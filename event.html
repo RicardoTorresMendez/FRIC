@@ -1,0 +1,242 @@
+<style style="text/css">
+  .hoverTable{
+    width:100%; 
+    border-collapse:collapse; 
+  }
+  .hoverTable td{ 
+    padding:7px; border:#4e95f4 1px solid;
+  }
+  /* Define the default color for all the table rows */
+  .hoverTable tr{
+    background: #ffffff;
+  }
+  /* Define the hover highlight color for the table row */
+  .hoverTable tr:hover {
+    background-color: #d4d4d4;
+  }
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="TEAM1">
+  <title>Fric · v.1</title>
+  
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <!-- Custom styles for this template -->
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="task.html">Task </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="event.html">Event<span class="sr-only">(current)</span> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<a href="#"><img title="helpicon" alt="help" src="helpicon.png" width="20px"></a> 
+<head><h2 style="text-decoration: underline;">Event Basic Information</h2></head>
+
+<fieldset>
+  <label for="fname">Event Name:</label>
+  <input type="text" id="eName" name="eName"><br><br>
+  <label for="eDescription">Event Description:</label>
+  <input type="text" id="eDescription" name="eDescription"><br><br>
+<!--   <input type="submit" value="Submit"> -->
+<label for="eventType" accesskey="p">Event Type</label>
+<select name="eventType" id="eventType">
+    <option>Cooperative Vulnerability Penetration Assessment            
+    </option>   
+</select>
+
+
+<br><br>
+
+<label for="eVersion">Event Version:</label>
+ <input type="text" id="eName" name="eName">
+ <br><br>
+<label for="eAssesmentDate">Event Assesment Date:</label>
+ <input type="text" id="eAssesmentDate" name="eAssesmentDate"> 
+<br><br>
+<label for="OrganizationName">Organization Name:</label>
+ <input type="text" id="OrganizationName" name="OrganizationName">
+ <br><br>
+<label for="sCTG">Security Classification Title Guide:</label>
+ <input type="text" id="sCTG" name="sCTG">  
+<br><br>
+ <label for="eventClassification" accesskey="p">Event Classification</label>
+<select name="eventClassification" id="eventClassification">
+    <option> Sample    
+    </option>   
+</select>
+
+<br><br>
+<label for="Declassification">Declassification Date:</label>
+ <input type="text" id="Declassification" name="Declassification">
+<br><br>
+<label for="CustomerName">Customer Name:</label>
+ <input type="text" id="CustomerName" name="CustomerName">
+</fieldset>
+
+<head><h2 style="text-decoration: underline;">Event Team Information</h2>
+
+<fieldset>
+<h3>Lead Analysts <a href="#"><img title="addLeadAnalyst" alt="Analysts" src="addPersonIcon.jpg" width="20px"></a></h3>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #000000;
+  color: white;
+  padding: 8px;
+  font-size: 12px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: center;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #000000;}
+</style>
+<body>
+
+<div class="dropdown">
+  <button class="dropbtn">Edit</button>
+  <div class="dropdown-content">
+    <a href="#">Remove</a>
+    <a href="#">Sync</a>
+  </div>
+</div>
+
+<br>
+
+<label for="addLeadAnalyst">Add Lead Analyst</label>
+
+
+<ul class="checkbox"> 
+  <li><input type="checkbox" id="cb1" value="PeterParker" /><label for="cb1">Peter Parker</label></li>
+  <li><input type="checkbox" id="cb2" value="TonyStark" /><label for="cb2"></label>Tony Stark</li> 
+  <li><input type="checkbox" id="cb3" value="BruceBanner" /><label for="cb3"></label>Bruce Banner</li> 
+</ul> 
+</fieldset>
+
+
+</table> -->
+<style>
+.container {
+  padding: 2rem 0rem;
+}
+
+h4 {
+  margin: 2rem 0rem 1rem;
+}
+
+.table-image {
+  td, th {
+    vertical-align: middle;
+  }
+}
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Select Day</th>
+            <th scope="col">Article Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Words</th>
+            <th scope="col">Shares</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                  <label class="custom-control-label" for="customCheck1">1</label>
+              </div>
+            </td>
+            <td>Bootstrap 4 CDN and Starter Template</td>
+            <td>Cristina</td>
+            <td>913</td>
+            <td>2.846</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck2">
+                  <label class="custom-control-label" for="customCheck2">2</label>
+              </div>
+            </td>
+            <td>Bootstrap Grid 4 Tutorial and Examples</td>
+            <td>Cristina</td>
+            <td>1.434</td>
+            <td>3.417</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck3">
+                  <label class="custom-control-label" for="customCheck3">3</label>
+              </div>
+            </td>
+            <td>Bootstrap Flexbox Tutorial and Examples</td>
+            <td>Cristina</td>
+            <td>1.877</td>
+            <td>1.234</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+  <script src="jquery.js"></script>
+  <script src="bootstrap.min.js"></script>
+</body>
+</body>
+</html>
