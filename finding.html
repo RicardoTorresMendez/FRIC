@@ -1,0 +1,393 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="TEAM1">
+  <title>Fric · v.1</title>
+  
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <!-- Custom styles for this template -->
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="event.html">Event</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="task.html">Tasks</a>
+        </li>
+				<li class="nav-item">
+					<a class="nav-link" href="Subtask.html">Sub-Tasks </a>
+				  </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="finding.html">Findings <span class="sr-only">(current)</span> </a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+	<button type="button" onclick="alert('Not yet implemented')">Delete</button>
+	<button type="button" onclick="alert('Not yet implemented')">Save</button>
+	<button type="button" onclick="alert('Not yet implemented')">Cancel</button>
+
+	<header>
+		<h2>Findings overview</h2>
+	</header>
+	<button type="button" onclick="alert('Not yet implemented')">ERB Report</button>
+	<button type="button" onclick="alert('Not yet implemented')">Risk Matrix Report</button>
+	<button type="button" onclick="alert('Not yet implemented')">Final Report</button>
+
+	<table align="center">
+		<tr>
+			<th>&nbsp</th>
+			<th>ID</th>
+			<th>Title</th>
+			<th>System</th>
+			<th>Task</th>
+			<th>Subtask</th>
+			<th>Analyst</th>
+			<th>Status</th>
+			<th>Classification</th>
+			<th>Type</th>
+			<th>Risk</th>
+		</tr>
+
+
+		<tr>
+			<td style="padding:0 20px 0 20px;">
+				<input type="checkbox" id="cb1" value="cb1" /><label for="cb1"></label>
+			</td>
+			<td style="padding:0 20px 0 20px;">1</td>
+			<td style="padding:0 20px 0 20px;">Real</td>
+			<td style="padding:0 20px 0 20px;">Real System</td>
+			<td style="padding:0 20px 0 20px;">Real Task</td>
+			<td style="padding:0 20px 0 20px;">Real Subtask</td>
+			<td style="padding:0 20px 0 20px;">Real Analyst</td>
+			<td style="padding:0 20px 0 20px;">Real Status</td>
+			<td style="padding:0 20px 0 20px;">Real Classification</td>
+			<td style="padding:0 20px 0 20px;">Real Type</td>
+			<td style="padding:0 20px 0 20px;">Real Risk</td>
+		</tr>
+	</table>
+
+	<header>
+		<h2>Finding detailed view</h2>
+	</header>
+
+	<header>
+		<h3>Finding information</h3>
+	</header>
+
+	<table align="center">
+		<tr>
+			<th>ID</th>
+			<th>Host Name</th>
+			<th>IP Port</th>
+			<th>Description</th>
+			<th>Long Description</th>
+			<th>Status</th>
+			<th>Type</th>
+			<th>Classification</th>
+			<th>Evidence</th>
+			<th>Related to</th>
+			<th>Related Finding(s)</th>
+		</tr>
+		<td><input type="text" id="id" name="id"><br></td>
+		<td style="padding:0 20px 0 20px;">Dummy Host</td>
+		<td style="padding:0 20px 0 20px;">192.0.0.1</td>
+		<td style="padding:0 20px 0 20px;">This is a dummy host</td>
+		<td style="padding:0 20px 0 20px;">This is a longer version of the previous description</td>
+		<td style="padding:0 20px 0 20px;">
+			<label for="Status"></label>
+			<select name="Status" id="Status">
+				<option value="a">Open</option>
+				<option value="b">Closed</option>
+			</select>
+		</td>
+		<td style="padding:0 20px 0 20px;">
+			<label for="Type"></label>
+			<select name="Type" id="Type">
+				<option value="a">Credentials Complexity</option>
+				<option value="b">Manufacturer Default Creds</option>
+				<option value="b">Lack of Authentication</option>
+				<option value="b">Plain Text Protocols</option>
+				<option value="b">Plain Text Web Login</option>
+				<option value="b">Encryption</option>
+				<option value="b">Authentication Bypass</option>
+				<option value="b">Port Security</option>
+				<option value="b">Access Control</option>
+				<option value="b">Least Privilege</option>
+				<option value="b">Privilige Escalation</option>
+				<option value="b">Missing Patches</option>
+				<option value="b">Physical Security</option>
+				<option value="b">Information Disclosure</option>
+			</select>
+		</td>
+		<td style="padding:0 20px 0 20px;">
+			<label for="Classification"></label>
+			<select name="Classification" id="Classification">
+				<option value="a">Vulnerability</option>
+				<option value="b">Information</option>
+			</select>
+		</td>
+		<td>
+	      <label for="myfile"></label>
+	      <input type="file" id="myfile" name="myfile"><br><br>
+	    </td>
+	    <td style="padding:0 20px 0 20px;">
+			<label for="System"></label>
+			<select name="System" id="System">
+				<option value="a">Real System</option>
+				<option value="b">Fake System</option>
+			</select>
+			OR
+			<label for="Task"></label>
+			<select name="Task" id="Task">
+				<option value="a">Real Task</option>
+				<option value="b">Fake Task</option>
+			</select>
+			OR
+			
+			<select name="Subtask" id="Subtask">
+				<option value="a">Real Subtask</option>
+				<option value="b">Fake Subtask</option>
+			</select>
+		</td>
+		<td>
+			<select name="RelatedFindings" id="RelatedFindings" multiple>
+				<option value="a">Real Finding</option>
+				<option value="b">Fake Finding</option>
+				<option value="c">Non-binary Finding</option>
+				<option value="d">Non-newtonian Finding</option>
+			</select>
+		</td>
+
+
+
+	</table>
+
+	<header>
+		<h3>Finding Impact<h3>
+	</header>
+
+		<table align="center">
+			<tr>
+				<th>Confidentiality</th>
+				<th>Integrity</th>
+				<th>Availability</th>
+			</tr>
+
+			<td>
+				<label for="Confidentiality"></label>
+				<select name="Confidentiality" id="Confidentiality">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="h">H</option>
+					<option value="i">Information</option>
+				</select>
+			</td>
+			<td>
+				<label for="Integrity"></label>
+				<select name="Integrity" id="Integrity">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="h">H</option>
+					<option value="i">Information</option>
+				</select>
+			</td>
+			<td>
+				<label for="Availability"></label>
+				<select name="Availability" id="Availability">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="h">H</option>
+					<option value="i">Information</option>
+				</select>
+			</td>
+
+		</table>
+
+	<header>
+		<h3>Analyst Information<h3>
+	</header>
+
+	<table align="center">
+		<tr>
+			<th>Analyst</th>
+			<th>Collaborator</th>
+			<th>Posture</th>
+		</tr>
+
+		<td>
+			<label for="Analyst"></label>
+			<select name="Analyst" id="Analyst" multiple>
+				<option value="l">RP</option>
+				<option value="m">FP</option>
+				<option value="h">CT</option>
+				<option value="i">FL</option>
+			</select>
+		</td>
+		<td>
+			<label for="Collaborator"></label>
+			<select name="Collaborator" id="Collaborator" multiple>
+				<option value="l">RP</option>
+				<option value="m">FP</option>
+				<option value="h">CT</option>
+				<option value="i">FL</option>
+			</select>
+		</td>
+		<td>
+			<label for="Posture"></label>
+			<select name="Posture" id="Posture">
+				<option value="l">Insider</option>
+				<option value="m">Insider-nearsider</option>
+				<option value="h">Outsider</option>
+				<option value="i">Nearsider</option>
+				<option value="i">Nearsider-outsider</option>
+			</select>
+		</td>
+
+	</table>
+
+	<header>
+		<h3>Mitigation<h3>
+	</header>
+
+	<table align="center">
+		<tr>
+			<th>Brief Description</th>
+			<th>Long Description</th>
+		</tr>
+		<td style="padding:0 20px 0 20px;">This is a dummy description</td>
+		<td style="padding:0 20px 0 20px;">This is an extended version of the previous description, the purpose of this is to be as verbose as possible</td>
+	</table>
+
+	<header>
+		<h3>Threat Relevance<h3>
+	</header>
+
+	<table align="center">
+		<tr>
+			<th>Threat Relevance</th>
+		</tr>
+		<td>
+			<label for="Posture"></label>
+			<select name="Posture" id="Posture">
+				<option value="l">Confirmed</option>
+				<option value="m">Expected</option>
+				<option value="h">Anticipated</option>
+				<option value="i">Predicted</option>
+				<option value="i">Possible</option>
+			</select>
+		</td>
+		
+	</table>
+
+	<header>
+		<h3>Countermeasure<h3>
+	</header>
+
+	<table align="center">
+		<tr>
+			<th>Effectiveness Rating</th>
+		</tr>
+		<td>
+			<label for="Posture"></label>
+			<select name="Posture" id="Posture">
+				<option value="l">Very High (10)</option>
+				<option value="m">High (7-9)</option>
+				<option value="h">Moderate (4-6)</option>
+				<option value="i">Low (1-3)</option>
+				<option value="i">Very Low (0)</option>
+			</select>
+		</td>
+		
+	</table>
+
+	<header>
+		<h3>Impact<h3>
+	</header>
+
+	<table align="center">
+		<tr>
+			<th>Impact Description</th>
+			<th>Impact Level</th>
+		</tr>
+		<td style="padding:0 20px 0 20px;">This is a dummy description</td>
+		<td>
+			<label for="Impact"></label>
+			<select name="Impact" id="Impact">
+				<option value="l">VH</option>
+				<option value="m">H</option>
+				<option value="h">M</option>
+				<option value="i">L</option>
+				<option value="i">VL</option>
+			</select>
+		</td>
+		
+	</table>
+
+	<header>
+		<h3>Severity<h3>
+	</header>
+
+	<table align="center">
+		<tr>
+			<th>Severity Category Score</th>
+			<th>Vulnerability Severity</th>
+			<th>Quantitative Vulnerability Severity</th>
+		</tr>
+		<td style="padding:0 20px 0 20px;">I</td>
+		<td style="padding:0 20px 0 20px;">Should be derived</td>
+		<td style="padding:0 20px 0 20px;">Should be derived</td>
+		
+	</table>
+
+	<header>
+		<h3>Risk<h3>
+	</header>
+
+	<table align="center">
+		<tr>
+			<th>Risk</th>
+			<th>Likelihood</th>
+		</tr>
+		<td style="padding:0 20px 0 20px;">Should be derived from impact</td>
+		<td style="padding:0 20px 0 20px;">Should be derived from impact</td>
+		
+	</table>
+
+	<header>
+		<h3>Finding System Level<h3>
+	</header>
+
+	<table align="center">
+		<tr>
+			<th>Confidentiality Finding Impact on System</th>
+			<th>Integrity Finding Impact on System</th>
+			<th>Availability Finding Impact on System</th>
+			<th>Impact Score</th>
+		</tr>
+		<td style="padding:0 20px 0 20px;">Should be derived; low, medium, high, or X</td>
+		<td style="padding:0 20px 0 20px;">Should be derived; low, medium, high, or X</td>
+		<td style="padding:0 20px 0 20px;">Should be derived; low, medium, high, or X</td>
+		<td style="padding:0 20px 0 20px;">Should be derived; HHH,HHx,Hxx,MMM,MMx,Mxx,LLL,LLx,Lxx</td>
+		
+	</table>
+
+	<script src="jquery.js"></script>
+	<script src="bootstrap.min.js"></script>
+	</body>
+	
