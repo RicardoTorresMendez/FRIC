@@ -23,9 +23,7 @@
   <meta name="author" content="TEAM1">
   <title>Fric · v.1</title>
   
-  <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="bootstrap.min.css">
-  <!-- Custom styles for this template -->
 </head>
 
 <body>
@@ -54,8 +52,8 @@
       </ul>
     </div>
   </nav>
-<a href="#"><img title="helpicon" alt="help" src="helpicon.png" width="20px"></a> 
 <head><h2 style="text-decoration: underline;">Event Basic Information</h2></head>
+<a href="#"><img title="helpicon" alt="help" src="C:\Users\chris\Desktop\FRICTool\FRIC\icons\helpicon.png" align="right" width="20px"></a> 
 
 <fieldset>
   <label for="fname">Event Name:</label>
@@ -99,10 +97,147 @@
 </fieldset>
 
 <head><h2 style="text-decoration: underline;">Event Team Information</h2>
-
 <fieldset>
-<h3>Lead Analysts <a href="#"><img title="addLeadAnalyst" alt="Analysts" src="addPersonIcon.jpg" width="20px"></a></h3>
+<h3>Lead Analysts </h3>
 </head>
+
+
+
+<style>
+.container {
+  padding: 2rem 0rem;
+}
+
+h4 {
+  margin: 2rem 0rem 1rem;
+}
+
+.table-image {
+  td, th {
+    vertical-align: middle;
+  }
+}
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="C:\Users\chris\Desktop\FRICTool\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th>
+            <th scope="col">Lead Analyst(s)</th>
+            <th scope="col">Lead Analyst Intials</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                  <label class="custom-control-label" for="customCheck1"></label>
+              </div>
+            </td>
+            <td>Michael Jones</td>
+            <td>MJ</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck2">
+                  <label class="custom-control-label" for="customCheck2"></label>
+              </div>
+            </td>
+            <td>Jacklyn Jones</td>
+            <td>JJ</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck3">
+                  <label class="custom-control-label" for="customCheck3"></label>
+              </div>
+            </td>
+            <td>Indiana Jones</td>
+            <td>IJ</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<h3> Analysts </h3>
+</head>
+
+
+
+<style>
+.container {
+  padding: 2rem 0rem;
+}
+
+h4 {
+  margin: 2rem 0rem 1rem;
+}
+
+.table-image {
+  td, th {
+    vertical-align: middle;
+  }
+}
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="C:\Users\chris\Desktop\FRICTool\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th>
+            <th scope="col">Analyst(s)</th>
+            <th scope="col">Analyst Intials</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck4" checked>
+                  <label class="custom-control-label" for="customCheck4"></label>
+              </div>
+            </td>
+            <td>Katie Jones</td>
+            <td>KJ</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck5">
+                  <label class="custom-control-label" for="customCheck5"></label>
+              </div>
+            </td>
+            <td>Linnus Jones</td>
+            <td>LJ</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck6">
+                  <label class="custom-control-label" for="customCheck6"></label>
+              </div>
+            </td>
+            <td>Parker Jones</td>
+            <td>PJ</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -145,28 +280,53 @@
 <body>
 
 <div class="dropdown">
-  <button class="dropbtn">Edit</button>
+  <button class="dropbtn" style="float: right;">Edit</button>
   <div class="dropdown-content">
     <a href="#">Remove</a>
     <a href="#">Sync</a>
   </div>
 </div>
+</table>
+</fieldset>
 
 <br>
 
-<label for="addLeadAnalyst">Add Lead Analyst</label>
+<head><h2 style="text-decoration: underline;">Add/Edit Overlay</h2>
+
+  <fieldset>
+    <head><h3>Add/Edit</h3>
+       <label for="fname">First Name:</label>
+  <input type="text" id="eName" name="eName"><br><br>
+   <label for="fname">Last Name:</label>
+  <input type="text" id="eName" name="eName"><br><br>
+   <label for="fname">Initials:</label>
+  <input type="text" id="eName" name="eName"><br><br>
+   <label for="fname">Title:</label>
+  <input type="text" id="eName" name="eName"><br><br>
+
+  </fieldset>
 
 
-<ul class="checkbox"> 
-  <li><input type="checkbox" id="cb1" value="PeterParker" /><label for="cb1">Peter Parker</label></li>
-  <li><input type="checkbox" id="cb2" value="TonyStark" /><label for="cb2"></label>Tony Stark</li> 
-  <li><input type="checkbox" id="cb3" value="BruceBanner" /><label for="cb3"></label>Bruce Banner</li> 
-</ul> 
-</fieldset>
+<br>
 
+<head><h2 style="text-decoration: underline;">Sync Overlay</h2>
 
-</table> -->
-<style>
+  <fieldset>
+    <head><h3>Sync</h3>
+       <label for="fname">From:</label>
+<select name="eventType" id="eventType">
+    <option>MJ</option>
+    <option>LJ</option> 
+  </select>
+  <br><br>
+   <label for="fname">IP Address:</label>
+  <input type="text" id="eName" name="eName"><br><br>
+   <label for="fname">Initials:</label>
+  <input type="text" id="eName" name="eName"><br><br>
+   <label for="fname">Title:</label>
+  <input type="text" id="eName" name="eName"><br><br>
+
+  <style>
 .container {
   padding: 2rem 0rem;
 }
@@ -188,55 +348,42 @@ h4 {
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th scope="col">Select Day</th>
-            <th scope="col">Article Name</th>
-            <th scope="col">Author</th>
-            <th scope="col">Words</th>
-            <th scope="col">Shares</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Analyst Intials</th>
+            <th>IP Addresses</th>
           </tr>
         </thead>
         <tbody>
+
           <tr>
             <td>
               <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-                  <label class="custom-control-label" for="customCheck1">1</label>
+                  <input type="checkbox" class="custom-control-input" id="customCheck7" checked>
+                  <label class="custom-control-label" for="customCheck7"></label>
               </div>
             </td>
-            <td>Bootstrap 4 CDN and Starter Template</td>
-            <td>Cristina</td>
-            <td>913</td>
-            <td>2.846</td>
+            <td>KJ</td>
+            <td><input type="text" id="eName" name="eName"></td> 
           </tr>
           <tr>
             <td>
               <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck2">
-                  <label class="custom-control-label" for="customCheck2">2</label>
+                  <input type="checkbox" class="custom-control-input" id="customCheck8">
+                  <label class="custom-control-label" for="customCheck8"></label>
               </div>
             </td>
-            <td>Bootstrap Grid 4 Tutorial and Examples</td>
-            <td>Cristina</td>
-            <td>1.434</td>
-            <td>3.417</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck3">
-                  <label class="custom-control-label" for="customCheck3">3</label>
-              </div>
-            </td>
-            <td>Bootstrap Flexbox Tutorial and Examples</td>
-            <td>Cristina</td>
-            <td>1.877</td>
-            <td>1.234</td>
+            <td>LJ</td>
+         <td><input type="text" id="eName" name="eName"></td> 
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 </div>
+<button type="button" onclick="alert('Syncing in Progress')">Sync</button>
+  </fieldset>
+
+
 
   <script src="jquery.js"></script>
   <script src="bootstrap.min.js"></script>
