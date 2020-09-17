@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple FRIC Router</title>
+    <style>
+    #view {
+
+    }
+    </style>
+    <script>
+        window.onload = function() {
+            console.log('DOM has loaded');
+            //create Router constructor
+
+            var view  = document.getElementById('view');
+
+
+            //grab all active attribute routes
+
+            var activeRoutes = Array.from(document.querySelectorAll('[route]'));
+
+            function navigate(event) {
+                var route = event.target.attributes[0].value;
+                var routeInfo = myFirstRouter.routes.filter(function(r) {
+                    return r.path === route;
+                })[0];
+                if(!routeInfo) {
+                    window.history.pushState({}, '', 'error')
+                    view.innerHTML = 'No route exists with this path'
+                }
+                else {
+                    window.history.pushState({}, 'name', routeInfo.path);
+                    view.innerHTML = 'You have clicked the ' + routeInfo.name + ' route'
+                }
+            };
+
+            //add event listeners
+
+            activeRoutes.forEach(function(route) {
+                route.addEventListener('click', navigate, false);
+            });
+
+            var Router = function(name, routes) {
+                return {
+                    name: name,
+                    routes: routes
+                }
+            };
+
+            var myFirstRouter = new Router('myFirstRouter', [
+                {
+                    path: '/',
+                    name: 'Login Page'
+                },
+                {
+                    path: '/event',
+                    name: 'Event Page'
+                },
+                {
+                    path: '/system',
+                    name: 'System Page'
+                },
+                {
+                    path: '/task',
+                    name: 'Task Page'
+                },
+                {
+                    path: '/finding',
+                    name: 'Finding Page'
+                },
+                {
+                    path: '/report',
+                    name: 'Reports Page'
+                },
+                {
+                    path: '/archive',
+                    name: 'Archive Page'
+                },
+            ]);
+            var currentPath = window.location.pathname;
+            if(currentPath === '/') {
+                view.innerHTML = 'You are automatically on the Login page as it is the root page';
+            }
+            else {
+                var route = myFirstRouter.routes.filter(function(r) {
+                    return r.path === currentPath
+                })[0];
+                if(route) {
+                    view.innerHTML = 'You are on the ' + route.name + ' path'
+                }
+                else {
+                    view.innerHTML = '404!';
+                }
+            }
+        }
+        </script>
+    </head>
+<body>
+    <h3> Simple FRIC router</h3>
+    <div id="view"></div>
+    <button route="/">Login Page</button>
+    <button route="/event">Event Page</button>
+    <button route="/system">System Page</button>
+    <button route="/task">Task Page</button>
+    <button route="/finding">Findings Page</button>
+    <button route="/report">Reports Page</button>
+    <button route="/archive">Archive Page</button>
+    <button route="404">404</button>
+</body>
+
+
+<a href="#"><img title="helpicon" alt="help" src="helpicon.png" width="20px"></a> 
+<head><h2>Event Basic Information</h2></head>
+
+<form action="/action_page.php">
+  <label for="fname">Event Name:</label>
+  <input type="text" id="eName" name="eName"><br><br>
+  <label for="eDescription">Event Description:</label>
+  <input type="text" id="eDescription" name="eDescription"><br><br>
+<!--   <input type="submit" value="Submit"> -->
+<label for="province" accesskey="p">Event Type</label>
+<select name="eventType" id="eventType">
+    <option>Cooperative Vulnerability Penetration Assessment            
+    <option>
+    </option>
+
+<label for="eVersion">Event Version:</label>
+ <input type="text" id="eName" name="eName">
+</select>
+</form>
+
+
+
+
+
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+tr:hover {background-color:#f5f5f5;}
+</style>
+</head>
+<body>
+   <table align="center">
+  <tr>
+    <th>Event Name</th>
+    <th>Event Description</th>
+  <th>Event Type</th>
+  <th>Event Version</th>
+  <th>Assesment Date</th>
+  <th>Organization Name</th>
+  <th>Security Classification Title Guide</th>
+  <th>Event Classification</th>
+  <th>Declassification Date</th>
+  <th>Customer Name</th>
+  <th>Archive Status</th>
+  <th>Event Team</th>
+
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+    <td>$100</td>
+    <td>v0.1</td>
+    <td>1-8 January 2019</td>
+    <td>DAC</td>
+    <td>Wells Fargo ATM Classification Guide</td>
+    <td>N/A</td>
+    <td>January 1,2020</td>
+    <td>Wells Fargo</td>
+    <td>N/A</td>
+    <td>N/A</td>
+
+  </tr>
+  <tr>
+     <td>Peter</td>
+    <td>Griffin</td>
+    <td>$100</td>
+    <td>v0.1</td>
+    <td>1-8 January 2019</td>
+    <td>DAC</td>
+    <td>Wells Fargo ATM Classification Guide</td>
+    <td>N/A</td>
+    <td>January 1,2020</td>
+    <td>Wells Fargo</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+    <td>$100</td>
+    <td>v0.1</td>
+    <td>1-8 January 2019</td>
+    <td>DAC</td>
+    <td>Wells Fargo ATM Classification Guide</td>
+    <td>N/A</td>
+    <td>January 1,2020</td>
+    <td>Wells Fargo</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+     <td>Peter</td>
+    <td>Griffin</td>
+    <td>$100</td>
+    <td>v0.1</td>
+    <td>1-8 January 2019</td>
+    <td>DAC</td>
+    <td>Wells Fargo ATM Classification Guide</td>
+    <td>N/A</td>
+    <td>January 1,2020</td>
+    <td>Wells Fargo</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr> <td>Peter</td>
+    <td>Griffin</td>
+    <td>$100</td>
+    <td>v0.1</td>
+    <td>1-8 January 2019</td>
+    <td>DAC</td>
+    <td>Wells Fargo ATM Classification Guide</td>
+    <td>N/A</td>
+    <td>January 1,2020</td>
+    <td>Wells Fargo</td>
+    <td>N/A</td>
+    <td>N/A</td></tr>
+</table>
+
+<!-- /*.myButton {
+    box-shadow: 3px 4px 0px 0px #1564ad;
+    background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+    background-color:#79bbff;
+    border-radius:5px;
+    border:1px solid #337bc4;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    font-weight:bold;
+    padding:12px 44px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #528ecc;
+}
+.myButton:hover {
+    background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color:#378de5;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}*/ -->
+
+</body>
+</html>
