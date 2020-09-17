@@ -1,0 +1,71 @@
+<style style="text/css">
+  .hoverTable{
+    width:100%; 
+    border-collapse:collapse; 
+  }
+  .hoverTable td{ 
+    padding:7px; border:#4e95f4 1px solid;
+  }
+  /* Define the default color for all the table rows */
+  .hoverTable tr{
+    background: #ffffff;
+  }
+  /* Define the hover highlight color for the table row */
+  .hoverTable tr:hover {
+    background-color: #d4d4d4;
+  }
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="TEAM1">
+  <title>Fric · v.1</title>
+  
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="event.html">Event<span class="sr-only">(current)</span> </a>
+        </li>
+        <li class="nav-item">
+					<a class="nav-link" href="task.html">Tasks</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Subtask.html">Sub-Tasks</a>
+				</li>
+        <li class="nav-item">
+            <a class="nav-link" href="finding.html">Findings</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<head><h2 style="text-decoration: underline;">Finding and Reporting Information Console (FRIC) </h2></head>
+
+<label for="CustomerName">Event: There is no existing event in your local system</label>
+<br>
+<label for="CustomerName">Please enter your intials:</label>
+<input type="text" id="CustomerName" name="CustomerName">
+<br>
+<label for="eventType" accesskey="p">Please select an option:</label>
+     <br>
+ <input type="checkbox" id="cb1" value="true">
+<label for="eventType" accesskey="p">Create a new event (any existing event will be archived)  </label>
+<br>
+ <input type="checkbox" id="cb1" value="true">
+<label for="eventType" accesskey="p">First time sync with lead analyst. Please enter the lead analyst's IP:</label>
+<input type="text" id="CustomerName" name="CustomerName">
+<br>
+<button type="button" onclick="alert('Event Created')">Submit</button>
