@@ -1,2 +1,2 @@
-# FRIC
+# FRIC Tool
 Software Project
