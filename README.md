@@ -9,3 +9,11 @@ Run Xaamp.
 Run Apache server.
 Open browser and type http://localhost/FRIC/index.html
 ```
+## How to do git branch:
+```bash
+$ git branch [branch-name]
+Creates a new branch
+$ git checkout [branch-name]
+Switches to the specified branch and updates the
+working directory
+```
