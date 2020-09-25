@@ -1,7 +1,9 @@
 # FRIC Tool
+
+
 ## Software Project
 
-## Instructions to run GUI:
+## Instructions to run the GUI:
 ```bash
 Install Xaamp.
 Blah blah blah put FRIC folder inside wherever Xaamp folder settled in.
