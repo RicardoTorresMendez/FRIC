@@ -1,21 +1,5 @@
-<style style="text/css">
-  .hoverTable{
-    width:100%; 
-    border-collapse:collapse; 
-  }
-  .hoverTable td{ 
-    padding:7px; border:#4e95f4 1px solid;
-  }
-  /* Define the default color for all the table rows */
-  .hoverTable tr{
-    background: #ffffff;
-  }
-  /* Define the hover highlight color for the table row */
-  .hoverTable tr:hover {
-    background-color: #d4d4d4;
-  }
-</style>
-
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,44 +12,86 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="event.html">Event<span class="sr-only">(current)</span> </a>
-        </li>
-        <li class="nav-item">
-					<a class="nav-link" href="task.html">Tasks</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="Subtask.html">Sub-Tasks</a>
-				</li>
-        <li class="nav-item">
-            <a class="nav-link" href="finding.html">Findings</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="event.html">Event<span class="sr-only">(current)</span> </a></li>
+        <li class="nav-item"><a class="nav-link" href="Systems.html">Systems<span class="sr-only">(current)</span> </a></li>
+        <li class="nav-item"><a class="nav-link" href="task.html">Tasks</a></li>
+				<li class="nav-item"><a class="nav-link" href="Subtask.html">Sub-Tasks</a></li>
+        <li class="nav-item"><a class="nav-link" href="finding.html">Findings</a></li>
+        <li class="nav-item"><a class="nav-link" href="Archive.html">Archive<span class="sr-only">(current)</span> </a></li>
+          <li class="nav-item"><a class="nav-link" href="Configuration.html">Configuration<span class="sr-only">(current)</span> </a></li>
+          <li class="nav-item active"><a class="nav-link" href="Setup.html">Setup<span class="sr-only">(current)</span> </a></li>
+          <li class="nav-item"><a class="nav-link" href="Help.html">Help<span class="sr-only">(current)</span> </a></li>
+         <form>
       </ul>
     </div>
   </nav>
-<head><h2 style="text-decoration: underline;">Finding and Reporting Information Console (FRIC) </h2></head>
+<head><h2 style="text-decoration: underline;"> Finding and Reporting Information Console (FRIC) </h2></head>
+<head><h3>*There is no existing event in your local system</h3></head>
 
-<label for="CustomerName">Event: There is no existing event in your local system</label>
-<br>
-<label for="CustomerName">Please enter your intials:</label>
-<input type="text" id="CustomerName" name="CustomerName">
-<br>
-<label for="eventType" accesskey="p">Please select an option:</label>
-     <br>
- <input type="checkbox" id="cb1" value="true">
-<label for="eventType" accesskey="p">Create a new event (any existing event will be archived)  </label>
-<br>
- <input type="checkbox" id="cb1" value="true">
-<label for="eventType" accesskey="p">First time sync with lead analyst. Please enter the lead analyst's IP:</label>
-<input type="text" id="CustomerName" name="CustomerName">
-<br>
-<button type="button" onclick="alert('Event Created')">Submit</button>
+<style> 
+  input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 35%;
+  background-color: #c88d17;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #e0a328;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+
+<script type="text/javascript">
+function checkOptions(val){
+ var element=document.getElementById('IPAddress');
+ if(val=='existingEvent')
+   element.style.display='block';
+ else  
+   element.style.display='none';
+}
+
+</script> 
+
+<div>
+  <form action="/action_page.php">
+    <label for="Initials">Please enter your intials</label>
+    <input type="text" id="initials" name="initials" placeholder="Your initials..">
+
+
+    <label for="setupOptions">Please select an option</label>
+    <select id="eventOptions" name="eventOptions" onchange="checkOptions(this.value);">
+      <option value="newEvent">Create a new event (any existing event will be archived)</option>
+      <option value="existingEvent">First time sync with lead analyst. Please enter the lead analyst's IP:</option>
+    </select>
+
+    <input type="text" id="IPAddress" name="IP" placeholder="IP Address.." style="display: none;">
+    <input type="submit" value="Submit" style="float: right;">
+  </form>
+</div>
+</html>
