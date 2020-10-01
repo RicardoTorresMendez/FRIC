@@ -28,7 +28,7 @@
   <!-- Custom styles for this template -->
 </head>
 
-<body>
+<body style="background-color:rgb(51, 116, 236);">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,209 +60,209 @@
       </ul>
     </div>
   </nav>
-<button type="button" onclick="alert('Not yet implemented')">Archive</button>
-<button type="button" onclick="alert('Not yet implemented')">Promote</button>
-<button type="button" onclick="alert('Not yet implemented')">Save</button>
-<button type="button" onclick="alert('Not yet implemented')">Cancel</button>
+  <button type="button" onclick="alert('Not yet implemented')">Archive</button>
+  <button type="button" onclick="alert('Not yet implemented')">Promote</button>
+  <button type="button" onclick="alert('Not yet implemented')">Save</button>
+  <button type="button" onclick="alert('Not yet implemented')">Cancel</button>
 
 
 
-<header>
-  <h2>Subtask overview</h2>
-</header>
-  <table align="center">
-  <tr>
-  	<th></th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Progress</th>
-    <th>Due Date</th>
-    <th>Analyst(s)</th>
-    <th>Collaborator(s)</th>
-    <th>Task(s)</th>
-    <th>Subtask(s)</th>
-    <th>Attachments</th>
-  </tr>
+  <header>
+    <h2>Subtask overview</h2>
+  </header>
+  <table class="table table-hover table-dark table-sm">
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Progress</th>
+      <th>Due Date</th>
+      <th>Analyst(s)</th>
+      <th>Collaborator(s)</th>
+      <th>Task(s)</th>
+      <th>Subtask(s)</th>
+      <th>Attachments</th>
+    </tr>
 
-  <tr>
-  	<td style="padding:0 20px 0 20px;">
-      <input type="checkbox" id="cb1" value="cb1" /><label for="cb1"></label>
-    </td>
-    <td style="padding:0 20px 0 20px;">Lorem</td>
-    <td style="padding:0 20px 0 20px;">Ipsum</td>
-    <td style="padding:0 20px 0 20px;">
-    	<label for="Progress"></label>
-      	<select name="Progress" id="Progress">
-        <option value="a">0%</option>
-        <option value="a">25%</option>
-        <option value="b">50%</option>
-        <option value="c">75%</option>
-        <option value="c">Completed</option>
-      </select>
-    </td>
-    <td style="padding:0 20px 0 20px;">
-    	<input type="date" id="date" name="date">
-    </td>
-    <td style="padding:0 20px 0 20px;">
-		<label for="analyst"></label>
-      	<select name="analyst" id="analyst" multiple>
-        <option value="a">Long Name for testing</option>
-        <option value="b">Short Name</option>
-        <option value="c">Shorter</option>
-        <option value="d">Lok'tar Ogar</option>
-      </select>
-    </td>
-    <td style="padding:0 20px 0 20px;">
-    	<label for="Collaborator"></label>
-     	<select name="Collaborator" id="Collaborator" multiple>
-        <option value="a">Long Name for testing</option>
-        <option value="b">Short Name</option>
-        <option value="c">Shorter</option>
-        <option value="d">Lok'tar Ogar</option>
-      </select>
-    </td>
-    <td style="padding:0 20px 0 20px;">
-    	<label for="Related"></label>
-      	<select name="Related" id="Related" multiple>
-        <option value="a">Dummy Task</option>
-        <option value="b">Real Task</option>
-        <option value="c">Japan</option>
-        <option value="d">Sacer Disc</option>
-      </select>
-    </td>
-    <td>
-    	<label for="RelatedSub"></label>
-      	<select name="RelatedSub" id="RelatedSub" multiple>
-        <option value="a">Dummy Subtask</option>
-        <option value="b">Real Subtask</option>
-        <option value="c">Warr Fury</option>
-        <option value="d">Tree Balance</option>
-    </td>
-    <td style="padding:0 20px 0 20px;">
-		<label for="myfile"></label>
-      	<input type="file" id="myfile" name="myfile"><br><br>
-    </td>
-  </tr>
-  <tr>
-  	<td style="padding:0 20px 0 20px;">
-      <input type="checkbox" id="cb1" value="cb1" /><label for="cb1"></label>
-    </td>
-    <td style="padding:0 20px 0 20px;">Real Subtask</td>
-    <td style="padding:0 20px 0 20px;">This subtask is definitely real</td>
-    <td style="padding:0 20px 0 20px;">
-    	<label for="Progress"></label>
-      	<select name="Progress" id="Progress">
-        <option value="a">0%</option>
-        <option value="a">25%</option>
-        <option value="b">50%</option>
-        <option value="c">75%</option>
-        <option value="c">Completed</option>
-      </select>
-    </td>
-    <td style="padding:0 20px 0 20px;">
-    	<input type="date" id="date" name="date">
-    </td>
-    <td style="padding:0 20px 0 20px;">
-		<label for="analyst"></label>
-      	<select name="analyst" id="analyst" multiple>
-        <option value="a">Long Name for testing</option>
-        <option value="b">Short Name</option>
-        <option value="c">Shorter</option>
-        <option value="d">Lok'tar Ogar</option>
-      </select>
-    </td>
-    <td style="padding:0 20px 0 20px;">
-    	<label for="Collaborator"></label>
-     	<select name="Collaborator" id="Collaborator" multiple>
-        <option value="a">Long Name for testing</option>
-        <option value="b">Short Name</option>
-        <option value="c">Shorter</option>
-        <option value="d">Lok'tar Ogar</option>
-      </select>
-    </td>
-    <td style="padding:0 20px 0 20px;">
-    	<label for="Related"></label>
-      	<select name="Related" id="Related" multiple>
-        <option value="a">Dummy Task</option>
-        <option value="b">Real Task</option>
-        <option value="c">Japan</option>
-        <option value="d">Sacer Disc</option>
-      </select>
-    </td>
-    <td>
-    	<label for="RelatedSub"></label>
-      	<select name="RelatedSub" id="RelatedSub" multiple>
-        <option value="a">Dummy Subtask</option>
-        <option value="b">Real Subtask</option>
-        <option value="c">Warr Fury</option>
-        <option value="d">Tree Balance</option>
-    </td>
-    <td style="padding:0 20px 0 20px;">
-		<label for="myfile"></label>
-      	<input type="file" id="myfile" name="myfile"><br><br>
-    </td>
-  </tr>
+    <tr>
+      <td style="padding:0 20px 0 20px;">
+        <input type="checkbox" id="cb1" value="cb1" /><label for="cb1"></label>
+      </td>
+      <td style="padding:0 20px 0 20px;">Lorem</td>
+      <td style="padding:0 20px 0 20px;">Ipsum</td>
+      <td style="padding:0 20px 0 20px;">
+        <label for="Progress"></label>
+          <select name="Progress" id="Progress">
+          <option value="a">0%</option>
+          <option value="a">25%</option>
+          <option value="b">50%</option>
+          <option value="c">75%</option>
+          <option value="c">Completed</option>
+        </select>
+      </td>
+      <td style="padding:0 20px 0 20px;">
+        <input type="date" id="date" name="date">
+      </td>
+      <td style="padding:0 20px 0 20px;">
+      <label for="analyst"></label>
+          <select name="analyst" id="analyst" multiple>
+          <option value="a">Long Name for testing</option>
+          <option value="b">Short Name</option>
+          <option value="c">Shorter</option>
+          <option value="d">Lok'tar Ogar</option>
+        </select>
+      </td>
+      <td style="padding:0 20px 0 20px;">
+        <label for="Collaborator"></label>
+        <select name="Collaborator" id="Collaborator" multiple>
+          <option value="a">Long Name for testing</option>
+          <option value="b">Short Name</option>
+          <option value="c">Shorter</option>
+          <option value="d">Lok'tar Ogar</option>
+        </select>
+      </td>
+      <td style="padding:0 20px 0 20px;">
+        <label for="Related"></label>
+          <select name="Related" id="Related" multiple>
+          <option value="a">Dummy Task</option>
+          <option value="b">Real Task</option>
+          <option value="c">Japan</option>
+          <option value="d">Sacer Disc</option>
+        </select>
+      </td>
+      <td>
+        <label for="RelatedSub"></label>
+          <select name="RelatedSub" id="RelatedSub" multiple>
+          <option value="a">Dummy Subtask</option>
+          <option value="b">Real Subtask</option>
+          <option value="c">Warr Fury</option>
+          <option value="d">Tree Balance</option>
+      </td>
+      <td style="padding:0 20px 0 20px;">
+      <label for="myfile"></label>
+          <input type="file" id="myfile" name="myfile"><br><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:0 20px 0 20px;">
+        <input type="checkbox" id="cb1" value="cb1" /><label for="cb1"></label>
+      </td>
+      <td style="padding:0 20px 0 20px;">Real Subtask</td>
+      <td style="padding:0 20px 0 20px;">This subtask is definitely real</td>
+      <td style="padding:0 20px 0 20px;">
+        <label for="Progress"></label>
+          <select name="Progress" id="Progress">
+          <option value="a">0%</option>
+          <option value="a">25%</option>
+          <option value="b">50%</option>
+          <option value="c">75%</option>
+          <option value="c">Completed</option>
+        </select>
+      </td>
+      <td style="padding:0 20px 0 20px;">
+        <input type="date" id="date" name="date">
+      </td>
+      <td style="padding:0 20px 0 20px;">
+      <label for="analyst"></label>
+          <select name="analyst" id="analyst" multiple>
+          <option value="a">Long Name for testing</option>
+          <option value="b">Short Name</option>
+          <option value="c">Shorter</option>
+          <option value="d">Lok'tar Ogar</option>
+        </select>
+      </td>
+      <td style="padding:0 20px 0 20px;">
+        <label for="Collaborator"></label>
+        <select name="Collaborator" id="Collaborator" multiple>
+          <option value="a">Long Name for testing</option>
+          <option value="b">Short Name</option>
+          <option value="c">Shorter</option>
+          <option value="d">Lok'tar Ogar</option>
+        </select>
+      </td>
+      <td style="padding:0 20px 0 20px;">
+        <label for="Related"></label>
+          <select name="Related" id="Related" multiple>
+          <option value="a">Dummy Task</option>
+          <option value="b">Real Task</option>
+          <option value="c">Japan</option>
+          <option value="d">Sacer Disc</option>
+        </select>
+      </td>
+      <td>
+        <label for="RelatedSub"></label>
+          <select name="RelatedSub" id="RelatedSub" multiple>
+          <option value="a">Dummy Subtask</option>
+          <option value="b">Real Subtask</option>
+          <option value="c">Warr Fury</option>
+          <option value="d">Tree Balance</option>
+      </td>
+      <td style="padding:0 20px 0 20px;">
+      <label for="myfile"></label>
+          <input type="file" id="myfile" name="myfile"><br><br>
+      </td>
+    </tr>
 
-  <tr>
-  	<td style="padding:0 20px 0 20px;">
-      <input type="checkbox" id="cb1" value="cb1" /><label for="cb1"></label>
-    </td>
-    <td style="padding:0 20px 0 20px;">Fake Subtask</td>
-    <td style="padding:0 20px 0 20px;">This subtask is definitely not real</td>
-    <td style="padding:0 20px 0 20px;">
-    	<label for="Progress"></label>
-      	<select name="Progress" id="Progress">
-        <option value="a">0%</option>
-        <option value="a">25%</option>
-        <option value="b">50%</option>
-        <option value="c">75%</option>
-        <option value="c">Completed</option>
-      </select>
-    </td>
-    <td style="padding:0 20px 0 20px;">
-    	<input type="date" id="date" name="date">
-    </td>
-    <td style="padding:0 20px 0 20px;">
-		<label for="analyst"></label>
-      	<select name="analyst" id="analyst" multiple>
-        <option value="a">Long Name for testing</option>
-        <option value="b">Short Name</option>
-        <option value="c">Shorter</option>
-        <option value="d">Lok'tar Ogar</option>
-      </select>
-    </td>
-    <td style="padding:0 20px 0 20px;">
-    	<label for="Collaborator"></label>
-     	<select name="Collaborator" id="Collaborator" multiple>
-        <option value="a">Long Name for testing</option>
-        <option value="b">Short Name</option>
-        <option value="c">Shorter</option>
-        <option value="d">Lok'tar Ogar</option>
-      </select>
-    </td>
-    <td style="padding:0 20px 0 20px;">
-    	<label for="Related"></label>
-      	<select name="Related" id="Related" multiple>
-        <option value="a">Dummy Task</option>
-        <option value="b">Real Task</option>
-        <option value="c">Japan</option>
-        <option value="d">Sacer Disc</option>
-      </select>
-    </td>
-    <td>
-    	<label for="RelatedSub"></label>
-      	<select name="RelatedSub" id="RelatedSub" multiple>
-        <option value="a">Dummy Subtask</option>
-        <option value="b">Real Subtask</option>
-        <option value="c">Warr Fury</option>
-        <option value="d">Tree Balance</option>
-    </td>
-    <td style="padding:0 20px 0 20px;">
-		<label for="myfile"></label>
-      	<input type="file" id="myfile" name="myfile"><br><br>
-    </td>
-  </tr>
-</table>
+    <tr>
+      <td style="padding:0 20px 0 20px;">
+        <input type="checkbox" id="cb1" value="cb1" /><label for="cb1"></label>
+      </td>
+      <td style="padding:0 20px 0 20px;">Fake Subtask</td>
+      <td style="padding:0 20px 0 20px;">This subtask is definitely not real</td>
+      <td style="padding:0 20px 0 20px;">
+        <label for="Progress"></label>
+          <select name="Progress" id="Progress">
+          <option value="a">0%</option>
+          <option value="a">25%</option>
+          <option value="b">50%</option>
+          <option value="c">75%</option>
+          <option value="c">Completed</option>
+        </select>
+      </td>
+      <td style="padding:0 20px 0 20px;">
+        <input type="date" id="date" name="date">
+      </td>
+      <td style="padding:0 20px 0 20px;">
+      <label for="analyst"></label>
+          <select name="analyst" id="analyst" multiple>
+          <option value="a">Long Name for testing</option>
+          <option value="b">Short Name</option>
+          <option value="c">Shorter</option>
+          <option value="d">Lok'tar Ogar</option>
+        </select>
+      </td>
+      <td style="padding:0 20px 0 20px;">
+        <label for="Collaborator"></label>
+        <select name="Collaborator" id="Collaborator" multiple>
+          <option value="a">Long Name for testing</option>
+          <option value="b">Short Name</option>
+          <option value="c">Shorter</option>
+          <option value="d">Lok'tar Ogar</option>
+        </select>
+      </td>
+      <td style="padding:0 20px 0 20px;">
+        <label for="Related"></label>
+          <select name="Related" id="Related" multiple>
+          <option value="a">Dummy Task</option>
+          <option value="b">Real Task</option>
+          <option value="c">Japan</option>
+          <option value="d">Sacer Disc</option>
+        </select>
+      </td>
+      <td>
+        <label for="RelatedSub"></label>
+          <select name="RelatedSub" id="RelatedSub" multiple>
+          <option value="a">Dummy Subtask</option>
+          <option value="b">Real Subtask</option>
+          <option value="c">Warr Fury</option>
+          <option value="d">Tree Balance</option>
+      </td>
+      <td style="padding:0 20px 0 20px;">
+      <label for="myfile"></label>
+          <input type="file" id="myfile" name="myfile"><br><br>
+      </td>
+    </tr>
+  </table>
 <script src="jquery.js"></script>
 <script src="bootstrap.min.js"></script>
 </body>
