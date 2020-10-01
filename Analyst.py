@@ -3,24 +3,24 @@ class Analyst:
     
     
     # Constructor
-    def _init_(self, fName, lName, initial, title, role):
-        self._fName = fName
-        self._lName = lName
-        self._intial = initial
-        self._title = title
-        self._role = role
+    def __init__(self, fName, lName, initial, title, role):
+        self.fName = fName
+        self.lName = lName
+        self.initial = initial
+        self.title = title
+        self.role = role
     
     #Getters (Python might not need getters)
     def get_fName(self):
-        return self._fName
+        return self.fName
     def get_lName(self):
-        return self._lName
+        return self.lName
     def get_initial(self):
-        return self._initial
+        return self.initial
     def get_title(self):
-        return self._title
+        return self.title
     def get_role(self):
-        return self._role
+        return self.role
     
     #Setters (Python might not need setters)
     def set_fName(self, fName):
@@ -33,3 +33,6 @@ class Analyst:
         self._title = title
     def set_role(self, role):
         self._role = role
+
+if __name__ == "__main__":
+    print('hi')
