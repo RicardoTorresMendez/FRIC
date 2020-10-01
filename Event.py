@@ -3,19 +3,19 @@ class Event:
     _description = ''
     
     # Constructor
-    def _init_(self, name, eType, version, date, orgName, securityClassification, classification, declassificationDate, 
+    def __init__(self, name, eType, version, date, orgName, securityClassification, classification, declassificationDate, 
     customer, stat, team):
-        self._name = name
-        self._eType = eType
-        self._version = version
-        self._date = date
-        self._orgName = orgName
-        self._securityClassification = securityClassification
-        self._classification = classification
-        self._declassificationDate = declassificationDate
-        self._customer = customer
-        self._stat = stat
-        self._team = team
+        self.name = name
+        self.eType = eType
+        self.version = version
+        self.date = date
+        self.orgName = orgName
+        self.securityClassification = securityClassification
+        self.classification = classification
+        self.declassificationDate = declassificationDate
+        self.customer = customer
+        self.stat = stat
+        self.team = team
     
     #Getters (Python might not need getters)
     def get_name(self):
@@ -32,8 +32,8 @@ class Event:
         return self.securityClassification
     def get_classification(self):
         return self._classification
-    def get_declasfDate(self):
-        return self._declasfDate
+    def get_declassificationDate(self):
+        return self._declassificationDate
     def get_customer(self):
         return self._customer
     def get_stat(self):
@@ -68,3 +68,10 @@ class Event:
         self._team = team
     def set_description(self, description):
         self._description = description
+
+
+if __name__ == "__main__": 
+    event1 = Event('1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11')
+    print(event1.name)
+    event1.set_name('a')
+    print(event1.name)
