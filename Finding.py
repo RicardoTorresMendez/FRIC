@@ -1,31 +1,34 @@
 class Finding:
     # Constructor
-    def _init_(self, findingID, hostName, IPport, description, longDescription, status, fType, classification, findingAssociation,
+    def __init__(self, findingID, hostName, IPport, description, longDescription, status, fType, classification, findingAssociation,
      evidence, findingImpact, assignment, posture, mitigation, threatRelevance, countermeasureData, impactData, severityData, 
      systemLevelImpact, archiveStatus):
-        self._findingID = findingID
-        self._hostName = hostName
-        self._IPport = IPport
-        self._description = longDescription
-        self._status = status
-        self._fType = fType
-        self._classsification = classification
-        self._findingAssocation = findingAssociation
-        self._evidence = evidence
-        self._findingImpact = findingImpact
-        self._assignment = assignment
-        self._posture = posture
-        self._mitigation = mitigation
-        self._threatRelevance = threatRelevance
-        self._counterMeasureData = countermeasureData
-        self._impactData = impactData
-        self._severityData = severityData
-        self._systemLevelImpact = archiveStatus
+        self.findingID = findingID
+        self.hostName = hostName
+        self.IPport = IPport
+        self.description = longDescription
+        self.status = status
+        self.fType = fType
+        self.classsification = classification
+        self.findingAssocation = findingAssociation
+        self.evidence = evidence
+        self.findingImpact = findingImpact
+        self.assignment = assignment
+        self.posture = posture
+        self.mitigation = mitigation
+        self.threatRelevance = threatRelevance
+        self.counterMeasureData = countermeasureData
+        self.impactData = impactData
+        self.severityData = severityData
+        self.systemLevelImpact = archiveStatus
 
         #finding’s ID, host name, IP port, description, long description, status, type, classification, association to finding, evidence,
         #  archive status, finding impact, analyst assignment, collaborator assignment, posture, mitigation data, threat relevance,
         #  countermeasure data, impact data, severity data, and system level impact
 
         #Getters (Python might not need getters)
+
+if __name__ == "__main__":
+    print('hi')
 
    
