@@ -3,16 +3,17 @@ class Event:
     _description = ''
     
     # Constructor
-    def _init_(self, name, eType, version, date, orgName, secClsf, clsf, dClsfDate, cName, stat, team):
+    def _init_(self, name, eType, version, date, orgName, securityClassification, classification, declassificationDate, 
+    customer, stat, team):
         self._name = name
         self._eType = eType
         self._version = version
         self._date = date
         self._orgName = orgName
-        self._secClsf = secClsf
-        self._clsf = clsf
-        self._dClsfDate = dClasfDate
-        self._cName = cName
+        self._securityClassification = securityClassification
+        self._classification = classification
+        self._declassificationDate = declassificationDate
+        self._customer = customer
         self._stat = stat
         self._team = team
     
@@ -27,14 +28,14 @@ class Event:
         return self._date
     def get_orgName(self):
         return self._orgName
-    def get_secClsf(self):
-        return self.secClsf
-    def get_clsf(self):
-        return self._clsf
-    def get_dClasfDate(self):
-        return self._dClasfDate
-    def get_cName(self):
-        return self._cName
+    def get_securityClassification(self):
+        return self.securityClassification
+    def get_classification(self):
+        return self._classification
+    def get_declasfDate(self):
+        return self._declasfDate
+    def get_customer(self):
+        return self._customer
     def get_stat(self):
         return self._stat
     def get_team(self):
@@ -53,14 +54,14 @@ class Event:
         self._date = date
     def set_orgName(self, orgName):
         self._orgName = orgName
-    def set_secClsf(self, secClsf):
-        self.secClsf = secClsf
-    def set_clsf(self, clsf):
-        self._clsf = clsf
-    def set_dClasfDate(self, dClasfDate):
-        self._dClasfDate = dClasfDate
-    def set_cName(self, cName):
-        self._cName = cName
+    def set_securityClassification(self, securityClassification):
+        self.securityClassification = securityClassification
+    def set_classification(self, classification):
+        self._classification = classification
+    def set_declassificationDate(self, declassificationDate):
+        self._declassificationDate = declassificationDate
+    def set_customer(self, customer):
+        self._customer = customer
     def set_stat(self, stat):
         self._stat = stat
     def set_team(self, team):
