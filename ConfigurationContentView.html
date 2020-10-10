@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="bootstrap.min.css">
+
+<style style="text/css">
+  .hoverTable{
+    width:100%; 
+    border-collapse:collapse; 
+  }
+  .hoverTable td{ 
+    padding:7px; border:#4e95f4 1px solid;
+  }
+  /* Define the default color for all the table rows */
+  .hoverTable tr{
+    background: #ffffff;
+  }
+  /* Define the hover highlight color for the table row */
+  .hoverTable tr:hover {
+    background-color: #d4d4d4;
+  }
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="TEAM1">
+  <title>Fric · v.1</title>
+  
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body style="background-color:rgb(51, 116, 236);">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Event <span class="sr-only">(current)</span> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Systems.html">Systems</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="task.html">Tasks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Subtask.html">Sub-Tasks </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="finding.html">Findings </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Archive.html">Archive </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+<head><h2 style="text-decoration: underline;">Finding Type</h2></head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <!-- <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="C:\Users\chris\Desktop\FRICTool\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th> -->
+            <th scope="col">Attribute</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+            </tr>
+        </thead>
+        
+
+         <tbody>
+
+          <tr>
+            <td>Finding ID</td>
+            <td>Number</td>
+            <td>System generated</td>
+            <td>Unique identifier of a
+vulnerability/potential
+issue</td>
+          </tr>
+          <tr>
+            <td>Host Name</td>
+            <td>String</td>
+            <td>Required; Editable</td>
+            <td>Host name where the
+vulnerability/potential
+issue resides</td>
+          </tr>
+          <tr>
+            <td>IP Port</td>
+            <td>String</td>
+            <td>Required; Editable</td>
+            <td>IP port where the
+vulnerability/ potential
+issue resides</td>
+          </tr>
+           <tr>
+            <td>Finding Description</td>
+            <td>String</td>
+            <td>Optional; Editable;
+Appendable</td>
+            <td>Long description of a
+vulnerability/ potential
+issue</td>
+          </tr>
+          <tr>
+            <td>Finding Long Description</td>
+            <td>String</td>
+            <td>Optional; Editable;
+Appendable</td>
+            <td>Long description of a
+vulnerability/ potential
+issue</td>
+          </tr>
+          <tr>
+            <td>Finding Status</td>
+            <td>Enumeration</td>
+            <td>Required; Editable; {Open,
+Closed}</td>
+<td>Status that describes
+whether the vulnerability has been patched by the
+customer</td>
+          </tr>
+          <tr>
+            <td>Finding Type</td>
+            <td>Enumeration</td>
+            <td>Required; Editable;
+{Credentials Complexity,
+Manufacturer Default
+Creds,
+Lack of Authentication,
+Plain Text Protocols,
+Plain Text Web Login,
+Encryption,
+Authentication Bypass,
+Port Security,
+Access Control,
+Least Privilege,
+Privilege Escalation,
+Missing Patches,
+Physical Security,
+Information Disclosure}</td>
+            <td>Type of vulnerability/
+potential issue</td>
+          </tr>
+          <tr>
+            <td>Finding Classification</td>
+            <td>Enumeration</td>
+            <td>Required; Editable;
+{Vulnerability,
+Information}</td>
+            <td>Classification that
+determines if the
+discovery is a
+vulnerability or potential
+issue</td>
+          </tr>
+          <tr>
+            <td>Association to Finding</td>
+            <td>List</td>
+            <td>Optional; The original
+finding and the associated
+finding shall belong to the
+same system.</td>
+            <td>Relationship of a finding
+to another finding</td>
+          </tr>
+          <tr>
+            <td>Evidence</td>
+            <td>File</td>
+            <td>Required; Editable;
+Appendable</td>
+            <td>Evidence that proves the
+existence of vulnerability</td>
+          </tr>
+                 <tr>
+            <td>Archive Status</td>
+            <td>Boolean</td>
+            <td>Required; Editable; {Y =
+archived, N = active}</td>
+            <td>State of a vulnerability or
+potential issue</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<head><h2 style="text-decoration: underline;">Posture</h2></head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Attribute(s)</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        
+
+        <tbody>
+<tr>
+	<td>Posture</td>
+	<td>Enunmeration</td>
+	<td>Required; Editable; {Insider
+Insider-nearsider
+Outsider
+Nearsider
+Nearsider-outsider}</td>
+<td>Security posture an
+analyst plays when
+completing a task/subtask</td>
+</tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<head><h2 style="text-decoration: underline;">Threat Level</h2></head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+           <th scope="col">Attribute(s)</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+<tr>
+<td>Relevance</td>
+<td>Enumeration</td>
+<td>Required; Editable;
+{Confirmed, Expected,
+Anticipated, Predicted
+Possible}</td>
+<td>Threat relevance</td>
+
+</tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<head><h2 style="text-decoration: underline;">Impact</h2></head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+           <th scope="col">Attribute(s)</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+<tr>
+<td>Impact Description</td>
+<td>String</td>
+<td>Required; Editable;
+Appendable</td>
+<td>Description of an impact</td>
+</tr>
+
+<tr>
+	<td>Impact Level</td>
+<td>Enumeration</td>
+<td>Required; Editable; {VH,
+H, M, L, VL, Information}</td>
+<td>Impact Level</td>
+</tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<head><h2 style="text-decoration: underline;">Finding Classification</h2></head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+           <th scope="col">Attribute(s)</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+<tr>
+<td>Finding Classification</td>
+<td>Enumeration</td>
+<td>Required; Editable;
+{Vulnerability,
+Information}</td>
+<td>Classification that
+determines if the
+discovery is a
+vulnerability or potential
+issue</td>
+</tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<head><h2 style="text-decoration: underline;">Countermeasure</h2></head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+           <th scope="col">Attribute(s)</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+<tr>
+<td>Effectiveness Rating</td>
+<td>Enumeration</td>
+<td>Required; Editable; {Very
+high (10), High (7-9),
+Moderate (4-6), Low (1-3)
+Very low (0)} (See Table
+17)</td>
+<td>Mechanism the system
+has in place to prevent the
+found vulnerability from
+being exploited</td>
+</tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<head><h2 style="text-decoration: underline;">Event Classification</h2></head>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+           <th scope="col">Attribute(s)</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+<tr>
+<td>Event Classification</td>
+<td>Enumeration</td>
+<td>Required; {Top secret,
+Secret, Confidential,
+Classified, Unclassified}</td>
+<td>Security classification of a
+cyber engagement</td>
+</tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<style>
+.container {
+  padding: 2rem 0rem;
+}
+
+h4 {
+  margin: 2rem 0rem 1rem;
+}
+
+.table-image {
+  td, th {
+    vertical-align: middle;
+  }
+}
+</style>
+
+
+
+<style>
+.container {
+  padding: 2rem 0rem;
+}
+
+h4 {
+  margin: 2rem 0rem 1rem;
+}
+
+.table-image {
+  td, th {
+    vertical-align: middle;
+  }
+}
+</style>
+<head><h2 style="text-decoration: underline;">System Level</h2></head>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Attribute(s)</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Confidentiality</td>
+            <td>Enumeration</td>
+            <td>Required; {Low, Medium, High, Information}</td>
+            <td>Confidentiality level of a system</td>
+          </tr>
+          <tr>
+            <td>Integrity</td>
+            <td>Enumeration</td>
+            <td>Required; {Low, Medium, High, Information}</td>
+            <td>Integrity level of a system</td>
+          </tr>
+          <tr>
+            <td>Availability</td>
+            <td>Enumeration</td>
+            <td>Required; {Low, Medium, High, Information}</td>
+            <td>Availability level of a system</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<head><h2 style="text-decoration: underline;">Event Type</h2></head>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Values and Constraints</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Required; {Cooperative Vulnerability Penetration Assessment (CVPA). Cooperative Vulnerability Investigation (CVI). Verification of Fixes (VOF)}; Editable</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<head><h2 style="text-decoration: underline;">Finding Impact Level</h2></head>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Attribute(s)</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Confidentiality</td>
+            <td>Enumeration</td>
+            <td>Required; {Low, Medium, High, Information}</td>
+            <td>Confidentiality level of a finding</td>
+          </tr>
+          <tr>
+            <td>Integrity</td>
+            <td>Enumeration</td>
+            <td>Required; {Low, Medium, High, Information}</td>
+            <td>Integrity level of a finding</td>
+          </tr>
+          <tr>
+            <td>Availability</td>
+            <td>Enumeration</td>
+            <td>Required; {Low, Medium, High, Information}</td>
+            <td>Availability level of a finding</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<head><h2 style="text-decoration: underline;">Severity Category Code</h2></head>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Enumeration</td>
+            <td>Required; Editable; {I, II, III}</td>
+            <td>A classification of vulnerabilities used to assess a facility or system security posture from Defense Information Systems Agency</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<head><h2 style="text-decoration: underline;">Progress</h2></head>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Attribute(s)</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Task Progress</td>
+            <td>Enumeration</td>
+            <td>Required; {Not started,assigned, transferred, in progress, complete, and not applicable}; Editable if thetask has no subtask. Derived: If a task as at least one subtask, the system shall calculate the progress of a task from the progresses of all its’ subtasks</td>
+            <td>Progress of a task</td>
+          </tr>
+          <tr>
+            <td>Subtask Progress</td>
+            <td>Enumeration</td>
+            <td>Required; Editable; {Not started, assigned, transferred, in progress, complete, and not applicable}</td>
+            <td>Progress of a subtask</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<head><h2 style="text-decoration: underline;">Event Rules</h2></head>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Lead Analyst Assignment</th>
+            <th scope="col">Analyst Self-Assign</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Allowed</td>
+            <td>Allowed</td>
+          </tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<head><h2 style="text-decoration: underline;">Risk Matrix Report Template</h2></head>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Attribute(s)</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Finding</td>
+            <td>List</td>
+            <td>Required</td>
+            <td>List of selected finding from the cyber engagement</td>
+          </tr>
+          <tr>
+            <td>System Categorization</td>
+            <td>List</td>
+            <td>Required</td>
+            <td>System categorization of the finding</td>
+          </tr>
+          <tr>
+            <td>Event Name</td>
+            <td>String</td>
+            <td>Required</td>
+            <td>Name of the cyber engagement</td>
+          </tr>
+          <tr>
+            <td>Event Type</td>
+            <td>String</td>
+            <td>Required</td>
+            <td>Type of the cyber engagement</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<head><h2 style="text-decoration: underline;">ERB Template</h2></head>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Attribute(s)</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Lead Analyst Name</td>
+            <td>String</td>
+            <td>Required</td>
+            <td>Name of lead analyst</td>
+          </tr>
+          <tr>
+            <td>Title</td>
+            <td>String</td>
+            <td>Required</td>
+            <td>Title of lead analyst</td>
+          </tr>
+          <tr>
+            <td>Event Type</td>
+            <td>String</td>
+            <td>Required</td>
+            <td>Type of the cyber engagement</td>
+          </tr>
+          <tr>
+            <td>Summary Table</td>
+            <td>List</td>
+            <td>Required; Summary table includes finding description, system name, impact, and risk</td>
+            <td>Summary table displays finding description, system name, impact, and risk</td>
+          </tr>
+          <tr>
+            <td>Finding</td>
+            <td>List</td>
+            <td>Required</td>
+            <td>List of selected finding from the cyber engagement</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<head><h2 style="text-decoration: underline;">Final Techical Report Template</h2></head>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Attribute(s)</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Analyst Name</td>
+            <td>List</td>
+            <td>Required</td>
+            <td>Name of analyst who participated in the cyber ingegament</td>
+          </tr>
+          <tr>
+            <td>Summary Table</td>
+            <td>List</td>
+            <td>Required; Summary table includes finding description, system name, impact, and risk</td>
+            <td>Summary table displays finding description, system name, impact, and risk</td>
+          </tr>
+           <tr>
+            <td>Finding</td>
+            <td>List</td>
+            <td>Required</td>
+            <td>List of selected finding from the cyber engagement</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<head><h2 style="text-decoration: underline;">Notification</h2></head>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Attribute(s)</th>
+            <th scope="col">Data Type</th>
+            <th scope="col">Values and Constraints</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Duration</td>
+            <td>List</td>
+            <td>Required; Editable</td>
+            <td>Time before the threshold</td>
+          </tr>
+          <tr>
+            <td>Frequency</td>
+            <td>List</td>
+            <td>Required; Editable</td>
+            <td>Recurring time a notification should appear</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #000000;
+  color: white;
+  padding: 8px;
+  font-size: 12px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: center;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+
+
+  <script src="jquery.js"></script>
+  <script src="bootstrap.min.js"></script>
+</body>
+</body>
+</html>

@@ -1,3 +1,21 @@
+<style style="text/css">
+	.hoverTable{
+	  width:100%; 
+	  border-collapse:collapse; 
+	}
+	.hoverTable td{ 
+	  padding:7px; border:#4e95f4 1px solid;
+	}
+	/* Define the default color for all the table rows */
+	.hoverTable tr{
+	  background: #ffffff;
+	}
+	/* Define the hover highlight color for the table row */
+	.hoverTable tr:hover {
+	  background-color: #d4d4d4;
+	}
+  </style>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,7 +28,10 @@
 	<!-- Custom styles for this template -->
 </head>
 
-<body>
+<body style="background-color:rgb(51, 116, 236);">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<!-- Custom styles for this template -->
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="#">Navbar</a>
@@ -45,7 +66,7 @@
 	</nav>
 
 	<button type="button" onclick="alert('Not yet implemented')">Delete</button>
-	<button type="button" onclick="alert('Not yet implemented')">Save</button>
+	<button type="button" onclick="alert('Not yet implemented')">Archive</button>
 	<button type="button" onclick="alert('Not yet implemented')">Cancel</button>
 
 	<header>
@@ -55,7 +76,7 @@
 	<button type="button" onclick="alert('Not yet implemented')">Risk Matrix Report</button>
 	<button type="button" onclick="alert('Not yet implemented')">Final Report</button>
 
-	<table align="center">
+	<table class="table table-hover table-dark table-sm">
 		<tr>
 			<th>&nbsp</th>
 			<th>ID</th>
@@ -96,7 +117,7 @@
 		<h3>Finding information</h3>
 	</header>
 
-	<table align="center">
+	<table class="table table-hover table-dark table-sm">
 		<tr>
 			<th>ID</th>
 			<th>Host Name</th>
@@ -179,16 +200,13 @@
 				<option value="d">Non-newtonian Finding</option>
 			</select>
 		</td>
-
-
-
 	</table>
 
 	<header>
 		<h3>Finding Impact<h3>
-		</header>
+	</header>
 
-		<table align="center">
+		<table class="table table-hover table-dark table-sm">	
 			<tr>
 				<th>Confidentiality</th>
 				<th>Integrity</th>
@@ -225,174 +243,177 @@
 
 		</table>
 
+	<header>
+		<h3>Analyst Information<h3>
+	</header>
+
+		<table class="table table-hover table-dark table-sm">
+			<tr>
+				<th>Analyst</th>
+				<th>Collaborator</th>
+				<th>Posture</th>
+			</tr>
+
+			<td>
+				<label for="Analyst"></label>
+				<select name="Analyst" id="Analyst" multiple>
+					<option value="l">RP</option>
+					<option value="m">FP</option>
+					<option value="h">CT</option>
+					<option value="i">FL</option>
+				</select>
+			</td>
+			<td>
+				<label for="Collaborator"></label>
+				<select name="Collaborator" id="Collaborator" multiple>
+					<option value="l">RP</option>
+					<option value="m">FP</option>
+					<option value="h">CT</option>
+					<option value="i">FL</option>
+				</select>
+			</td>
+			<td>
+				<label for="Posture"></label>
+				<select name="Posture" id="Posture">
+					<option value="l">Insider</option>
+					<option value="m">Insider-nearsider</option>
+					<option value="h">Outsider</option>
+					<option value="i">Nearsider</option>
+					<option value="i">Nearsider-outsider</option>
+				</select>
+			</td>
+
+		</table>
+
 		<header>
-			<h3>Analyst Information<h3>
-			</header>
+			<h3>Mitigation<h3>
+		</header>
 
-			<table align="center">
+		<table class="table table-hover table-dark table-sm"></table>
+			<tr>
+				<th>Brief Description</th>
+				<th>Long Description</th>
+			</tr>
+			<td style="padding:0 20px 0 20px;">This is a dummy description</td>
+			<td style="padding:0 20px 0 20px;">This is an extended version of the previous description, the purpose of this is to be as verbose as possible</td>
+		</table>
+
+		<header>
+			<h3>Threat Relevance<h3>
+		</header>
+
+		<table class="table table-hover table-dark table-sm">
 				<tr>
-					<th>Analyst</th>
-					<th>Collaborator</th>
-					<th>Posture</th>
+					<th>Threat Relevance</th>
 				</tr>
-
-				<td>
-					<label for="Analyst"></label>
-					<select name="Analyst" id="Analyst" multiple>
-						<option value="l">RP</option>
-						<option value="m">FP</option>
-						<option value="h">CT</option>
-						<option value="i">FL</option>
-					</select>
-				</td>
-				<td>
-					<label for="Collaborator"></label>
-					<select name="Collaborator" id="Collaborator" multiple>
-						<option value="l">RP</option>
-						<option value="m">FP</option>
-						<option value="h">CT</option>
-						<option value="i">FL</option>
-					</select>
-				</td>
 				<td>
 					<label for="Posture"></label>
 					<select name="Posture" id="Posture">
-						<option value="l">Insider</option>
-						<option value="m">Insider-nearsider</option>
-						<option value="h">Outsider</option>
-						<option value="i">Nearsider</option>
-						<option value="i">Nearsider-outsider</option>
+						<option value="l">Confirmed</option>
+						<option value="m">Expected</option>
+						<option value="h">Anticipated</option>
+						<option value="i">Predicted</option>
+						<option value="i">Possible</option>
 					</select>
 				</td>
 
 			</table>
 
-			<header>
-				<h3>Mitigation<h3>
-				</header>
+		<header>
+			<h3>Countermeasure<h3>
+		</header>
 
-				<table align="center">
-					<tr>
-						<th>Brief Description</th>
-						<th>Long Description</th>
-					</tr>
-					<td style="padding:0 20px 0 20px;">This is a dummy description</td>
-					<td style="padding:0 20px 0 20px;">This is an extended version of the previous description, the purpose of this is to be as verbose as possible</td>
-				</table>
+			<table align="center">
+				<tr>
+					<th>Effectiveness Rating</th>
+				</tr>
+				<td>
+					<label for="Posture"></label>
+					<select name="Posture" id="Posture">
+						<option value="l">Very High (10)</option>
+						<option value="m">High (7-9)</option>
+						<option value="h">Moderate (4-6)</option>
+						<option value="i">Low (1-3)</option>
+						<option value="i">Very Low (0)</option>
+					</select>
+				</td>
 
-				<header>
-					<h3>Threat Relevance<h3>
-					</header>
+			</table>
 
-					<table align="center">
-						<tr>
-							<th>Threat Relevance</th>
-						</tr>
-						<td>
-							<label for="Posture"></label>
-							<select name="Posture" id="Posture">
-								<option value="l">Confirmed</option>
-								<option value="m">Expected</option>
-								<option value="h">Anticipated</option>
-								<option value="i">Predicted</option>
-								<option value="i">Possible</option>
-							</select>
-						</td>
+		<header>
+			<h3>Impact<h3>
+		</header>
 
-					</table>
+			<table class="table table-hover table-dark table-sm">
+				<tr>
+					<th>Impact Description</th>
+					<th>Impact Level</th>
+				</tr>
+				<td style="padding:0 20px 0 20px;">This is a dummy description</td>
+				<td>
+					<label for="Impact"></label>
+					<select name="Impact" id="Impact">
+						<option value="l">VH</option>
+						<option value="m">H</option>
+						<option value="h">M</option>
+						<option value="i">L</option>
+						<option value="i">VL</option>
+					</select>
+				</td>
 
-					<header>
-						<h3>Countermeasure<h3>
-						</header>
+			</table>
 
-						<table align="center">
-							<tr>
-								<th>Effectiveness Rating</th>
-							</tr>
-							<td>
-								<label for="Posture"></label>
-								<select name="Posture" id="Posture">
-									<option value="l">Very High (10)</option>
-									<option value="m">High (7-9)</option>
-									<option value="h">Moderate (4-6)</option>
-									<option value="i">Low (1-3)</option>
-									<option value="i">Very Low (0)</option>
-								</select>
-							</td>
+		<header>
+			<h3>Severity<h3>
+		</header>
 
-						</table>
+			<table class="table table-hover table-dark table-sm">
+				<tr>
+					<th>Severity Category Score</th>
+					<th>Vulnerability Severity</th>
+					<th>Quantitative Vulnerability Severity</th>
+				</tr>
+				<td style="padding:0 20px 0 20px;">I</td>
+				<td style="padding:0 20px 0 20px;">Should be derived</td>
+				<td style="padding:0 20px 0 20px;">Should be derived</td>
 
-						<header>
-							<h3>Impact<h3>
-							</header>
+			</table>
 
-							<table align="center">
-								<tr>
-									<th>Impact Description</th>
-									<th>Impact Level</th>
-								</tr>
-								<td style="padding:0 20px 0 20px;">This is a dummy description</td>
-								<td>
-									<label for="Impact"></label>
-									<select name="Impact" id="Impact">
-										<option value="l">VH</option>
-										<option value="m">H</option>
-										<option value="h">M</option>
-										<option value="i">L</option>
-										<option value="i">VL</option>
-									</select>
-								</td>
+		<header>
+			<h3>Risk<h3>
+		</header>
 
-							</table>
+			<table class="table table-hover table-dark table-sm"></table>
+				<tr>
+					<th>Risk</th>
+					<th>Likelihood</th>
+				</tr>
+				<td style="padding:0 20px 0 20px;">Should be derived from impact</td>
+				<td style="padding:0 20px 0 20px;">Should be derived from impact</td>
 
-							<header>
-								<h3>Severity<h3>
-								</header>
+			</table>
 
-								<table align="center">
-									<tr>
-										<th>Severity Category Score</th>
-										<th>Vulnerability Severity</th>
-										<th>Quantitative Vulnerability Severity</th>
-									</tr>
-									<td style="padding:0 20px 0 20px;">I</td>
-									<td style="padding:0 20px 0 20px;">Should be derived</td>
-									<td style="padding:0 20px 0 20px;">Should be derived</td>
+		<header>
+			<h3>Finding System Level<h3>
+		</header>
 
-								</table>
+			<table class="table table-hover table-dark table-sm"></table>
+				<tr>
+					<th>Confidentiality Finding Impact on System</th>
+					<th>Integrity Finding Impact on System</th>
+					<th>Availability Finding Impact on System</th>
+					<th>Impact Score</th>
+				</tr>
+				<td style="padding:0 20px 0 20px;">Should be derived; low, medium, high, or X</td>
+				<td style="padding:0 20px 0 20px;">Should be derived; low, medium, high, or X</td>
+				<td style="padding:0 20px 0 20px;">Should be derived; low, medium, high, or X</td>
+				<td style="padding:0 20px 0 20px;">Should be derived; HHH,HHx,Hxx,MMM,MMx,Mxx,LLL,LLx,Lxx</td>
 
-								<header>
-									<h3>Risk<h3>
-									</header>
+			</table>
 
-									<table align="center">
-										<tr>
-											<th>Risk</th>
-											<th>Likelihood</th>
-										</tr>
-										<td style="padding:0 20px 0 20px;">Should be derived from impact</td>
-										<td style="padding:0 20px 0 20px;">Should be derived from impact</td>
+	<script src="jquery.js"></script>
+    <script src="bootstrap.min.js"></script>
 
-									</table>
+  </body>
 
-									<header>
-										<h3>Finding System Level<h3>
-										</header>
-
-										<table align="center">
-											<tr>
-												<th>Confidentiality Finding Impact on System</th>
-												<th>Integrity Finding Impact on System</th>
-												<th>Availability Finding Impact on System</th>
-												<th>Impact Score</th>
-											</tr>
-											<td style="padding:0 20px 0 20px;">Should be derived; low, medium, high, or X</td>
-											<td style="padding:0 20px 0 20px;">Should be derived; low, medium, high, or X</td>
-											<td style="padding:0 20px 0 20px;">Should be derived; low, medium, high, or X</td>
-											<td style="padding:0 20px 0 20px;">Should be derived; HHH,HHx,Hxx,MMM,MMx,Mxx,LLL,LLx,Lxx</td>
-
-										</table>
-
-										<script src="jquery.js"></script>
-										<script src="bootstrap.min.js"></script>
-									</body>
+</html>
