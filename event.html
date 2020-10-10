@@ -59,7 +59,7 @@
     </div>
   </nav>
 <head><h2 style="text-decoration: underline;">Event Basic Information</h2></head>
-<a href="#"><img title="helpicon" alt="help" src="C:\Users\chris\Desktop\FRICTool\FRIC\icons\helpicon.png" align="right" width="20px"></a> 
+<a href="#"><img title="helpicon" alt="help" src="\FRIC\icons\helpicon.png" align="right" width="20px"></a> 
 
 <fieldset>
   <label for="fname">Event Name:</label>
@@ -68,7 +68,7 @@
   <input type="text" id="eDescription" name="eDescription"><br><br>
 <!--   <input type="submit" value="Submit"> -->
 <label for="eventType" accesskey="p">Event Type</label>
-<select name="eventType" id="eventType">
+<select name="eventType" id="eType">
     <option>Cooperative Vulnerability Penetration Assessment            
     </option>   
 </select>
@@ -77,29 +77,29 @@
 <br><br>
 
 <label for="eVersion">Event Version:</label>
- <input type="text" id="eName" name="eName">
+ <input type="text" id="eVersion" name="eName">
  <br><br>
-<label for="eAssesmentDate">Event Assesment Date:</label>
+<label for="eAssesmentDate">Event Assessment Date:</label>
  <input type="text" id="eAssesmentDate" name="eAssesmentDate"> 
 <br><br>
 <label for="OrganizationName">Organization Name:</label>
- <input type="text" id="OrganizationName" name="OrganizationName">
+ <input type="text" id="eOrganizationName" name="OrganizationName">
  <br><br>
 <label for="sCTG">Security Classification Title Guide:</label>
- <input type="text" id="sCTG" name="sCTG">  
+ <input type="text" id="eSCTG" name="sCTG">  
 <br><br>
  <label for="eventClassification" accesskey="p">Event Classification</label>
-<select name="eventClassification" id="eventClassification">
+<select name="eventClassification" id="eClassification">
     <option> Sample    
     </option>   
 </select>
 
 <br><br>
 <label for="Declassification">Declassification Date:</label>
- <input type="text" id="Declassification" name="Declassification">
+ <input type="text" id="eDeclassificationDate" name="Declassification">
 <br><br>
 <label for="CustomerName">Customer Name:</label>
- <input type="text" id="CustomerName" name="CustomerName">
+ <input type="text" id="eCustomerName" name="CustomerName">
 </fieldset>
 
 <head><h2 style="text-decoration: underline;">Event Team Information</h2>
@@ -131,7 +131,7 @@ h4 {
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="C:\Users\chris\Desktop\FRICTool\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th>
+            <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th>
             <th scope="col">Lead Analyst(s)</th>
             <th scope="col">Lead Analyst Intials</th>
           </tr>
@@ -201,7 +201,7 @@ h4 {
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="C:\Users\chris\Desktop\FRICTool\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th>
+            <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th>
             <th scope="col">Analyst(s)</th>
             <th scope="col">Analyst Intials</th>
           </tr>
@@ -244,6 +244,7 @@ h4 {
   </div>
 </div>
 
+<!-- ---------------------------------------------------------------------- -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -386,13 +387,14 @@ h4 {
     </div>
   </div>
 </div>
-<button type="button" onclick="alert('Syncing in Progress')">Sync</button>
+<button type="button" id="sync">Sync</button>
   </fieldset>
 
 
 
   <script src="jquery.js"></script>
   <script src="bootstrap.min.js"></script>
+  <script src="createEventHandler.js"></script>
 </body>
 </body>
 </html>
