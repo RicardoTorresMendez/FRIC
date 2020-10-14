@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 
-<body style="background-color:rgb(51, 116, 236);">
+<body style="background-color:rgb(235, 192, 52);">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,8 +58,88 @@
       </ul>
     </div>
   </nav>
+
+<head><h2 style="text-decoration: underline;">Event Overview</h2></head>
+<style>
+.container {
+  padding: 2rem 0rem;
+}
+
+h4 {
+  margin: 2rem 0rem 1rem;
+}
+
+.table-image {
+  td, th {
+    vertical-align: middle;
+  }
+}
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+           <!--  <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th> -->
+           <th scope="col"></th>
+            <th scope="col">Event Name</th>
+            <th scope="col">No. of Systems</th>
+            <th scope="col">No. of Findings</th>
+            <th scope="col">Progress</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                  <label class="custom-control-label" for="customCheck1"></label>
+              </div>
+            </td>
+            <td>Wells Fargo</td>
+            <td>1</td>
+            <td>5</td>
+            <td>25%</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck2">
+                  <label class="custom-control-label" for="customCheck2"></label>
+              </div>
+            </td>
+           <td>Chase</td>
+            <td>4</td>
+            <td>10</td>
+            <td>50%</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck3">
+                  <label class="custom-control-label" for="customCheck3"></label>
+              </div>
+            </td>
+            <td>Bank of America</td>
+            <td>7</td>
+            <td>13</td>
+            <td>75%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</head>
+
+<button type="button" id="submit" style="float: right;">Cancel</button>
+<button type="button" id="submit" style="float: right;">Save</button>
+<button type="button" id="submit" style="float: right;">Archive</button>
+
 <head><h2 style="text-decoration: underline;">Event Basic Information</h2></head>
-<a href="#"><img title="helpicon" alt="help" src="\FRIC\icons\helpicon.png" align="right" width="20px"></a> 
+<!-- <a href="#"><img title="helpicon" alt="help" src="\FRIC\icons\helpicon.png" align="right" width="20px"></a>  -->
 
 <fieldset>
   <label for="fname">Event Name:</label>
@@ -387,7 +467,8 @@ h4 {
     </div>
   </div>
 </div>
-<button type="button" id="sync">Sync</button>
+<button type="button" id="submit" style="float: right;">Submit</button>
+<button type="button" id="sync" style="float: right;">Sync</button>
   </fieldset>
 
 
