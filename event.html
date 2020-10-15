@@ -133,53 +133,71 @@ h4 {
   </div>
 </div>
 </head>
-
-<button type="button" id="submit" style="float: right;">Cancel</button>
-<button type="button" id="submit" style="float: right;">Save</button>
-<button type="button" id="submit" style="float: right;">Archive</button>
+<button type="button" class="btn btn-secondary" id="Archive" style="float: right;">Archive</button>
 
 <head><h2 style="text-decoration: underline;">Event Basic Information</h2></head>
 <!-- <a href="#"><img title="helpicon" alt="help" src="\FRIC\icons\helpicon.png" align="right" width="20px"></a>  -->
 
 <fieldset>
   <label for="fname">Event Name:</label>
-  <input type="text" id="eName" name="eName"><br><br>
+  <input type="text" id="eventName" name="eventInfo"><br><br>
   <label for="eDescription">Event Description:</label>
-  <input type="text" id="eDescription" name="eDescription"><br><br>
+  <input type="text" id="eventDescription" name="eventInfo"><br><br>
 <!--   <input type="submit" value="Submit"> -->
 <label for="eventType" accesskey="p">Event Type</label>
-<select name="eventType" id="eType">
-    <option>Cooperative Vulnerability Penetration Assessment            
+<select name="eventType" id="eventType">
+    <option>Cooperative Vulnerability Penetration Assessment (CVPA)          
     </option>   
+    <option>Cooperative Vulnerability Investigation (CVI)            
+    </option>   
+    <option>Verification of Fixes (VOF)      
+    </option>   
+
 </select>
 
 
 <br><br>
 
-<label for="eVersion">Event Version:</label>
- <input type="text" id="eVersion" name="eName">
+<label for="eventVersion">Event Version:</label>
+ <input type="text" id="eventVersion" name="eventInfo">
  <br><br>
-<label for="eAssesmentDate">Event Assessment Date:</label>
- <input type="text" id="eAssesmentDate" name="eAssesmentDate"> 
+<label for="eventAssesmentDate">Event Assessment Date:</label>
+ <input type="date" id="eventAssesmentDate" name="eventInfo"> 
 <br><br>
-<label for="OrganizationName">Organization Name:</label>
- <input type="text" id="eOrganizationName" name="OrganizationName">
+<label for="eventOrganizationName">Organization Name:</label>
+ <input type="text" id="eventOrganizationName" name="eventInfo">
  <br><br>
 <label for="sCTG">Security Classification Title Guide:</label>
- <input type="text" id="eSCTG" name="sCTG">  
+ <input type="text" id="eventSCTG" name="eventInfo">  
 <br><br>
  <label for="eventClassification" accesskey="p">Event Classification</label>
-<select name="eventClassification" id="eClassification">
-    <option> Sample    
+<select name="eventClassification" id="eventClassification">
+    <option> Top secret    
+    </option>   
+    <option> Secret    
+    </option>   
+    <option> Confidential    
+    </option>   
+    <option> Classified    
+    </option>   
+    <option> Unclassified    
     </option>   
 </select>
+
+<br><br>
+<label for="ClassificationAuthor">Classified By:</label>
+ <input type="text" id="eventClassificationAuthor" name="eventInfo">
+
+<br><br>
+<label for="Declassification">Derived From:</label>
+ <input type="text" id="eventDerivedFrom" name="eventInfo">
 
 <br><br>
 <label for="Declassification">Declassification Date:</label>
- <input type="text" id="eDeclassificationDate" name="Declassification">
+ <input type="date" id="eventDeclassoficationDate" name="eventInfo">
 <br><br>
 <label for="CustomerName">Customer Name:</label>
- <input type="text" id="eCustomerName" name="CustomerName">
+ <input type="text" id="eventCustomerName" name="eventInfo">
 </fieldset>
 
 <head><h2 style="text-decoration: underline;">Event Team Information</h2>
@@ -211,7 +229,8 @@ h4 {
       <table class="table table-bordered table-dark">
         <thead>
           <tr>
-            <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th>
+            <!-- <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th> -->
+            <th scope="col"></th>
             <th scope="col">Lead Analyst(s)</th>
             <th scope="col">Lead Analyst Intials</th>
           </tr>
@@ -221,8 +240,8 @@ h4 {
           <tr>
             <td>
               <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-                  <label class="custom-control-label" for="customCheck1"></label>
+                  <input type="checkbox" class="custom-control-input" id="leadAnalstyCheck1" checked>
+                  <label class="custom-control-label" for="leadAnalstyCheck1"></label>
               </div>
             </td>
             <td>Michael Jones</td>
@@ -231,8 +250,8 @@ h4 {
           <tr>
             <td>
               <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck2">
-                  <label class="custom-control-label" for="customCheck2"></label>
+                  <input type="checkbox" class="custom-control-input" id="leadAnalstyCheck2">
+                  <label class="custom-control-label" for="leadAnalstyCheck2"></label>
               </div>
             </td>
             <td>Jacklyn Jones</td>
@@ -241,8 +260,8 @@ h4 {
           <tr>
             <td>
               <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck3">
-                  <label class="custom-control-label" for="customCheck3"></label>
+                  <input type="checkbox" class="custom-control-input" id="leadAnalstyCheck3">
+                  <label class="custom-control-label" for="leadAnalstyCheck3"></label>
               </div>
             </td>
             <td>Indiana Jones</td>
@@ -281,7 +300,8 @@ h4 {
       <table class="table table-bordered table-dark">
         <thead>
           <tr>
-            <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th>
+            <!-- <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th> -->
+            <th scope="col"></th>
             <th scope="col">Analyst(s)</th>
             <th scope="col">Analyst Intials</th>
           </tr>
@@ -291,8 +311,8 @@ h4 {
           <tr>
             <td>
               <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck4" checked>
-                  <label class="custom-control-label" for="customCheck4"></label>
+                  <input type="checkbox" class="custom-control-input" id="analystCheck1" checked>
+                  <label class="custom-control-label" for="analystCheck1"></label>
               </div>
             </td>
             <td>Katie Jones</td>
@@ -301,8 +321,8 @@ h4 {
           <tr>
             <td>
               <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck5">
-                  <label class="custom-control-label" for="customCheck5"></label>
+                  <input type="checkbox" class="custom-control-input" id="analystCheck2">
+                  <label class="custom-control-label" for="analystCheck2"></label>
               </div>
             </td>
             <td>Linnus Jones</td>
@@ -311,8 +331,8 @@ h4 {
           <tr>
             <td>
               <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck6">
-                  <label class="custom-control-label" for="customCheck6"></label>
+                  <input type="checkbox" class="custom-control-input" id="analystCheck3">
+                  <label class="custom-control-label" for="analystCheck3"></label>
               </div>
             </td>
             <td>Parker Jones</td>
@@ -326,71 +346,56 @@ h4 {
 
 <!-- ---------------------------------------------------------------------- -->
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.dropbtn {
-  background-color: #000000;
-  color: white;
-  padding: 8px;
-  font-size: 12px;
-  border: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 100px;
-  box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  text-align: center;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #000000;}
-</style>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 <body>
 
-<div class="dropdown">
+<!-- <div class="dropdown">
   <button class="dropbtn" style="float: right;">Edit</button>
   <div class="dropdown-content">
     <a href="#">Remove</a>
     <a href="#">Sync</a>
   </div>
 </div>
-</table>
+</table> -->
+<script type="text/javascript">
+  function clearAll() {
+var elements = document.getElementsByTagName("input");
+for (var ii=0; ii < elements.length; ii++) {
+  if (elements[ii].type == "text" && elements[ii].name == "eventInfo") {
+    elements[ii].value = "";
+  }
+}
+}
+</script>
+
+<div class="btn-group" role="group" aria-label="Basic example" style="float: right;">
+<button type="button" class="btn btn-secondary" id="Save">Save</button>
+<button type="button" class="btn btn-secondary" onClick="clearAll()" id="Cancel">Cancel</button>
+</div>
+
 </fieldset>
+
+
 
 <br>
 
 <head><h2 style="text-decoration: underline;">Add/Edit Overlay</h2>
 
   <fieldset>
-    <head><h3>Add/Edit</h3>
+    <head><h3>Add/Edit:</h3>
        <label for="fname">First Name:</label>
-  <input type="text" id="eName" name="eName"><br><br>
+  <input type="text" id="analystFirstName" name="analystInfo"><br><br>
    <label for="fname">Last Name:</label>
-  <input type="text" id="eName" name="eName"><br><br>
+  <input type="text" id="analystLastName" name="analystInfo"><br><br>
    <label for="fname">Initials:</label>
-  <input type="text" id="eName" name="eName"><br><br>
+  <input type="text" id="analystInitials" name="analystInfo"><br><br>
    <label for="fname">Title:</label>
-  <input type="text" id="eName" name="eName"><br><br>
+  <input type="text" id="analystTitle" name="analystInfo"><br><br>
 
+<div class="btn-group" role="group" aria-label="Basic example" style="float: right;">
+<button type="button" class="btn btn-secondary" id="Add">Add</button>
+<button type="button" class="btn btn-secondary" id="Edit">Edit</button>
+</div>
   </fieldset>
 
 
@@ -399,7 +404,7 @@ h4 {
 <head><h2 style="text-decoration: underline;">Sync Overlay</h2>
 
   <fieldset>
-    <head><h3>Sync</h3>
+    <head><h3>Sync:</h3>
        <label for="fname">From:</label>
 <select name="eventType" id="eventType">
     <option>MJ</option>
@@ -407,11 +412,12 @@ h4 {
   </select>
   <br><br>
    <label for="fname">IP Address:</label>
-  <input type="text" id="eName" name="eName"><br><br>
+  <input type="text" id="IPAddress" name="IPAddress"><br><br>
    <label for="fname">Initials:</label>
-  <input type="text" id="eName" name="eName"><br><br>
+  <input type="text" id="analystInitialsSync" name="analystInitials"><br><br>
    <label for="fname">Title:</label>
-  <input type="text" id="eName" name="eName"><br><br>
+  <input type="text" id="analystTitle" name="analystTitle"><br><br>
+</fieldset>
 
   <style>
 .container {
@@ -467,8 +473,7 @@ h4 {
     </div>
   </div>
 </div>
-<button type="button" id="submit" style="float: right;">Submit</button>
-<button type="button" id="sync" style="float: right;">Sync</button>
+<button type="button" class="btn btn-secondary" id="Sync" style="float: right;">Sync</button>
   </fieldset>
 
 

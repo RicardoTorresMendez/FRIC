@@ -14,16 +14,16 @@ if ($conn -> connect_errno) {
   exit();
 }
 
-$name = $_POST[ "eName" ];
-$description = $_POST[ "eDescription" ];
-$type = $_POST[ "eType" ];
-$version = $_POST[ "eVersion" ];
-$assessmentDate = $_POST[ "eAssessmentDate" ];
-$organizationName = $_POST[ "eOrganizationName" ];
-$sCGT = $_POST[ "eSCGT" ];
-$classification = $_POST[ "eClassification" ];
-$declassificationDate = $_POST[ "eDeclassificationDate" ];
-$customerName = $_POST[ "eCustomerName" ];
+$name = $_POST[ "eventName" ];
+$description = $_POST[ "eventDescription" ];
+$type = $_POST[ "eventType" ];
+$version = $_POST[ "eventVersion" ];
+$assessmentDate = $_POST[ "eventAssessmentDate" ];
+$organizationName = $_POST[ "eventOrganizationName" ];
+$sCGT = $_POST[ "eventSCGT" ];
+$classification = $_POST[ "eventClassification" ];
+$declassificationDate = $_POST[ "eventDeclassificationDate" ];
+$customerName = $_POST[ "eventCustomerName" ];
 $analysts = $_POST[ "eAnalysts" ];
 
 

@@ -1,16 +1,16 @@
-document.getElementById("sync").addEventListener("click", function( e ) {
+document.getElementById("Sync").addEventListener("click", function( e ) {
   e.preventDefault();
   
-  var eName = document.getElementById("eName").value;
-  var eDescription = document.getElementById("eDescription").value;
-  var eType = document.getElementById("eType").value;
-  var eVersion = document.getElementById("eVersion").value;
-  var eAssesmentDate = document.getElementById("eAssesmentDate").value;
-  var eOrganizationName = document.getElementById("eOrganizationName").value;
-  var eSCTG = document.getElementById("eSCTG").value;
-  var eClassification = document.getElementById("eClassification").value;
+  var eName = document.getElementById("eventName").value;
+  var eDescription = document.getElementById("eventDescription").value;
+  var eType = document.getElementById("eventType").value;
+  var eVersion = document.getElementById("eventVersion").value;
+  var eAssesmentDate = document.getElementById("eventAssesmentDate").value;
+  var eOrganizationName = document.getElementById("eventOrganizationName").value;
+  var eSCTG = document.getElementById("eventSCTG").value;
+  var eClassification = document.getElementById("eventClassification").value;
   var eDeclassificationDate = document.getElementById("eDeclassificationDate").value;
-  var eCustomerName = document.getElementById("eCustomerName").value;
+  var eCustomerName = document.getElementById("eventCustomerName").value;
   //---------------------------------------------------------------------------------
   var box1check1 = document.getElementById("customCheck1").checked;
   var box1check2 = document.getElementById("customCheck2").checked;
@@ -30,17 +30,17 @@ document.getElementById("sync").addEventListener("click", function( e ) {
   //require all text fields to be non-empty, otherwise reprompt.
 
   const formData = new FormData();
-  formData.append("eName", eName);
-  formData.append("eDescription", eDescription);
-  formData.append("eType", eType);
-  formData.append("eVersion", eVersion);
-  formData.append("eAssesmentDate", eAssesmentDate);
-  formData.append("eOrganizationName", eOrganizationName);
-  formData.append("eSCTG", eSCTG);
-  formData.append("eClassification", eClassification);
-  formData.append("eDeclassificationDate", eDeclassificationDate);
-  formData.append("eCustomerName", eCustomerName);
-  formData.append("eAnalysts", eAnalysts);
+  formData.append("eventName", eName);
+  formData.append("eventDescription", eDescription);
+  formData.append("eventType", eType);
+  formData.append("eventVersion", eVersion);
+  formData.append("eventAssesmentDate", eAssesmentDate);
+  formData.append("eventOrganizationName", eOrganizationName);
+  formData.append("eventSCTG", eSCTG);
+  formData.append("eventClassification", eClassification);
+  formData.append("eventDeclassificationDate", eDeclassificationDate);
+  formData.append("eventCustomerName", eCustomerName);
+  formData.append("eventAnalysts", eAnalysts);
   
 
   fetch("eHandler.php", {
