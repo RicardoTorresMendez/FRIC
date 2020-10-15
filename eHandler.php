@@ -1,12 +1,9 @@
 <?php 
-/*
-Programed by Jose Torres Mendez
-*/
 
 //header( "Content-Type: application/json" );
 
 
-$conn = mysqli_connect( "localhost", "ricardo", "hola", "fric" );
+$conn = mysqli_connect( "localhost", "root", "", "fric" );
 
 // Check connection
 if ($conn -> connect_errno) {
@@ -14,20 +11,20 @@ if ($conn -> connect_errno) {
   exit();
 }
 
-$name = $_POST[ "eventName" ];
-$description = $_POST[ "eventDescription" ];
-$type = $_POST[ "eventType" ];
-$version = $_POST[ "eventVersion" ];
-$assessmentDate = $_POST[ "eventAssessmentDate" ];
-$organizationName = $_POST[ "eventOrganizationName" ];
-$sCGT = $_POST[ "eventSCGT" ];
-$classification = $_POST[ "eventClassification" ];
-$declassificationDate = $_POST[ "eventDeclassificationDate" ];
-$customerName = $_POST[ "eventCustomerName" ];
+$name = $_POST[ "eName" ];
+$description = $_POST[ "eDescription" ];
+$type = $_POST[ "eType" ];
+$version = $_POST[ "eVersion" ];
+$assessmentDate = $_POST[ "eAssessmentDate" ];
+$organizationName = $_POST[ "eOrganizationName" ];
+$sCTG = $_POST[ "eSCTG" ];
+$classification = $_POST[ "eClassification" ];
+$declassificationDate = $_POST[ "eDeclassificationDate" ];
+$customerName = $_POST[ "eCustomerName" ];
 $analysts = $_POST[ "eAnalysts" ];
 
 
-$upload = "INSERT into event (Name, Description, Type, Version, AssessmentDate, OrganizationName, SCGT, Classification, DeclassificationDate, CustomerName, Analysts) values ('$name','$description','$type','$version',now(),'$organizationName','$sCGT','$classification',now(),'$customerName','$analysts')";  
+$upload = "INSERT into event (Name, Description, Type, Version, AssessmentDate, OrganizationName, SCTG, Classification, DeclassificationDate, CustomerName, Analysts) values ('$name','$description','$type','$version',now(),'$organizationName','$sCTG','$classification',now(),'$customerName','$analysts')";
 
 $result = mysqli_query($conn, $upload);
 
