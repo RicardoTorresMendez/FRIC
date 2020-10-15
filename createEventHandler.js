@@ -1,4 +1,4 @@
-document.getElementById("Sync").addEventListener("click", function( e ) {
+document.getElementById("sync").addEventListener("click", function( e ) {
   e.preventDefault();
   
   var eName = document.getElementById("eventName").value;
