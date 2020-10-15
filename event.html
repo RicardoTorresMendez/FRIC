@@ -81,48 +81,11 @@ h4 {
            <!--  <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th> -->
            <th scope="col"></th>
             <th scope="col">Event Name</th>
-            <th scope="col">No. of Systems</th>
-            <th scope="col">No. of Findings</th>
-            <th scope="col">Progress</th>
+            <th scope="col">Description</th>
+            <th scope="col">Version</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-                  <label class="custom-control-label" for="customCheck1"></label>
-              </div>
-            </td>
-            <td>Wells Fargo</td>
-            <td>1</td>
-            <td>5</td>
-            <td>25%</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck2">
-                  <label class="custom-control-label" for="customCheck2"></label>
-              </div>
-            </td>
-           <td>Chase</td>
-            <td>4</td>
-            <td>10</td>
-            <td>50%</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck3">
-                  <label class="custom-control-label" for="customCheck3"></label>
-              </div>
-            </td>
-            <td>Bank of America</td>
-            <td>7</td>
-            <td>13</td>
-            <td>75%</td>
-          </tr>
+        <tbody id="event_table">
         </tbody>
       </table>
     </div>
@@ -190,7 +153,7 @@ h4 {
 
 <br><br>
 <label for="Declassification">Declassification Date:</label>
- <input type="date" id="eventDeclassoficationDate" name="eventInfo">
+ <input type="date" id="eventDeclassificationDate" name="eventInfo">
 <br><br>
 <label for="CustomerName">Customer Name:</label>
  <input type="text" id="eventCustomerName" name="eventInfo">
@@ -469,7 +432,7 @@ h4 {
     </div>
   </div>
 </div>
-<button type="button" class="btn btn-secondary" id="Sync" style="float: right;">Sync</button>
+<button type="button" class="btn btn-secondary" id="sync" style="float: right;">Sync</button>
   </fieldset>
 
 
@@ -477,6 +440,7 @@ h4 {
   <script src="jquery.js"></script>
   <script src="bootstrap.min.js"></script>
   <script src="createEventHandler.js"></script>
+  <script src="fetchTables.js"></script>
 </body>
 </body>
 </html>

@@ -90,20 +90,7 @@
               <th>Progress</th>
             </tr>
           </thead>
-          <tbody>
-
-            <tr>
-              <td>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-                    <label class="custom-control-label" for="customCheck1"></label>
-                </div>
-              </td>
-              <td>ATM</td>
-              <td>5</td>
-              <td>7</td>
-              <td>33%</td>
-            </tr>
+          <tbody id="systemsTable">
           </tbody>
         </table>
       </div>
@@ -117,19 +104,19 @@
     <h3> System Information </h3>
 
     <label for="fname">System Name:</label>
-    <input type="text" id="eName" name="eName"><br><br>
+    <input type="text" id="sName" name="eName"><br><br>
     <label for="fname">System Description:</label>
-    <input type="text" id="eName" name="eName"><br><br>
+    <input type="text" id="sDescription" name="eName"><br><br>
     <label for="fname">System Location:</label>
-    <input type="text" id="eName" name="eName"><br><br>
+    <input type="text" id="sLocation" name="eName"><br><br>
     <label for="fname">System Router:</label>
-    <input type="text" id="eName" name="eName"><br><br>
+    <input type="text" id="sRouter" name="eName"><br><br>
     <label for="fname">System Switch:</label>
-    <input type="text" id="eName" name="eName"><br><br>
+    <input type="text" id="sSwitch" name="eName"><br><br>
     <label for="fname">System Room:</label>
-    <input type="text" id="eName" name="eName"><br><br>
+    <input type="text" id="sRoom" name="eName"><br><br>
     <label for="fname">Test Plan:</label>
-    <input type="text" id="eName" name="eName"><br><br>
+    <input type="text" id="sTestPlan" name="eName"><br><br>
 
     <h3>System Categorization</h3>
 
@@ -185,11 +172,13 @@ for (var i=0; i < elements.length; i++) {
 
   <div class="btn-group" role="group" aria-label="Basic example" style="float: right;">
     <button type="button" class="btn btn-secondary">Archive</button>
-    <button type="button" class="btn btn-secondary">Save</button>
+    <button type="button" class="btn btn-secondary" id="save">Save</button>
     <button type="button" class="btn btn-secondary" onclick="clearAll()">Cancel</button>
   </div>
 
   <script src="jquery.js"></script>
   <script src="bootstrap.min.js"></script>
+  <script src="fetchSystems.js"></script>
+  <script src="createSystemHandler.js"></script>
 </body>
 </html>
