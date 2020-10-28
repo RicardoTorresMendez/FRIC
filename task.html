@@ -33,7 +33,7 @@
 
 
 
-<body style="background-color:rgb(232, 183, 60);">
+<body style="background-color:rgb(235, 192, 52);">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand dropdown-toggle" href="#navbarDropdown" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">FRIC menu</a>
     <div class="dropdown-menu" id="navbarDropdown" aria-labelledby="navbarDropdown">
@@ -87,7 +87,7 @@ h4 {
 
 
 
-<script type="text/javascript" src="task.js"></script>
+<script type="text/javascript" src="task.js"></script> <!-- This just opens and closes the form-->
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
@@ -126,16 +126,20 @@ input[type=submit]:hover {
 
 
 <div class="container" id="addTask" style="display: none;">
-  <form action="">
+  <form action=""> <!-- I THINK THIS LINE NEEDS EITHER A onsubmit="idk" OR id="idk" BUT IM TOO STUPID-->
     <h3><u>Add Task</u></h3>
     <label for="addTaskTitle">Title</label>
-    <input type="text" id="addTaskTitle" placeholder="Title..">
+    <input type="text" id="taskTitle" placeholder="Title..">
 
     <label for="lname">Description</label>
-     <textarea id="addTaskDescription" placeholder="Description.." style="height:200px"></textarea>
+     <textarea input id="taskDescription" placeholder="Description.." style="height:200px"></textarea>
+
+     <label for="addTaskPriority">Priority</label>
+    <input type="text" id="taskPriority" placeholder="Priority..">
+
 
     <label for="addTaskProgress">Progress</label>
-    <select id="addTaskProgress">
+    <select id="taskProgress">
       <option value="Not started">Not started</option>
       <option value="assigned">assigned</option>
       <option value="transferred">transferred</option>
@@ -144,19 +148,27 @@ input[type=submit]:hover {
     </select>
 
     <label for="addTaskDueDate">Due Date:</label>
-   <input type="date" id="addTaskDueDate">
+   <input type="date" id="taskDueDate">
 
 
     <br><br><label for="AddTaskAnalysts">Analyst(s)</label>
-          <select id="addTaskAnalyst" multiple>
+          <select id="taskAnalysts" multiple>
           <option value="a">JK</option>
           <option value="b">MK</option>
           <option value="c">LK</option>
           <option value="d">PK</option>
         </select>
 
+    <br><br><label for="AddTaskSystem">Analyst(s)</label>
+          <select id="taskSystem" multiple>
+          <option value="a">test</option>
+          <option value="b">please</option>
+          <option value="c">just</option>
+          <option value="d">work</option>
+        </select>
+
          <br><br><label for="AddTaskCollaborators">Collaborator(s)</label>
-          <select id="AddTaskCollaborators" multiple>
+          <select id="taskCollaborators" multiple>
           <option value="a">JK</option>
           <option value="b">MK</option>
           <option value="c">LK</option>
@@ -164,15 +176,23 @@ input[type=submit]:hover {
         </select>
 
    <br><br><label for="AddTaskTasks">Task(s)</label>
-          <select id="AddTaskTasks" multiple>
+          <select id="taskTasks" multiple>
           <option value="a">Dummy Task</option>
           <option value="b">Real Task</option>
           <option value="c">Japan</option>
           <option value="d">Sacer Disc</option>
         </select>
 
-   <br><br><label for="AddTaskTasks">Subtask(s)</label>
-          <select id="AddTaskTasks" multiple>
+   <br><br><label for="AddTaskFindings">Finding(s)</label>
+          <select id="taskFindings" multiple>
+          <option value="a">Dummy Finding</option>
+          <option value="b">Real Finding</option>
+          <option value="c">E TU</option>
+          <option value="d">Ele Sham</option>
+        </select>     
+
+   <br><br><label for="AddSubtasks">Subtask(s)</label>
+          <select id="taskSubtasks" multiple>
           <option value="a">Dummy Task</option>
           <option value="b">Real Task</option>
           <option value="c">Japan</option>
@@ -180,26 +200,24 @@ input[type=submit]:hover {
         </select>
 
        <label for="Attatchment(s)">Attachment(s):</label>
-          <input type="file" id="Attatchment(s)"><br><br>
+          <input type="file" id="taskAttachment"><br><br>
 
-    <button class="btn btn-secondary" type="submit" onclick="addTask()">Submit</button>
-    <button class="btn btn-secondary" type="submit" onclick="addTask()">Cancel</button>
+    <button type="button" class="btn btn-secondary" id="submit" type="submit" onclick="closeForm()">Submit</button>
+    <button class="btn btn-secondary" type="submit" >Cancel</button>
   </form>
 </div>
 
 
 <header>
-    <h2>Task Overview <input type="image" alt="addIcon" src="icons\addIcon.png" width="25" onclick="addFormAppear()"></h2>
-     
-    <!-- <h2><link rel="icon" type="image/png" href="C:\Users\chris\Desktop\FRICTool\FRIC\icons" sizes="128x128"/></h2> -->
-  </header>
-  <div class="container" style="">
+    <h2>Task Overview <input type="image" alt="addIcon" src="icons\addIcon.png" width="25" onclick="addFormAppear()"></h2>    
+</header>
+
+<div class="container">
   <div class="row">
     <div class="col-12">
       <table class="table table-bordered table-dark">
         <thead>
           <tr>
-           <!--  <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th> -->
             <th scope="col"></th>
             <th scope="col">Title</th>
             <th scope="col">System</th>
@@ -253,8 +271,8 @@ input[type=submit]:hover {
 
   <script src="jquery.js"></script>
   <script src="bootstrap.min.js"></script>
-  <script src="fetchTask.js"></script>
-    
+  <script src="createTaskHandler.js"></script>  
+  <script src="fetchTasks.js"></script>
   </body>
 
 </html>

@@ -28,13 +28,6 @@ $upload = "INSERT into event (Name, Description, Type, Version, AssessmentDate, 
 
 $result = mysqli_query($conn, $upload);
 
-//$results = array();
-
-//$query = "SELECT ID, lat, lon, nodes FROM completeRoutes";
-
-//$result_set = mysqli_query( $conn, $query );
-
-
 $conn->close();
 
 ?>
