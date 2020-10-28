@@ -28,47 +28,145 @@
   <!-- Custom styles for this template -->
 </head>
 
-<body style="background-color:rgb(51, 116, 236);">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+<body style="background-color:rgb(235, 192, 52);">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand dropdown-toggle" href="#navbarDropdown" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">FRIC menu</a>
+    <div class="dropdown-menu" id="navbarDropdown" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="event.html">Event</a>
+          <a class="dropdown-item" href="Systems.html">Systems</a>
+          <a class="dropdown-item" href="task.html">Tasks</a>
+          <a class="dropdown-item" href="Subtasks.html">Subtasks</a>
+          <a class="dropdown-item" href="finding.html">Findings</a>
+          <a class="dropdown-item" href="Archive.html">Archive</a>
+          <a class="dropdown-item" href="Configuration.html">Configuration</a>
+          <a class="dropdown-item" href="Setup.html">Setup</a>
+          <a class="dropdown-item" href="Help.html">Help</a>
+        </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="event.html">Event</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Systems.html">Systems</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="task.html">Tasks</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Sub-Tasks <span class="sr-only">(current)</span> </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="finding.html">Findings </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Archive.html">Archive </a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="icons/eventTree.jpg">Event tree menu<span class="sr-only">(current)</span> </a></li>
+        <li class="nav-item"><a class="nav-link" href="ConfigurationContentView.html">Content view<span class="sr-only">(current)</span> </a></li>
       </ul>
+      <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-secondary" type="submit">Search</button>
+    </form>
     </div>
   </nav>
+
   <button type="button" onclick="alert('Not yet implemented')">Archive</button>
   <button type="button" onclick="alert('Not yet implemented')">Promote</button>
   <button type="button" onclick="alert('Not yet implemented')">Save</button>
   <button type="button" onclick="alert('Not yet implemented')">Cancel</button>
 
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+
+
+
+<script type="text/javascript" src="subtask.js"></script>
+
+<div class="container" id="addSubtask" style="display: none;">
+  <form action="/action_page.php">
+    <h3><u>Add Subtask</u></h3>
+    <label for="addSubtaskTitle">Title</label>
+    <input type="text" id="addSubtaskTitle" placeholder="Title..">
+
+    <label for="lname">Description</label>
+     <textarea id="addSubtaskDescription" placeholder="Description.." style="height:200px"></textarea>
+
+    <label for="addSubtaskProgress">Progress</label>
+    <select id="addSubtaskProgress">
+      <option value="Not started">Not started</option>
+      <option value="assigned">assigned</option>
+      <option value="transferred">transferred</option>
+      <option value="complete">complete</option>
+      <option value="applicable">not applicable</option>
+    </select>
+
+    <label for="addSubtaskDueDate">Due Date:</label>
+   <input type="date" id="addSubtaskDueDate">
+
+
+    <br><br><label for="AddSubtaskAnalysts">Analyst(s)</label>
+          <select id="addSubtaskAnalyst" multiple>
+          <option value="a">JK</option>
+          <option value="b">MK</option>
+          <option value="c">LK</option>
+          <option value="d">PK</option>
+        </select>
+
+         <br><br><label for="AddSubtaskCollaborators">Collaborator(s)</label>
+          <select id="AddSubtaskCollaborators" multiple>
+          <option value="a">JK</option>
+          <option value="b">MK</option>
+          <option value="c">LK</option>
+          <option value="d">PK</option>
+        </select>
+
+   <br><br><label for="AddSubtaskTasks">Task(s)</label>
+          <select id="AddSubtaskTasks" multiple>
+          <option value="a">Dummy Task</option>
+          <option value="b">Real Task</option>
+          <option value="c">Japan</option>
+          <option value="d">Sacer Disc</option>
+        </select>
+
+   <br><br><label for="AddSubtaskTasks">Subtask(s)</label>
+          <select id="AddSubtaskTasks" multiple>
+          <option value="a">Dummy Task</option>
+          <option value="b">Real Task</option>
+          <option value="c">Japan</option>
+          <option value="d">Sacer Disc</option>
+        </select>
+
+       <label for="Attatchment(s)">Attachment(s):</label>
+          <input type="file" id="Attatchment(s)"><br><br>
+
+    <button class="btn btn-secondary" type="submit" onclick="addSubtask()">Submit</button>
+    <button class="btn btn-secondary" type="submit" onclick="addSubtask()">Cancel</button>
+  </form>
+</div>
 
   <header>
-    <h2>Subtask overview</h2>
+    <h2>Subtask Overview <input type="image" alt="addIcon" src="icons\addIcon.png" width="25" onclick="addFormAppear()"></h2>
+     
+    <!-- <h2><link rel="icon" type="image/png" href="C:\Users\chris\Desktop\FRICTool\FRIC\icons" sizes="128x128"/></h2> -->
   </header>
   <table class="table table-hover table-dark table-sm">
     <tr>
