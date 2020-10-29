@@ -75,7 +75,7 @@ h4 {
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark table-hover">
         <thead>
           <tr>
            <!--  <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th> -->
@@ -194,38 +194,9 @@ h4 {
             <th scope="col">Lead Analyst Intials</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="LeadAnalysts">
 
-          <tr>
-            <td>
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="leadAnalstyCheck1" checked>
-                  <label class="custom-control-label" for="leadAnalstyCheck1"></label>
-              </div>
-            </td>
-            <td>Michael Jones</td>
-            <td>MJ</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="leadAnalstyCheck2">
-                  <label class="custom-control-label" for="leadAnalstyCheck2"></label>
-              </div>
-            </td>
-            <td>Jacklyn Jones</td>
-            <td>JJ</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="leadAnalstyCheck3">
-                  <label class="custom-control-label" for="leadAnalstyCheck3"></label>
-              </div>
-            </td>
-            <td>Indiana Jones</td>
-            <td>IJ</td>
-          </tr>
+          
         </tbody>
       </table>
     </div>
@@ -265,38 +236,9 @@ h4 {
             <th scope="col">Analyst Intials</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="Analysts">
 
-          <tr>
-            <td>
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="analystCheck1" checked>
-                  <label class="custom-control-label" for="analystCheck1"></label>
-              </div>
-            </td>
-            <td>Katie Jones</td>
-            <td>KJ</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="analystCheck2">
-                  <label class="custom-control-label" for="analystCheck2"></label>
-              </div>
-            </td>
-            <td>Linnus Jones</td>
-            <td>LJ</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="analystCheck3">
-                  <label class="custom-control-label" for="analystCheck3"></label>
-              </div>
-            </td>
-            <td>Parker Jones</td>
-            <td>PJ</td>
-          </tr>
+          
         </tbody>
       </table>
     </div>
@@ -350,6 +292,8 @@ for (var i=0; i < elements.length; i++) {
   <input type="text" id="analystInitials" name="analystInfo"><br><br>
    <label for="fname">Title:</label>
   <input type="text" id="analystTitle" name="analystInfo"><br><br>
+  <label for="fname">Role:</label>
+  <input type="text" id="analystRole" name="analystInfo"><br><br>
 
 <div class="btn-group" role="group" aria-label="Basic example" style="float: right;">
 <button type="button" class="btn btn-secondary" id="Add">Add</button>
@@ -405,28 +349,7 @@ h4 {
             <th>IP Addresses</th>
           </tr>
         </thead>
-        <tbody>
-
-          <tr>
-            <td>
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck7" checked>
-                  <label class="custom-control-label" for="customCheck7"></label>
-              </div>
-            </td>
-            <td>KJ</td>
-            <td><input type="text" id="eName" name="eName"></td> 
-          </tr>
-          <tr>
-            <td>
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck8">
-                  <label class="custom-control-label" for="customCheck8"></label>
-              </div>
-            </td>
-            <td>LJ</td>
-         <td><input type="text" id="eName" name="eName"></td> 
-          </tr>
+        <tbody id="allAnalysts">
         </tbody>
       </table>
     </div>
@@ -441,6 +364,7 @@ h4 {
   <script src="bootstrap.min.js"></script>
   <script src="createEventHandler.js"></script>
   <script src="fetchTables.js"></script>
+  <script src="createAnalystHandler.js"></script>
 </body>
 </body>
 </html>
