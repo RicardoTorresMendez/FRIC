@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
 <style style="text/css">
   .hoverTable{
     width:100%; 
@@ -80,16 +78,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <script type="text/javascript" src="subtask.js"></script>
 
 <div class="container" id="addSubtask" style="display: none;">
-  <form action="/action_page.php">
+  <form action="">
     <h3><u>Add Subtask</u></h3>
     <label for="addSubtaskTitle">Title</label>
-    <input type="text" id="addSubtaskTitle" placeholder="Title..">
+    <input type="text" id="subtaskTitle" placeholder="Title..">
 
     <label for="lname">Description</label>
-     <textarea id="addSubtaskDescription" placeholder="Description.." style="height:200px"></textarea>
+     <textarea id="subtaskDescription" placeholder="Description.." style="height:200px"></textarea>
 
     <label for="addSubtaskProgress">Progress</label>
-    <select id="addSubtaskProgress">
+    <select id="subtaskProgress">
       <option value="Not started">Not started</option>
       <option value="assigned">assigned</option>
       <option value="transferred">transferred</option>
@@ -98,11 +96,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
     </select>
 
     <label for="addSubtaskDueDate">Due Date:</label>
-   <input type="date" id="addSubtaskDueDate">
+   <input type="date" id="subtaskDueDate">
 
 
     <br><br><label for="AddSubtaskAnalysts">Analyst(s)</label>
-          <select id="addSubtaskAnalyst" multiple>
+          <select id="subtaskAnalysts" multiple>
           <option value="a">JK</option>
           <option value="b">MK</option>
           <option value="c">LK</option>
@@ -110,7 +108,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
         </select>
 
          <br><br><label for="AddSubtaskCollaborators">Collaborator(s)</label>
-          <select id="AddSubtaskCollaborators" multiple>
+          <select id="subtaskCollaborators" multiple>
           <option value="a">JK</option>
           <option value="b">MK</option>
           <option value="c">LK</option>
@@ -118,15 +116,15 @@ body {font-family: Arial, Helvetica, sans-serif;}
         </select>
 
    <br><br><label for="AddSubtaskTasks">Task(s)</label>
-          <select id="AddSubtaskTasks" multiple>
+          <select id="subtaskTasks" multiple>
           <option value="a">Dummy Task</option>
           <option value="b">Real Task</option>
           <option value="c">Japan</option>
           <option value="d">Sacer Disc</option>
         </select>
 
-   <br><br><label for="AddSubtaskTasks">Subtask(s)</label>
-          <select id="AddSubtaskTasks" multiple>
+   <br><br><label for="AddSubtaskSubtasks">Subtask(s)</label>
+          <select id="subtaskSubtasks" multiple>
           <option value="a">Dummy Task</option>
           <option value="b">Real Task</option>
           <option value="c">Japan</option>
@@ -134,98 +132,47 @@ body {font-family: Arial, Helvetica, sans-serif;}
         </select>
 
        <label for="Attatchment(s)">Attachment(s):</label>
-          <input type="file" id="Attatchment(s)"><br><br>
+          <input type="file" id="attachment"><br><br>
 
-    <button class="btn btn-secondary" type="submit" onclick="addSubtask()">Submit</button>
+    <button class="btn btn-secondary" id="submit" type="submit" onclick="addSubtask()">Submit</button>
     <button class="btn btn-secondary" type="submit" onclick="addSubtask()">Cancel</button>
   </form>
 </div>
 
-  <header>
-    <h2>Subtask Overview <input type="image" alt="addIcon" src="icons\addIcon.png" width="25" onclick="addFormAppear()"></h2>
-     
-    <!-- <h2><link rel="icon" type="image/png" href="C:\Users\chris\Desktop\FRICTool\FRIC\icons" sizes="128x128"/></h2> -->
-  </header>
-  <table class="table table-hover table-dark table-sm">
-    <tr>
-      <th></th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Progress</th>
-      <th>Due Date</th>
-      <th>Analyst(s)</th>
-      <th>Collaborator(s)</th>
-      <th>Task(s)</th>
-      <th>Subtask(s)</th>
-      <th>Attachments</th>
-    </tr>
+<header>
+    <h2>Subtask Overview <input type="image" alt="addIcon" src="icons\addIcon.png" width="25" onclick="addFormAppear()"></h2>    
+</header>
 
-    <tr>
-      <td style="padding:0 20px 0 20px;">
-        <input type="checkbox" id="cb1" value="cb1" /><label for="cb1"></label>
-      </td>
-      <td style="padding:0 20px 0 20px;">Title</td>
-      <td style="padding:0 20px 0 20px;">Description</td>
-      <td style="padding:0 20px 0 20px;">
-        <label for="subtaskProgress"></label>
-         <select id="subtaskProgress">
-      <option value="Not started">Not started</option>
-      <option value="assigned">assigned</option>
-      <option value="transferred">transferred</option>
-      <option value="complete">complete</option>
-      <option value="applicable">not applicable</option>
-    </select>
-      </td>
-      <td style="padding:0 20px 0 20px;">
-        <input type="date" id="date" name="date">
-      </td>
-      <td style="padding:0 20px 0 20px;">
-      <label for="analyst"></label>
-          <select name="analyst" id="analyst" multiple>
-          <option value="a">Long Name for testing</option>
-          <option value="b">Short Name</option>
-          <option value="c">Shorter</option>
-          <option value="d">Lok'tar Ogar</option>
-        </select>
-      </td>
-      <td style="padding:0 20px 0 20px;">
-        <label for="Collaborator"></label>
-        <select name="Collaborator" id="Collaborator" multiple>
-          <option value="a">Long Name for testing</option>
-          <option value="b">Short Name</option>
-          <option value="c">Shorter</option>
-          <option value="d">Lok'tar Ogar</option>
-        </select>
-      </td>
-      <td style="padding:0 20px 0 20px;">
-        <label for="Related"></label>
-          <select name="Related" id="Related" multiple>
-          <option value="a">Dummy Task</option>
-          <option value="b">Real Task</option>
-          <option value="c">Japan</option>
-          <option value="d">Sacer Disc</option>
-        </select>
-      </td>
-      <td>
-        <label for="RelatedSub"></label>
-          <select name="RelatedSub" id="RelatedSub" multiple>
-          <option value="a">Dummy Subtask</option>
-          <option value="b">Real Subtask</option>
-          <option value="c">Warr Fury</option>
-          <option value="d">Tree Balance</option>
-        </select>
-      </td>
-      <td style="padding:0 20px 0 20px;">
-      <label for="myfile"></label>
-          <input type="file" id="myfile" name="myfile"><br><br>
-      </td>
-    </tr>
-  </table>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Progress</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">Analyst(s)</th>
+            <th scope="col">Collaborator(s)</th>
+            <th scope="col">Task(s)</th>
+            <th scope="col">Subtask(s)</th>
+            <th scope="col">Attachments</th>
+          </tr>
+        </thead>
+        <tbody id="subtask_table">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 <h3><u>Subtask Detailed View</u></h3>
 
  <label for="subtaskTitle">Title:</label>
-    <input type="text" id="subtaskTitle" placeholder="Title.."><br><br>
+    <input type="text"  placeholder="Title.."><br><br>
 
      <textarea id="subtaskDescription" placeholder="Description.." style="height:200px"></textarea><br><br>
 
@@ -279,5 +226,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 <script src="jquery.js"></script>
 <script src="bootstrap.min.js"></script>
+<script src="createSubtaskHandler.js"></script>  
+<script src="fetchSubtasks.js"></script> 
 </body>
-</html>

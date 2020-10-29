@@ -15,7 +15,6 @@ $description = $_POST[ "taskDescription" ];
 $system = $_POST[ "taskSystem" ];
 $analysts = $_POST[ "taskAnalysts" ];
 $priority = $_POST[ "taskPriority" ];
-$description = $_POST[ "taskDescription" ];
 $progress = $_POST[ "taskProgress" ];
 $dueDate = $_POST[ "taskDueDate" ];
 $findings = $_POST[ "taskFindings" ];
@@ -23,7 +22,6 @@ $collaborators = $_POST[ "taskCollaborators" ];
 $relatedTasks = $_POST[ "taskRelatedTasks" ];
 $subtasks = $_POST[ "taskSubtasks" ];
 $attachment = $_POST[ "taskAttachment" ];
-$priority = $_POST[ "taskPriority" ];
 
 
 

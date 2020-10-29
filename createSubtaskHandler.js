@@ -8,7 +8,7 @@ document.getElementById("submit").addEventListener("click", function( e ) {//sub
 
   var sAnalysts = $('#subtaskAnalysts').val().join();//this gets multiple values, converts to array with val(), then to comma separated list with join()
   var sCollaborators = $('#subtaskCollaborators').val().join();
-  var sTask = $('#subtaskTask').val().join();
+  var sTask = $('#subtaskTasks').val().join();
   var sSubtasks = $('#subtaskSubtasks').val().join();
  
   const formData = new FormData();
