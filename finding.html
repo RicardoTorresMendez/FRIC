@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <style style="text/css">
 	.hoverTable{
 	  width:100%; 
@@ -61,8 +63,252 @@
 	<button type="button" onclick="alert('Not yet implemented')">Archive</button>
 	<button type="button" onclick="alert('Not yet implemented')">Cancel</button>
 
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+
+
+
+<script type="text/javascript" src="finding.js"></script>
+
+<div class="container" id="addFinding" style="display: none;">
+  <form action="">
+		<h3><u>Finding Information</u></h3>
+
+			<label for="findingID">ID:</label>
+			<input type="text" id="findingID"><br><br>
+
+			<label for="findingHostName">Host Name:</label>
+			<input type="text" id="findingHostName"><br><br>
+
+			<label for="findingIPPort">IP Port:</label>
+			<input type="text" id="findingIPPort"><br><br>
+
+			<textarea id="findingDescription" placeholder="Brief Description.." style="height:100px"></textarea><br><br>
+
+			<textarea id="findingLongDescription" placeholder="Long Description.." style="height:200px"></textarea><br><br>
+
+			<label for="findingStatus">Status:</label>
+			<select id="findingStatus">
+				<option value="a">Open</option>
+				<option value="b">Closed</option>
+			</select><br><br>
+
+			<label for="findingType">Type:</label>
+			<select id="findingType">
+				<option value="a">Credentials Complexity</option>
+				<option value="b">Manufacturer Default Creds</option>
+				<option value="b">Lack of Authentication</option>
+				<option value="b">Plain Text Protocols</option>
+				<option value="b">Plain Text Web Login</option>
+				<option value="b">Encryption</option>
+				<option value="b">Authentication Bypass</option>
+				<option value="b">Port Security</option>
+				<option value="b">Access Control</option>
+				<option value="b">Least Privilege</option>
+				<option value="b">Privilege Escalation</option>
+				<option value="b">Missing Patches</option>
+				<option value="b">Physical Security</option>
+				<option value="b">Information Disclosure</option>
+			</select><br><br>
+
+			<label for="findingClassification">Classification</label>
+			<select id="findingClassification">
+				<option value="a">Vulnerability</option>
+				<option value="b">Information</option>
+			</select><br><br>
+
+			<label for="findingFile">Evidence</label>
+			<input type="file" id="findingFile"><br><br>
+
+			<hr class="solid">
+
+			<label for="findingSystem">System:</label>
+			<select id="findingSystem">
+				<option value="a">Real System</option>
+				<option value="b">Fake System</option>
+			</select><br><br>
+
+			<label for="OR">OR</label><br><br>
+
+			<label for="findingTask">Task</label>
+			<select id="findingTask">
+				<option value="a">Real Task</option>
+				<option value="b">Fake Task</option>
+			</select><br><br>
+
+			<label for="OR">OR</label><br><br>
+
+			<label for="findingSubtask">Subtask</label>
+			<select id="findingSubtask">
+				<option value="a">Real Subtask</option>
+				<option value="b">Fake Subtask</option>
+			</select>
+
+			<hr class="solid">
+
+			<label for="findingRelatedFindings">Related Finding(s)</label>
+			<select id="findingRelatedFindings" multiple>
+				<option value="a">Real Finding</option>
+				<option value="b">Fake Finding</option>
+				<option value="c">Non-binary Finding</option>
+				<option value="d">Non-newtonian Finding</option>
+			</select><br><br>
+
+		<h3><u>Finding Impact</u></h3>
+			
+				<label for="Confidentiality">Confidentiality:</label>
+				<select name="Confidentiality" id="Confidentiality">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="h">H</option>
+					<option value="i">Information</option>
+				</select>
+			
+				<label for="Integrity">Integrity:</label>
+				<select name="Integrity" id="Integrity">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="h">H</option>
+					<option value="i">Information</option>
+				</select>
+		
+				<label for="Availability">Availability:</label>
+				<select name="Availability" id="Availability">
+					<option value="l">L</option>
+					<option value="m">M</option>
+					<option value="h">H</option>
+					<option value="i">Information</option>
+				</select>
+			
+
+		<h3><u>Analyst Information</u></h3>
+
+				<label for="Analyst">Analyst:</label>
+				<br>
+				<select name="Analyst" id="Analyst" multiple>
+					<option value="l">RP</option>
+					<option value="m">FP</option>
+					<option value="h">CT</option>
+					<option value="i">FL</option>
+				</select>
+				<br><br>
+			
+				<label for="Collaborator">Collaborator:</label>
+				<br>
+				<select name="Collaborator" id="Collaborator" multiple>
+					<option value="l">RP</option>
+					<option value="m">FP</option>
+					<option value="h">CT</option>
+					<option value="i">FL</option>
+				</select>
+				<br><br>
+			
+				<label for="Posture">Posture:</label>
+				<br>
+				<select name="Posture" id="Posture">
+					<option value="l">Insider</option>
+					<option value="m">Insider-nearsider</option>
+					<option value="h">Outsider</option>
+					<option value="i">Nearsider</option>
+					<option value="i">Nearsider-outsider</option>
+				</select>
+				<br><br>
+		
+
+			<h3><u>Mitigation</u></h3>
+
+		<textarea id="mitigationBriefDescription" placeholder="Brief Description.." style="height:100px"></textarea>
+		<br><br>
+		<textarea id="mitigationLongDescription" placeholder="Long Description.." style="height:200px"></textarea>
+
+<br><br>
+			<h3><u>Threat Relevance</u></h3>
+					<label for="Posture"></label>
+					<select name="Posture" id="Posture">
+						<option value="l">Confirmed</option>
+						<option value="m">Expected</option>
+						<option value="h">Anticipated</option>
+						<option value="i">Predicted</option>
+						<option value="i">Possible</option>
+					</select>
+
+<br><br>
+			<h3><u>Countermeasure</u></h3>
+				<h4> Effectiveness Rating: </h4>
+					<label for="Posture"></label>
+					<select name="Posture" id="Posture">
+						<option value="l">Very High (10)</option>
+						<option value="m">High (7-9)</option>
+						<option value="h">Moderate (4-6)</option>
+						<option value="i">Low (1-3)</option>
+						<option value="i">Very Low (0)</option>
+					</select>
+
+<br><br>
+			<h3><u>Impact</u></h3>
+
+					<textarea id="impactDescription" placeholder="Impact Description.." style="height:100px"></textarea>
+					<br><br>
+					<label for="Impact">Impact Level:</label>
+					<select name="Impact" id="Impact">
+						<option value="l">VH</option>
+						<option value="m">H</option>
+						<option value="h">M</option>
+						<option value="i">L</option>
+						<option value="i">VL</option>
+					</select>
+					<br><br>
+
+			<h3><u>Severity</u></h3>
+		<label for="Severity">Severity Category Score:</label>
+  		<input type="text" id="Severity"><br><br>
+
+  		<label for="VulnerabilitySeverity">Vulnerability Severity:</label>
+  		<input type="text" id="VulnerabilitySeverity"><br><br>
+
+  		<label for="QuantitativeVulnerabilitySeverity">Quantitative Vulnerability Severity:</label>
+  		<input type="text" id="QuantitativeVulnerabilitySeverity"><br><br>
+
+			<h3><u>Risk</u></h3>
+
+		<label for="Risk">Risk:</label>
+  		<input type="text" id="Risk"><br><br>
+
+
+		<label for="Likelihood">Likelihood:</label>
+  		<input type="text" id="Likelihood"><br><br>
+
+			<h3><u>Finding System Level Impact</u></h3>
+
+		<label for="ConfidentialityFindingImpactOnSystem">Confidentiality Finding Impact on System:</label>
+  		<input type="text" id="ConfidentialityFindingImpactOnSystem"><br><br>
+
+  		<label for="IntegrityFindingImpactOnSystem">Integrity Finding Impact on System:</label>
+  		<input type="text" id="IntegrityFindingImpactOnSystem"><br><br>
+
+  		<label for="AvailabilityFindingImpactonSystem">Availability Finding Impact on System:</label>
+  		<input type="text" id="AvailabilityFindingImpactonSystem"><br><br>
+
+		<label for="ImpactScore">Impact Score:</label>
+  		<input type="text" id="ImpactScore"><br><br>
+
+
+    <button class="btn btn-secondary" type="submit" onclick="addSubtask()">Submit</button>
+    <button class="btn btn-secondary" type="submit" onclick="addSubtask()">Cancel</button>
+
+  </form>
+</div>
+
 	<header>
-		<h2><u>Findings Overview</u></h2>
+		<h2><u>Findings Overview <input type="image" alt="addIcon" src="icons\addIcon.png" width="25" onclick="addFormAppear()"></u></h2>
 	</header>
 	<button type="button" onclick="alert('Not yet implemented')">ERB Report</button>
 	<button type="button" onclick="alert('Not yet implemented')">Risk Matrix Report</button>
@@ -109,35 +355,27 @@
 		<h3><u>Finding Information</u></h3>
 	</header>
 
-	<table class="table table-hover table-dark table-sm">
-		<tr>
-			<th>ID</th>
-			<th>Host Name</th>
-			<th>IP Port</th>
-			<th>Description</th>
-			<th>Long Description</th>
-			<th>Status</th>
-			<th>Type</th>
-			<th>Classification</th>
-			<th>Evidence</th>
-			<th>Related to</th>
-			<th>Related Finding(s)</th>
-		</tr>
-		<td><input type="text" id="id" name="id"><br></td>
-		<td style="padding:0 20px 0 20px;">Dummy Host</td>
-		<td style="padding:0 20px 0 20px;">192.0.0.1</td>
-		<td style="padding:0 20px 0 20px;">This is a dummy host</td>
-		<td style="padding:0 20px 0 20px;">This is a longer version of the previous description</td>
-		<td style="padding:0 20px 0 20px;">
-			<label for="Status"></label>
-			<select name="Status" id="Status">
+			<label for="findingID">ID:</label>
+			<input type="text" id="findingID"><br><br>
+
+			<label for="findingHostName">Host Name:</label>
+			<input type="text" id="findingHostName"><br><br>
+
+			<label for="findingIPPort">IP Port:</label>
+			<input type="text" id="findingIPPort"><br><br>
+
+			<textarea id="findingDescription" placeholder="Brief Description.." style="height:100px"></textarea><br><br>
+
+			<textarea id="findingLongDescription" placeholder="Long Description.." style="height:200px"></textarea><br><br>
+
+			<label for="findingStatus">Status:</label>
+			<select id="findingStatus">
 				<option value="a">Open</option>
 				<option value="b">Closed</option>
-			</select>
-		</td>
-		<td style="padding:0 20px 0 20px;">
-			<label for="Type"></label>
-			<select name="Type" id="Type">
+			</select><br><br>
+
+			<label for="findingType">Type:</label>
+			<select id="findingType">
 				<option value="a">Credentials Complexity</option>
 				<option value="b">Manufacturer Default Creds</option>
 				<option value="b">Lack of Authentication</option>
@@ -148,51 +386,54 @@
 				<option value="b">Port Security</option>
 				<option value="b">Access Control</option>
 				<option value="b">Least Privilege</option>
-				<option value="b">Privilige Escalation</option>
+				<option value="b">Privilege Escalation</option>
 				<option value="b">Missing Patches</option>
 				<option value="b">Physical Security</option>
 				<option value="b">Information Disclosure</option>
-			</select>
-		</td>
-		<td style="padding:0 20px 0 20px;">
-			<label for="Classification"></label>
-			<select name="Classification" id="Classification">
+			</select><br><br>
+
+			<label for="findingClassification">Classification</label>
+			<select id="findingClassification">
 				<option value="a">Vulnerability</option>
 				<option value="b">Information</option>
-			</select>
-		</td>
-		<td>
-			<label for="myfile"></label>
-			<input type="file" id="myfile" name="myfile"><br><br>
-		</td>
-		<td style="padding:0 20px 0 20px;">
-			<label for="System"></label>
-			<select name="System" id="System">
+			</select><br><br>
+
+			<label for="findingFile">Evidence</label>
+			<input type="file" id="findingFile"><br><br>
+
+			<hr class="solid">
+
+			<label for="findingSystem">System:</label>
+			<select id="findingSystem">
 				<option value="a">Real System</option>
 				<option value="b">Fake System</option>
-			</select>
-			OR
-			<label for="Task"></label>
-			<select name="Task" id="Task">
+			</select><br><br>
+
+			<label for="OR">OR</label><br><br>
+
+			<label for="findingTask">Task</label>
+			<select id="findingTask">
 				<option value="a">Real Task</option>
 				<option value="b">Fake Task</option>
-			</select>
-			OR
-			
-			<select name="Subtask" id="Subtask">
+			</select><br><br>
+
+			<label for="OR">OR</label><br><br>
+
+			<label for="findingSubtask">Subtask</label>
+			<select id="findingSubtask">
 				<option value="a">Real Subtask</option>
 				<option value="b">Fake Subtask</option>
 			</select>
-		</td>
-		<td>
-			<select name="RelatedFindings" id="RelatedFindings" multiple>
+
+			<hr class="solid">
+
+			<label for="findingRelatedFindings">Related Finding(s)</label>
+			<select id="findingRelatedFindings" multiple>
 				<option value="a">Real Finding</option>
 				<option value="b">Fake Finding</option>
 				<option value="c">Non-binary Finding</option>
 				<option value="d">Non-newtonian Finding</option>
-			</select>
-		</td>
-	</table>
+			</select><br><br>
 
 	<header>
 		<h3><u>Finding Impact</u><h3>
@@ -350,10 +591,9 @@
 		<label for="ImpactScore">Impact Score:</label>
   		<input type="text" id="ImpactScore"><br><br>
 
+  		  </body>
 
 	<script src="jquery.js"></script>
     <script src="bootstrap.min.js"></script>
-
-  </body>
 
 </html>
