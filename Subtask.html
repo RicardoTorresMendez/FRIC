@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <style style="text/css">
   .hoverTable{
     width:100%; 
@@ -35,7 +37,7 @@
           <a class="dropdown-item" href="event.html">Event</a>
           <a class="dropdown-item" href="Systems.html">Systems</a>
           <a class="dropdown-item" href="task.html">Tasks</a>
-          <a class="dropdown-item" href="Subtasks.html">Subtasks</a>
+          <a class="dropdown-item" href="Subtask.html">Subtasks</a>
           <a class="dropdown-item" href="finding.html">Findings</a>
           <a class="dropdown-item" href="Archive.html">Archive</a>
           <a class="dropdown-item" href="Configuration.html">Configuration</a>
@@ -65,30 +67,6 @@
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
 
 .container {
   border-radius: 5px;
@@ -186,76 +164,17 @@ input[type=submit]:hover {
       <td style="padding:0 20px 0 20px;">
         <input type="checkbox" id="cb1" value="cb1" /><label for="cb1"></label>
       </td>
-      <td style="padding:0 20px 0 20px;">Lorem</td>
-      <td style="padding:0 20px 0 20px;">Ipsum</td>
+      <td style="padding:0 20px 0 20px;">Title</td>
+      <td style="padding:0 20px 0 20px;">Description</td>
       <td style="padding:0 20px 0 20px;">
-        <label for="Progress"></label>
-          <select name="Progress" id="Progress">
-          <option value="a">0%</option>
-          <option value="a">25%</option>
-          <option value="b">50%</option>
-          <option value="c">75%</option>
-          <option value="c">Completed</option>
-        </select>
-      </td>
-      <td style="padding:0 20px 0 20px;">
-        <input type="date" id="date" name="date">
-      </td>
-      <td style="padding:0 20px 0 20px;">
-      <label for="analyst"></label>
-          <select name="analyst" id="analyst" multiple>
-          <option value="a">Long Name for testing</option>
-          <option value="b">Short Name</option>
-          <option value="c">Shorter</option>
-          <option value="d">Lok'tar Ogar</option>
-        </select>
-      </td>
-      <td style="padding:0 20px 0 20px;">
-        <label for="Collaborator"></label>
-        <select name="Collaborator" id="Collaborator" multiple>
-          <option value="a">Long Name for testing</option>
-          <option value="b">Short Name</option>
-          <option value="c">Shorter</option>
-          <option value="d">Lok'tar Ogar</option>
-        </select>
-      </td>
-      <td style="padding:0 20px 0 20px;">
-        <label for="Related"></label>
-          <select name="Related" id="Related" multiple>
-          <option value="a">Dummy Task</option>
-          <option value="b">Real Task</option>
-          <option value="c">Japan</option>
-          <option value="d">Sacer Disc</option>
-        </select>
-      </td>
-      <td>
-        <label for="RelatedSub"></label>
-          <select name="RelatedSub" id="RelatedSub" multiple>
-          <option value="a">Dummy Subtask</option>
-          <option value="b">Real Subtask</option>
-          <option value="c">Warr Fury</option>
-          <option value="d">Tree Balance</option>
-      </td>
-      <td style="padding:0 20px 0 20px;">
-      <label for="myfile"></label>
-          <input type="file" id="myfile" name="myfile"><br><br>
-      </td>
-    </tr>
-    <tr>
-      <td style="padding:0 20px 0 20px;">
-        <input type="checkbox" id="cb1" value="cb1" /><label for="cb1"></label>
-      </td>
-      <td style="padding:0 20px 0 20px;">Real Subtask</td>
-      <td style="padding:0 20px 0 20px;">This subtask is definitely real</td>
-      <td style="padding:0 20px 0 20px;">
-        <label for="Progress"></label>
-          <select name="Progress" id="Progress">
-          <option value="a">0%</option>
-          <option value="a">25%</option>
-          <option value="b">50%</option>
-          <option value="c">75%</option>
-          <option value="c">Completed</option>
-        </select>
+        <label for="subtaskProgress"></label>
+         <select id="subtaskProgress">
+      <option value="Not started">Not started</option>
+      <option value="assigned">assigned</option>
+      <option value="transferred">transferred</option>
+      <option value="complete">complete</option>
+      <option value="applicable">not applicable</option>
+    </select>
       </td>
       <td style="padding:0 20px 0 20px;">
         <input type="date" id="date" name="date">
@@ -294,66 +213,7 @@ input[type=submit]:hover {
           <option value="b">Real Subtask</option>
           <option value="c">Warr Fury</option>
           <option value="d">Tree Balance</option>
-      </td>
-      <td style="padding:0 20px 0 20px;">
-      <label for="myfile"></label>
-          <input type="file" id="myfile" name="myfile"><br><br>
-      </td>
-    </tr>
-
-    <tr>
-      <td style="padding:0 20px 0 20px;">
-        <input type="checkbox" id="cb1" value="cb1" /><label for="cb1"></label>
-      </td>
-      <td style="padding:0 20px 0 20px;">Fake Subtask</td>
-      <td style="padding:0 20px 0 20px;">This subtask is definitely not real</td>
-      <td style="padding:0 20px 0 20px;">
-        <label for="Progress"></label>
-          <select name="Progress" id="Progress">
-          <option value="a">0%</option>
-          <option value="a">25%</option>
-          <option value="b">50%</option>
-          <option value="c">75%</option>
-          <option value="c">Completed</option>
         </select>
-      </td>
-      <td style="padding:0 20px 0 20px;">
-        <input type="date" id="date" name="date">
-      </td>
-      <td style="padding:0 20px 0 20px;">
-      <label for="analyst"></label>
-          <select name="analyst" id="analyst" multiple>
-          <option value="a">Long Name for testing</option>
-          <option value="b">Short Name</option>
-          <option value="c">Shorter</option>
-          <option value="d">Lok'tar Ogar</option>
-        </select>
-      </td>
-      <td style="padding:0 20px 0 20px;">
-        <label for="Collaborator"></label>
-        <select name="Collaborator" id="Collaborator" multiple>
-          <option value="a">Long Name for testing</option>
-          <option value="b">Short Name</option>
-          <option value="c">Shorter</option>
-          <option value="d">Lok'tar Ogar</option>
-        </select>
-      </td>
-      <td style="padding:0 20px 0 20px;">
-        <label for="Related"></label>
-          <select name="Related" id="Related" multiple>
-          <option value="a">Dummy Task</option>
-          <option value="b">Real Task</option>
-          <option value="c">Japan</option>
-          <option value="d">Sacer Disc</option>
-        </select>
-      </td>
-      <td>
-        <label for="RelatedSub"></label>
-          <select name="RelatedSub" id="RelatedSub" multiple>
-          <option value="a">Dummy Subtask</option>
-          <option value="b">Real Subtask</option>
-          <option value="c">Warr Fury</option>
-          <option value="d">Tree Balance</option>
       </td>
       <td style="padding:0 20px 0 20px;">
       <label for="myfile"></label>
@@ -361,6 +221,63 @@ input[type=submit]:hover {
       </td>
     </tr>
   </table>
+
+<h3><u>Subtask Detailed View</u></h3>
+
+ <label for="subtaskTitle">Title:</label>
+    <input type="text" id="subtaskTitle" placeholder="Title.."><br><br>
+
+     <textarea id="subtaskDescription" placeholder="Description.." style="height:200px"></textarea><br><br>
+
+    <label for="subtaskProgress">Progress:</label>
+    <select id="subtaskProgress">
+      <option value="Not started">Not started</option>
+      <option value="assigned">assigned</option>
+      <option value="transferred">transferred</option>
+      <option value="complete">complete</option>
+      <option value="applicable">not applicable</option>
+    </select><br><br>
+
+    <label for="subtaskDueDate">Due Date:</label>
+   <input type="date" id="subtaskDueDate"><br><br>
+
+
+    <br><br><label for="subtaskAnalysts">Analyst(s):</label>
+          <select id="subtaskAnalyst" multiple>
+          <option value="a">JK</option>
+          <option value="b">MK</option>
+          <option value="c">LK</option>
+          <option value="d">PK</option>
+        </select><br><br>
+
+        <label for="subtaskCollaborators">Collaborator(s)</label>
+          <select id="subtaskCollaborators" multiple>
+          <option value="a">JK</option>
+          <option value="b">MK</option>
+          <option value="c">LK</option>
+          <option value="d">PK</option>
+        </select><br><br>
+
+      <label for="subtaskTasks">Task(s):</label>
+          <select id="subtaskTasks" multiple>
+          <option value="a">Dummy Task</option>
+          <option value="b">Real Task</option>
+          <option value="c">Japan</option>
+          <option value="d">Sacer Disc</option>
+        </select><br><br>
+
+   <label for="subtaskTasks">Subtask(s):</label>
+          <select id="subtaskTasks" multiple>
+          <option value="a">Dummy Task</option>
+          <option value="b">Real Task</option>
+          <option value="c">Japan</option>
+          <option value="d">Sacer Disc</option>
+        </select><br><br>
+
+       <label for="subtaskAttatchment(s)">Attachment(s):</label>
+          <input type="file" id="subtaskAttatchment(s)"><br><br>
+
 <script src="jquery.js"></script>
 <script src="bootstrap.min.js"></script>
 </body>
+</html>
