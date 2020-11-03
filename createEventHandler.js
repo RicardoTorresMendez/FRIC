@@ -14,13 +14,13 @@ document.getElementById("sync").addEventListener("click", function( e ){
   //---------------------------------------------------------------------------------
   var eAnalysts = "";
 
-  var elems = document.getElementsByClassName("swt");
+  var elems = document.getElementsByClassName("eventTable");
   var anonymous_function = Array.prototype.filter.call(elems, function( elem ){
-    if( elem.checked ){
-      console.log("checked");
-    }
+      let c = elem.children;
+      if( c[ 0 ].children[ 0 ].checked ){
+        console.log( elem.id );
+      }
   });
-
 
   const formData = new FormData();
   formData.append("eventName", eName);

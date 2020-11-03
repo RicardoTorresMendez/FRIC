@@ -16,17 +16,15 @@ function refreshEvents(){
         for (r of response){
 
             let tr = document.createElement("tr");
-
-            tr.addEventListener("click", function( e ){
-    			console.log("POOPA");
-  			});
+            tr.classList.add("eventTable");
+            tr.id = r["ID"];
 
             let td_checkbox = document.createElement("td");
             let td_Name = document.createElement("td");
             let td_Description = document.createElement("td");
             let td_Version = document.createElement("td");
 
-            td_checkbox.innerHTML = '<input type="checkbox" value="no" class="swt">';
+            td_checkbox.innerHTML = '<input type="checkbox" value="no" >';
             td_Name.innerText = r["Name"];
             td_Description.innerText = r["Description"];
             td_Version.innerText = r["Version"];

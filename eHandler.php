@@ -24,7 +24,7 @@ $customerName = $_POST[ "eventCustomerName" ];
 $analysts = $_POST[ "eAnalysts" ];
 
 
-$upload = "INSERT into event (Name, Description, Type, Version, AssessmentDate, OrganizationName, SCTG, Classification, DeclassificationDate, CustomerName, Analysts) values ('$name','$description','$type','$version',now(),'$organizationName','$sCTG','$classification',now(),'$customerName','$analysts')";
+$upload = "INSERT into event (Name, Description, Type, Version, AssessmentDate, OrganizationName, SCTG, Classification, DeclassificationDate, CustomerName, Analysts) values ('$name','$description','$type','$version','$assessmentDate','$organizationName','$sCTG','$classification','$declassificationDate','$customerName','$analysts')";
 
 $result = mysqli_query($conn, $upload);
 

@@ -14,7 +14,7 @@ if ($conn -> connect_errno) {
 
 $response = [];
 
-$query = "Select Name, Description, Version from event;";
+$query = "Select ID, Name, Description, Version from event;";
 
 $result = mysqli_query($conn, $query);
 
