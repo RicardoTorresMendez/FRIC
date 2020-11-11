@@ -11,16 +11,25 @@ document.getElementById("sync").addEventListener("click", function( e ){
   var eClassification = document.getElementById("eventClassification").value;
   var eDeclassificationDate = document.getElementById("eventDeclassificationDate").value;
   var eCustomerName = document.getElementById("eventCustomerName").value;
-  //---------------------------------------------------------------------------------
   var eAnalysts = "";
 
+  //Data validation is pending
+
+  //---------------------------------------------------------------------------------
+
   var elems = document.getElementsByClassName("eventTable");
+  let ids = new Array();
   var anonymous_function = Array.prototype.filter.call(elems, function( elem ){
       let c = elem.children;
       if( c[ 0 ].children[ 0 ].checked ){
         console.log( elem.id );
+        ids.push( elem.id );
       }
   });
+
+  console.log( ids );
+
+  //-----------------------------------------------------------------------------------
 
   const formData = new FormData();
   formData.append("eventName", eName);

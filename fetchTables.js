@@ -1,6 +1,9 @@
+//name should be EventPageRefresh.js
+
 refreshEvents();
 refreshAnalysts();
 
+//refreshes the event table seen on event.html
 function refreshEvents(){
 
 	var eventTable = document.getElementById("event_table");
@@ -42,6 +45,7 @@ function refreshEvents(){
 
 }
 
+//refreshes the 3 analysts tables seen on event.html
 function refreshAnalysts(){
 
 	var leads = document.getElementById("LeadAnalysts");
@@ -88,10 +92,10 @@ function refreshAnalysts(){
 
             all_analysts.appendChild(tr_c);
 
-            if( r["Role"] == 0 ){
+            if( r["Role"] == 1 ){
             	analysts.appendChild(tr);
             }
-            else if( r["Role"] == 1 ){
+            else if( r["Role"] == 0 ){
             	leads.appendChild(tr);
             }
 
