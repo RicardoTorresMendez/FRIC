@@ -310,9 +310,28 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	<header>
 		<h2><u>Findings Overview <input type="image" alt="addIcon" src="icons\addIcon.png" width="25" onclick="addFormAppear()"></u></h2>
 	</header>
+
+<script type="text/javascript">
+   function generateFinalReport(){
+       $.ajax({
+   url: "FRIC/utils.py",
+   success: function(response) {
+     // here you do whatever you want with the response variable
+   }
+});
+
+  console.log('Python reached');
+
+   }
+</script>
+
+	<!-- <form action="findings.php"> -->
 	<button type="button" onclick="alert('Not yet implemented')">ERB Report</button>
 	<button type="button" onclick="alert('Not yet implemented')">Risk Matrix Report</button>
-	<button type="button" onclick="alert('Not yet implemented')">Final Report</button>
+	<button type="button" onclick="generateFinalReport()" id="FinalReportButton" value="RUN">Final Report</button>
+	<!-- </form> -->
+
+
 
 	<table class="table table-hover table-dark table-sm">
 		<tr>
