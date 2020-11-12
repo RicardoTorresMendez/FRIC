@@ -63,6 +63,14 @@ function checkOptions(val){
     <label for="Initials">Please enter your intials</label>
     <input type="text" id="initials" name="initials" placeholder="Your initials..">
 
+    <label for="fname">First Name:</label>
+    <input type="text" id="fName" name="analystInfo" placeholder="First Name.."><br><br>
+    <label for="fname">Last Name:</label>
+    <input type="text" id="lName" name="analystInfo" placeholder="Last Name.."><br><br>
+
+    <label for="fname">Private IP:</label>
+    <input type="text" id="privateIP" name="analystInfo" placeholder="IP Address.."><br><br>
+    </form>
 
     <label for="setupOptions">Please select an option</label>
     <select id="eventOptions" name="eventOptions" onchange="checkOptions(this.value);">
@@ -75,5 +83,6 @@ function checkOptions(val){
   </form>
 </div>
 <script src="app.js"></script>
+<script src="userAuthentication.js"></script>
 </body>
 </html>
