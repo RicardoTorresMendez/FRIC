@@ -9,8 +9,10 @@ def gen_final_report():
 
     context = dict(zip(note_data['var'], note_data['value']))
     doc.render(context)
-    doc.save('FinalReport3.docx')
+    doc.save('FinalReport4.docx')
 
 if __name__ == "__main__": 
     print("Executed when invoked directly")
+    gen_final_report()
+
 
