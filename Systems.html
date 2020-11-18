@@ -54,27 +54,67 @@
     </form>
     </div>
   </nav>
-  <head><h2 style="text-decoration: underline;">Systems Overview </h2></head>
-    <fieldset>
-  </head>
+
+<script type="text/javascript" src="task.js"></script> <!-- This just opens and closes the form-->
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
 
 
 
-  <style>
-  .container {
-    padding: 2rem 0rem;
-  }
+<div class="container" id="addTask" style="display: none;">
+  <form action=""> 
+    <h3><u>Add Task</u></h3>
+    <label for="addSystemName">Title</label>
+    <input type="text" id="systemName" placeholder="Title.." style="width: 300px">
+    <p></p>
+    
+    <label for="lname">Description</label>
+    <textarea input id="systemDescription" placeholder="Description.." rows="5"cols="75"></textarea>
+    <p></p>
 
-  h4 {
-    margin: 2rem 0rem 1rem;
-  }
+    <label for="lname">Location</label>
+    <input type="text" id="systemLocation" placeholder="Location.." style="width: 300px">
+    <p></p>
 
-  .table-image {
-    td, th {
-      vertical-align: middle;
-    }
-  }
-  </style>
+    <label for="lname">Router</label>
+    <input type="text" id="systemRouter" placeholder="Router.." style="width: 300px">
+    <p></p>
+
+    <label for="lname">Switch</label>
+    <input type="text" id="systemSwitch" placeholder="Switch.." style="width: 300px">
+    <p></p>
+
+    <label for="lname">Room</label>
+    <input type="text" id="systemRoom" placeholder="Router.." style="width: 300px">
+    <p></p>
+    
+<!-- Not sure if this should go here or not
+    <label for="addSystemProgress">Progress</label>
+    <select id="SystemProgress">
+      <option value="Not started">Not started</option>
+      <option value="assigned">assigned</option>
+      <option value="transferred">transferred</option>
+      <option value="complete">complete</option>
+      <option value="applicable">not applicable</option>
+    </select> -->
+
+    <p></p>
+    <button type="button" class="btn btn-secondary" id="submit" type="submit" onclick="closeForm()">Submit</button>
+    <button class="btn btn-secondary" type="submit" >Cancel</button>
+  </form>
+</div>
+
+<header>
+    <h2>Systems Overview <input type="image" alt="addIcon" src="icons\addIcon.png" width="25" onclick="addFormAppear()"></h2>    
+</header>
 
   <div class="container">
     <div class="row">
