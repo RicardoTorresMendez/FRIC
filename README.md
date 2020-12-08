@@ -21,7 +21,7 @@ Go to your broswer and type [phpmyadmin link](http://localhost/phpmyadmin/). You
 Click on **New** Icon on the left panel to create a new Database. Name it "fric"
 ![New Database](https://github.com/RicardoTorresMendez/FRIC/blob/Doc/new_database.JPG)
 Click on import on the top right. Click on **Choose File** button to browse your computer for the Database template. The template can be found in the folder **Database_template** within the cloned repository (**C:\xampp\htdocs\FRIC\Database_template**).
-![Import](C:/xampp/htdocs/FRIC/https://github.com/RicardoTorresMendez/FRIC/blob/Doc/browse_computer.JPG)
+![Import](https://github.com/RicardoTorresMendez/FRIC/blob/Doc/browse_computer.JPG)
 Clicking Go should fill the data structure and will fill some default values for Analysts.
 
 ## Run Webapp
