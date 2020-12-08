@@ -34,7 +34,18 @@ $result = mysqli_query($conn, $systems);
 while($row = mysqli_fetch_assoc($result)){
 	array_push($response, $row);
 }
+
+$query = "Select count(ID) from Task WHERE Progress='complete'";
+$complete = mysqli_query($conn, $query);
+$query = "Select count(*) from Task";
+$all = mysqli_query($conn, $query);
+array_push($response, mysqli_fetch_assoc($complete));
+array_push($response, mysqli_fetch_assoc($all));
+
+
+
 echo json_encode($response);
+
 
 $conn->close();
 

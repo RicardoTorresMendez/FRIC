@@ -11,7 +11,6 @@ document.getElementById("submit").addEventListener("click", function( e ) {//sub
   var sTask = $('#subtaskTasks').val().join();
   var sSubtasks = $('#subtaskSubtasks').val().join();
 
-  console.log( sTask );
  
   const formData = new FormData();
   formData.append("subtaskTitle", sTitle);

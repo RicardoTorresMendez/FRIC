@@ -26,6 +26,7 @@ function refreshSystems(){
                 let td_Name = document.createElement("td");
                 let td_Tasks = document.createElement("td");
                 let td_Subtasks = document.createElement("td");
+                let td_Progress = document.createElement("td");
 
                 td_checkbox.innerText = "";
                 td_Name.innerText = r["Name"];
@@ -38,10 +39,15 @@ function refreshSystems(){
                 else
                     td_Subtasks.innerText = 0;
 
+
+                console.log( r["count(ID)"] );
+                td_Progress.innerText = ( parseInt(r["count(ID)"] ) );
+
                 tr.appendChild(td_checkbox);
                 tr.appendChild(td_Name);
                 tr.appendChild(td_Tasks);
                 tr.appendChild(td_Subtasks);
+                tr.appendChild(td_Progress);
 
                 systemTable.appendChild(tr);
             }

@@ -71,6 +71,8 @@ function refreshFindings(){
 
     var selectAnalyst = document.getElementById("findingAnalyst");
     var selectCollaborator = document.getElementById("findingCollaborator");
+    selectAnalyst.innerHTML = "";
+    selectCollaborator.innerHTML = "";
 
     fetch("fetchAnalysts.php", {
        method: 'POST',
@@ -94,6 +96,7 @@ function refreshFindings(){
 
     formData.append("request2", "systemList");
     var selectSystem = document.getElementById("findingSystem");
+    selectSystem.innerHTML = "";
 
     fetch("connectToDatabase.php", {
        method: 'POST',
@@ -113,6 +116,7 @@ function refreshFindings(){
 
 
     var selectTask = document.getElementById("findingTask");
+    selectTask.innerHTML = "";
 
     fetch("fetchToTask.php", {
         method: 'POST',
@@ -131,6 +135,7 @@ function refreshFindings(){
     });
 
     var selectSubtask = document.getElementById("findingSubtask");
+    selectSubtask.innerHTML = "";
 
     fetch("fetchToSubtask.php", {
         method: 'POST',
@@ -152,6 +157,7 @@ function refreshFindings(){
     formData.append("request3", "relatedFindings");
 
     var selectFindings = document.getElementById("findingRelatedFindings");
+    selectFindings.innerHTML = "";
 
     fetch("connectToDatabase.php", {
         method: 'POST',

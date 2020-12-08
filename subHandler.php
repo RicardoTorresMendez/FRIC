@@ -16,13 +16,19 @@ $progress = $_POST[ "subtaskProgress" ];
 $dueDate = $_POST[ "subtaskDueDate" ];
 $analysts = $_POST[ "subtaskAnalysts" ];
 $collaborators = $_POST[ "subtaskCollaborators" ];
-$task = $_POST[ "subtaskTasks" ];
+$task = $_POST[ "subtaskTasks" ];//task
 $subtasks = $_POST[ "subtaskSubtasks" ];
 $attachment = $_POST[ "subtaskAttachment" ];
 
+$tasks = explode( ',', $task );
+$tasks = $tasks[ 0 ];
+
+$query = "SELECT ID from task WHERE Title = '$tasks'";
+
+
 
 							// Title Description Progress DueDate Analysts Collaborators Task Subtasks Attachment
-$upload = "INSERT into subtask (Title,Description,Progress,DueDate,Analysts,Collaborators,Task,Subtasks,Attachment) values ('$title','$description',			'$progress','$dueDate','$analysts','$collaborators','$task','$subtasks','$attachment')";
+$upload = "INSERT into subtask (Title,Description,Progress,DueDate,Analysts,Collaborators,Task,Subtasks,Attachment) values ('$title','$description', '$progress','$dueDate','$analysts','$collaborators','$task','$subtasks','$attachment')";
 
 $result = mysqli_query($conn, $upload);
 echo "pastQuery";
