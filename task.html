@@ -28,13 +28,36 @@
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="bootstrap.min.css">
   <!-- Custom styles for this template -->
+  <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  <script type="text/javascript" src="js/all.js"></script>
+  <!-- New Stuff Joe -->
+  <style>
+    {
+        box-sizing: border-box;
+    }
+    p.dotted {border-style: dotted;}
+    p.double {border-style: double;}
+    /* Set additional styling options for the columns*/
+    .column {
+    margin: 0 1.5%;
+    float: left;
+    width: 45%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    </style>
+  <!-- /New Stuff Joe -->
 </head>
 
 
 
 
 <body style="background-color:rgb(235, 192, 52);">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand dropdown-toggle" href="#navbarDropdown" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">FRIC menu</a>
     <div class="dropdown-menu" id="navbarDropdown" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="event.html">Event</a>
@@ -132,55 +155,31 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
     <label for="addTaskSystem">System</label>
     <select id="taskSystem">
-          <option value="Not started">Not started</option>
-          <option value="assigned">assigned</option>
-          <option value="transferred">transferred</option>
-          <option value="complete">complete</option>
-          <option value="applicable">not applicable</option>
           </select>
     <p></p>
 
     <label for="AddTaskAnalysts">Analyst(s)</label>
           <select id="taskAnalysts" multiple>
-          <option value="a">JK</option>
-          <option value="b">MK</option>
-          <option value="c">LK</option>
-          <option value="d">PK</option>
           </select>
 
          <br><br><label for="AddTaskCollaborators">Collaborator(s)</label>
           <select id="taskCollaborators" multiple>
-          <option value="a">JK</option>
-          <option value="b">MK</option>
-          <option value="c">LK</option>
-          <option value="d">PK</option>
           </select>
           <br><br>
 
     <label for="AddTaskTasks">Task(s)</label>
           <select id="taskTasks" multiple>
-          <option value="a">Dummy Task</option>
-          <option value="b">Real Task</option>
-          <option value="c">Japan</option>
-          <option value="d">Sacer Disc</option>
           </select>
           <br><br>
 
    <label for="AddTaskFindings">Finding(s)</label>
           <select id="taskFindings" multiple>
-          <option value="a">Dummy Finding</option>
-          <option value="b">Real Finding</option>
-          <option value="c">E TU</option>
-          <option value="d">Ele Sham</option>
           </select>     
           <br><br>
 
    <label for="AddSubtasks">Subtask(s)</label>
           <select id="taskSubtasks" multiple>
-          <option value="a">Dummy Task</option>
-          <option value="b">Real Task</option>
-          <option value="c">Japan</option>
-          <option value="d">Sacer Disc</option>
+
           </select>
           <br><br>
 
@@ -227,6 +226,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <header>
     <h2>Task Detailed View</h2>
   </header>
+  <!-- New Data Joe -->
+  <div class="row">
+        <div class="column" style = "border-style: double;background-color:grey;">
+            <h2></h2>
+            <p>
+              <!-- Column 1 -->
    <label for="taskTitle">Title:</label>
     <input type="text" id="taskTitle" placeholder="Title.."><br><br>
 
@@ -251,7 +256,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
       <option value="complete">complete</option>
       <option value="applicable">not applicable</option>
     </select><br><br>
-
+<!-- /Column 1 -->
+            </p>
+        </div>
+        <div class="column" style="border-style: double;background-color:grey;">
+            <h2></h2>
+            <p>
+              <!-- Column 2 -->
     <label for="taskDueDate">Due Date:</label>
    <input type="date" id="subtaskDueDate"><br><br>
 
@@ -282,13 +293,18 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
        <label for="subtaskAttachment(s)">Attachment(s):</label>
           <input type="file" id="subtaskAttachment(s)"><br><br>
-
+<!-- /Column 2 -->
+            </p>
+        </div>
+    </div>
+  <!-- /New Data Joe -->
     <!---------------------------------->
 
   <script src="jquery.js"></script>
   <script src="bootstrap.min.js"></script>
   <script src="createTaskHandler.js"></script>  
   <script src="fetchTasks.js"></script>
+  <script src="js/script.js"></script>
   </body>
 
 </html>

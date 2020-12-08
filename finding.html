@@ -28,10 +28,33 @@
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="bootstrap.min.css">
 	<!-- Custom styles for this template -->
+	<link rel="stylesheet" type="text/css" href="CSS/main.css">
+  <script type="text/javascript" src="js/all.js"></script>
+  <!-- New Stuff Joe -->
+  <style>
+    {
+        box-sizing: border-box;
+    }
+    p.dotted {border-style: dotted;}
+    p.double {border-style: double;}
+    /* Set additional styling options for the columns*/
+    .column {
+    margin: 0 1.5%;
+    float: left;
+    width: 45%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    </style>
+  <!-- /New Stuff Joe -->
 </head>
 
 <body style="background-color:rgb(235, 192, 52);">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand dropdown-toggle" href="#navbarDropdown" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">FRIC menu</a>
     <div class="dropdown-menu" id="navbarDropdown" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="event.html">Event</a>
@@ -135,35 +158,20 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 			<label for="findingSystem">System:</label>
 			<select id="findingSystem">
-				<option value="Not started">Not started</option>
-				<option value="assigned">assigned</option>
-				<option value="transferred">transferred</option>
-				<option value="complete">complete</option>
-				<option value="applicable">not applicable</option>
 			</select><br><br>
-
-			<label for="OR">OR</label><br><br>
 
 			<label for="findingTask">Task</label>
 			<select id="findingTask">
-				<option value="a">Real Task</option>
-				<option value="b">Fake Task</option>
 			</select><br><br>
 
 			<label for="findingSubtask">Subtask</label>
 			<select id="findingSubtask">
-				<option value="a">Real Subtask</option>
-				<option value="b">Fake Subtask</option>
 			</select>
 
 			<hr class="solid">
 
 			<label for="findingRelatedFindings">Related Finding(s)</label>
 			<select id="findingRelatedFindings" multiple>
-				<option value="a">Real Finding</option>
-				<option value="b">Fake Finding</option>
-				<option value="c">Non-binary Finding</option>
-				<option value="d">Non-newtonian Finding</option>
 			</select><br><br>
 
 		<h3><u>Finding Impact</u></h3>
@@ -198,20 +206,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
 				<label for="findingAnalyst">Analyst:</label>
 				<br>
 				<select id="findingAnalyst" multiple>
-					<option value="l">RP</option>
-					<option value="m">FP</option>
-					<option value="h">CT</option>
-					<option value="i">FL</option>
 				</select>
 				<br><br>
 			
 				<label for="findingCollaborator">Collaborator:</label>
 				<br>
 				<select id="findingCollaborator" multiple>
-					<option value="l">RP</option>
-					<option value="m">FP</option>
-					<option value="h">CT</option>
-					<option value="i">FL</option>
 				</select>
 				<br><br>
 			
@@ -358,7 +358,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	<header>
 		<h2><u>Finding Detailed View</u></h2>
 	</header>
-
+<!-- New Data Joe -->
+  <div class="row">
+        <div class="column" style = "border-style: double;background-color:grey;">
+            <h2></h2>
+            <p>
+              <!-- Column 1 -->
+              <header>
 	<header>
 		<h3><u>Finding Information</u></h3>
 	</header>
@@ -504,7 +510,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
 					<option value="i">Nearsider-outsider</option>
 				</select>
 				<br><br>
-		
+	<!-- /Column 1 -->
+            </p>
+        </div>
+        <div class="column" style="border-style: double;background-color:grey;">
+            <h2></h2>
+            <p>
+              <!-- Column 2 -->	
 
 		<header>
 			<h3><u>Mitigation</u><h3>
@@ -596,12 +608,19 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 		<label for="ImpactScore">Impact Score:</label>
   		<input type="text" id="ImpactScore"><br><br>
-
+<!-- /Column 2 -->
+            </p>
+        </div>
+    </div>
+  <!-- /New Data Joe -->
   		  </body>
 
 	<script src="jquery.js"></script>
     <script src="bootstrap.min.js"></script>
     <script src="createFindingHandler.js"></script>
     <script src="fetchFindings.js"></script>
+    <script src="jquery.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 
 </html>

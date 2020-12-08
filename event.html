@@ -24,10 +24,13 @@
   <title>Fric · v.1</title>
   
   <link rel="stylesheet" href="bootstrap.min.css">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  <script type="text/javascript" src="js/all.js"></script>
 </head>
 
 <body style="background-color:rgb(235, 192, 52);">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand dropdown-toggle" href="#navbarDropdown" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">FRIC menu</a>
     <div class="dropdown-menu" id="navbarDropdown" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="event.html">Event</a>
@@ -53,8 +56,33 @@
       <button class="btn btn-secondary" type="submit">Search</button>
     </form>
     </div>
+    <!--Shortcut Dropdown-->
+
+
+    <short>
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger"><div></div></div>
+            <div class="menu">
+                <div>
+                    <div>
+                        <ul class="short-links">
+            <li><a href="#EO">Event Overview</a></li>
+            <li><a href="#EBI">Event Basic Info</a></li>
+            <li><a href="#ETI">Event Team Info</a></li>
+            <li><a href="#AEO">Add/Edit Overlay</a></li>
+            <li><a href="#SO">Sync Overlay</a></li>
+        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </short>
+    <!-- Shortcut Dropdown End-->
   </nav>
 
+<section class="pglink" id="EO"> <!-- add this to each heading -->
 <head><h2 style="text-decoration: underline;">Event Overview</h2></head>
 <style>
 .container {
@@ -94,6 +122,7 @@ h4 {
 </head>
 <button type="button" class="btn btn-secondary" id="Archive" style="float: right;">Archive</button>
 
+<section class="pglink" id="EBI">
 <head><h2 style="text-decoration: underline;">Event Basic Information</h2></head>
 <!-- <a href="#"><img title="helpicon" alt="help" src="\FRIC\icons\helpicon.png" align="right" width="20px"></a>  -->
 
@@ -159,6 +188,7 @@ h4 {
  <input type="text" id="eventCustomerName" name="eventInfo">
 </fieldset>
 
+<section class="pglink" id="ETI">
 <head><h2 style="text-decoration: underline;">Event Team Information</h2>
 <fieldset>
 <h3>Lead Analysts </h3>
@@ -280,6 +310,7 @@ for (var i=0; i < elements.length; i++) {
 
 <br>
 
+<section class="pglink" id="AEO">
 <head><h2 style="text-decoration: underline;">Add/Edit Overlay</h2>
 
   <fieldset>
@@ -304,6 +335,7 @@ for (var i=0; i < elements.length; i++) {
 
 <br>
 
+<section class="pglink" id="SO">
 <head><h2 style="text-decoration: underline;">Sync Overlay</h2>
 
   <fieldset>
@@ -366,6 +398,7 @@ h4 {
   <script src="fetchTables.js"></script>
   <script src="createAnalystHandler.js"></script>
   <script src="sync.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </body>
 </html>

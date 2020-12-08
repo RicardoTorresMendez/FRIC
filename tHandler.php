@@ -12,7 +12,7 @@ if ($conn -> connect_errno) {
 
 $title = $_POST[ "taskTitle" ];
 $description = $_POST[ "taskDescription" ];
-$system = $_POST[ "taskSystem" ];
+$system = $_POST[ "taskSystem" ];//system
 $analysts = $_POST[ "taskAnalysts" ];
 $priority = $_POST[ "taskPriority" ];
 $progress = $_POST[ "taskProgress" ];
