@@ -14,7 +14,7 @@ if ($conn -> connect_errno) {
 
 $response = [];
 
-$query = "Select Name, Title, findingId from systems natural join systemtasks natural join systemfindings;";
+$query = "Select Name, Title, findingTitle from systems natural join systemtasks natural join systemfindings;";
 
 $result = mysqli_query($conn, $query);
 

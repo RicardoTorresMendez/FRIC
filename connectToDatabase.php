@@ -79,6 +79,8 @@ else if( $_POST[ "request" ] == "uploadFinding" ){
 
 	$upload = "INSERT into finding (Title, Finding_System, Task, Subtask, Analyst, Finding_Status, Classification, Type, Risk, Host_Name, IP_Port, Description, Long_Description, Evidence, Related_Findings, Confidentiality, Integrity, Availability, Archived, Collaborator, Posture, Mitigation_Brief_Description, Mitigation_Long_Description, Relevance, Effectiveness_Rating, Impact_Description, Impact_Level, Severity_Category_Score, Vulnerability_Severity, Quantitative_Vulnerability_Severity, Likelihood, Confidentiality_Finding_Impact_on_System, Integrity_Finding_Impact_on_System, Availability_Finding_Impact_on_System, Finding_Impact_Score) values ( '$v1', '$v10', '$v11', '$v12', '$v17', '$v6', '$v8', '$v7', '$v29', '$v2', '$v3', '$v4', '$v5', '$v9', '$v13', '$v14', '$v15', '$v16', '0', '$v18', '$v19', '$v20', '$v21', '$v22', '$v23', '$v24', '$v25', '$v26', '$v27', '$v28', '$v30', '$v31', '$v32', '$v33', '$v34' )";
 	$result = mysqli_query($conn, $upload);
+	$upload = "INSERT into systemfindings values('$v10', '$v1');";
+	mysqli_query($conn, $upload);
 	echo json_encode( $result );
 }
 else if( $_POST[ "request" ] == "" ){

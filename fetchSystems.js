@@ -21,12 +21,12 @@ function refreshSystems(){
 
             td_checkbox.innerText = "";
             td_Name.innerText = r["Name"];
-            if(r["Title"].split(',').length != 0)
+            if(r["Title"] != "")
                 td_Tasks.innerText = r["Title"].split(',').length;
             else
                 td_Tasks.innerText = 0;
-            if(r["findingId"].split(',').length != 0)
-                td_Subtasks.innerText = r["findingId"].split(',').length;
+            if(r["findingTitle"] != "")
+                td_Subtasks.innerText = r["findingTitle"].split(',').length;
             else
                 td_Subtasks.innerText = 0;
 

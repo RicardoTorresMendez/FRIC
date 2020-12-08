@@ -26,9 +26,12 @@ $attachment = $_POST[ "taskAttachment" ];
 
 
 
-$upload = "INSERT into task (Title,Description,System,Progress,DueDate,Analysts,Collaborators,RelatedTasks,Subtasks,Findings,Attachment,Priority)  values 		('$title','$description','$system','$progress','$dueDate','$analysts','$collaborators','$relatedTasks','$subtasks','$findings','$attachment', '$priority')";
+$upload = "INSERT into task (Title,Description,System,Progress,DueDate,Analysts,Collaborators,RelatedTasks, Subtasks,Findings,Attachment,Priority,Archived) values	('$title','$description','$system','$progress','$dueDate','$analysts','$collaborators','$relatedTasks','$subtasks','$findings','$attachment', '$priority', '0')";
 
 $result = mysqli_query($conn, $upload);
+
+$upload = "INSERT into systemtasks values('$system', '$title');";
+mysqli_query($conn, $upload);
 
 $conn->close();
 

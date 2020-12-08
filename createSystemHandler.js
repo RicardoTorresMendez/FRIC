@@ -7,7 +7,10 @@ document.getElementById("submit").addEventListener("click", function( e ) {
   var sRouter = document.getElementById("systemRouter").value;
   var sSwitch = document.getElementById("systemSwitch").value;
   var sRoom = document.getElementById("systemRoom").value;
-  // var sTestPlan = document.getElementById("sTestPlan").value;
+  var sTestPlan = document.getElementById("sTestPlan").value;
+  var sConfidentiality = document.getElementById("sTestPlan").value;
+  var sIntegrity = document.getElementById("sTestPlan").value;
+  var sAvailability = document.getElementById("sTestPlan").value;
   //---------------------------------------------------------------------------------
 
   const formData = new FormData();
@@ -17,7 +20,10 @@ document.getElementById("submit").addEventListener("click", function( e ) {
   formData.append("sRouter", sRouter);
   formData.append("sSwitch", sSwitch);
   formData.append("sRoom", sRoom);
-  // formData.append("sTestPlan", sTestPlan);
+  formData.append("sTestPlan", sTestPlan);
+  formData.append("sConfidentiality", sConfidentiality);
+  formData.append("sIntegrity", sIntegrity);
+  formData.append("sAvailability", sAvailability);
   
 
   fetch("sHandler.php", {

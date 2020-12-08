@@ -18,10 +18,12 @@ $router = $_POST[ "sRouter" ];
 $switch = $_POST[ "sSwitch" ];
 $room = $_POST[ "sRoom" ];
 $testPlan = $_POST[ "sTestPlan" ];
+$confidentiality = $_POST["sConfidentiality"];
+$integrity = $_POST["sIntegrity"];
+$availability = $_POST["sAvailability"];
 
 
-
-$upload = "INSERT into systems (Name, Description, Location, Router, Switch, Room, TestPlan) values ('$name','$description','$location','$router','$switch','$room','$testPlan')";
+$upload = "INSERT into systems (Name, Description, Location, Router, Switch, Room, TestPlan, confidentiality, integrity, availability) values ('$name','$description','$location','$router','$switch','$room','$testPlan', '$confidentiality', '$integrity', '$availability')";
 
 $result = mysqli_query($conn, $upload);
 
