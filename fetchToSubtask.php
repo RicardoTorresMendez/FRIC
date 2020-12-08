@@ -14,7 +14,7 @@ if ($conn -> connect_errno) {
 $response = [];
 
 
-$query = "Select Title, Description, Progress, DueDate, Analysts, Collaborators, Task, Subtasks, Attachment from subtask;";
+$query = "Select Title, Description, Progress, DueDate, Analysts, Collaborators, Task, Subtasks, Findings, Attachment from subtask;";
 
 $result = mysqli_query($conn, $query);
 

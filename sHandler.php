@@ -23,7 +23,10 @@ $integrity = $_POST["sIntegrity"];
 $availability = $_POST["sAvailability"];
 
 
-$upload = "INSERT into systems (Name, Description, Location, Router, Switch, Room, TestPlan, confidentiality, integrity, availability) values ('$name','$description','$location','$router','$switch','$room','$testPlan', '$confidentiality', '$integrity', '$availability')";
+$event = mysqli_query($conn, "Select ID from event WHERE Archived=0 LIMIT 1");
+$event_id = mysqli_fetch_assoc($event)["ID"];
+
+$upload = "INSERT into systems (Name, Description, Location, Router, Switch, Room, TestPlan, confidentiality, integrity, availability, RelatedEvent, Archived) values ('$name','$description','$location','$router','$switch','$room','$testPlan', '$confidentiality', '$integrity', '$availability', '$event_id', '0' )";
 
 $result = mysqli_query($conn, $upload);
 

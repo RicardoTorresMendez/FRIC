@@ -3,7 +3,8 @@ refreshSubtasks();
 function refreshSubtasks(){
 	var subtaskTable = document.getElementById("subtask_table");
 
-
+    const formData = new FormData();
+    formData.append("request", "");
 
 	fetch("fetchToSubtask.php")
     .then(response => response.json())
@@ -24,7 +25,7 @@ function refreshSubtasks(){
             let td_Collaborators = document.createElement("td");
             let td_Task = document.createElement("td");
             let td_Subtasks = document.createElement("td");
-            // let td_Findings = document.createElement("td");
+            let td_Findings = document.createElement("td");
             let td_Attachment = document.createElement("td");
 
 
@@ -38,7 +39,7 @@ function refreshSubtasks(){
             td_Collaborators.innerText = r["Collaborators"];
             td_Task.innerText = r["Task"];
             td_Subtasks.innerText = r["Subtasks"];
-            // td_Findings.innerText = r["Findings"];
+            td_Findings.innerText = r["Findings"];
             td_Attachment.innerText = r["Attachment"];
 
 
@@ -53,13 +54,91 @@ function refreshSubtasks(){
             tr.appendChild(td_Collaborators);
             tr.appendChild(td_Task);
             tr.appendChild(td_Subtasks);
-            // tr.appendChild(td_Findings);
+            tr.appendChild(td_Findings);
             tr.appendChild(td_Attachment);
             
             subtaskTable.appendChild(tr);
         } 
     });
 
+    var selectAnalyst = document.getElementById("subtaskAnalysts");
+    var selectCollaborator = document.getElementById("subtaskCollaborators");
 
+    fetch("fetchAnalysts.php", {
+       method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option1 = document.createElement("option");
+            option1.value = r[ "Initial" ];
+            option1.text = r[ "Initial" ];
+            selectAnalyst.appendChild( option1 );
+            var option2 = document.createElement("option");
+            option2.value = r[ "Initial" ];
+            option2.text = r[ "Initial" ];
+            selectCollaborator.appendChild( option2 );
+        }
+
+
+    });
+
+    var selectTask = document.getElementById("subtaskTasks");
+
+    fetch("fetchToTask.php", {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option = document.createElement("option");
+            option.value = r[ "Title" ];
+            option.text = r[ "Title" ];
+            selectTask.appendChild( option );
+        }
+
+
+    });
+
+    var selectSubtask = document.getElementById("subtaskSubtasks");
+
+    fetch("fetchToSubtask.php", {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option = document.createElement("option");
+            option.value = r[ "Title" ];
+            option.text = r[ "Title" ];
+            selectSubtask.appendChild( option );
+        }
+
+
+    });
+
+    formData.set("request2", "");
+    formData.append("request3", "relatedFindings");
+
+    var selectFindings = document.getElementById("subtaskFindings");
+
+    fetch("connectToDatabase.php", {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option = document.createElement("option");
+            option.value = r[ "Title" ];
+            option.text = r[ "Title" ];
+            selectFindings.appendChild( option );
+        }
+
+
+    });
 
 }

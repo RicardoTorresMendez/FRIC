@@ -3,7 +3,8 @@ refreshTasks();
 function refreshTasks(){
 	var taskTable = document.getElementById("task_table");
 
-
+    const formData = new FormData();
+    formData.append("request", "");
 
 	fetch("fetchToTask.php")
     .then(response => response.json())
@@ -63,6 +64,103 @@ function refreshTasks(){
         } 
     });
 
+    var selectAnalyst = document.getElementById("taskAnalysts");
+    var selectCollaborator = document.getElementById("taskCollaborators");
 
+    fetch("fetchAnalysts.php", {
+       method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option1 = document.createElement("option");
+            option1.value = r[ "Initial" ];
+            option1.text = r[ "Initial" ];
+            selectAnalyst.appendChild( option1 );
+            var option2 = document.createElement("option");
+            option2.value = r[ "Initial" ];
+            option2.text = r[ "Initial" ];
+            selectCollaborator.appendChild( option2 );
+        }
+
+
+    });
+
+    formData.append("request2", "systemList");
+    var selectSystem = document.getElementById("taskSystem");
+
+    fetch("connectToDatabase.php", {
+       method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option = document.createElement("option");
+            option.value = r[ "Name" ];
+            option.text = r[ "Name" ];
+            selectSystem.appendChild( option );
+        }
+
+
+    });
+
+    var selectTask = document.getElementById("taskTasks");
+
+    fetch("fetchToTask.php", {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option = document.createElement("option");
+            option.value = r[ "Title" ];
+            option.text = r[ "Title" ];
+            selectTask.appendChild( option );
+        }
+
+
+    });
+
+    formData.set("request2", "");
+    formData.append("request3", "relatedFindings");
+
+    var selectFindings = document.getElementById("taskFindings");
+
+    fetch("connectToDatabase.php", {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option = document.createElement("option");
+            option.value = r[ "Title" ];
+            option.text = r[ "Title" ];
+            selectFindings.appendChild( option );
+        }
+
+
+    });
+
+    var selectSubtask = document.getElementById("taskSubtasks");
+
+    fetch("fetchToSubtask.php", {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option = document.createElement("option");
+            option.value = r[ "Title" ];
+            option.text = r[ "Title" ];
+            selectSubtask.appendChild( option );
+        }
+
+
+    });
 
 }

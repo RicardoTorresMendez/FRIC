@@ -83,8 +83,23 @@ else if( $_POST[ "request" ] == "uploadFinding" ){
 	mysqli_query($conn, $upload);
 	echo json_encode( $result );
 }
-else if( $_POST[ "request" ] == "" ){
-	
+else if( $_POST[ "request2" ] == "systemList" ){
+	$query = "Select Name from systems";
+	$response = [];
+	$result = mysqli_query($conn, $query);
+	while($row = mysqli_fetch_assoc($result)){
+		array_push($response, $row);
+	}
+	echo json_encode( $response );
+}
+else if( $_POST[ "request3" ] == "relatedFindings" ){
+	$query = "Select Title from finding";
+	$response = [];
+	$result = mysqli_query($conn, $query);
+	while($row = mysqli_fetch_assoc($result)){
+		array_push($response, $row);
+	}
+	echo json_encode( $response );
 }
 
 

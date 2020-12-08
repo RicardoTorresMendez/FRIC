@@ -67,7 +67,10 @@ function refreshFindings(){
         } 
     });
 
+    formData.set("request", "null");
+
     var selectAnalyst = document.getElementById("findingAnalyst");
+    var selectCollaborator = document.getElementById("findingCollaborator");
 
     fetch("fetchAnalysts.php", {
        method: 'POST',
@@ -76,19 +79,23 @@ function refreshFindings(){
     .then(response => response.json())
     .then(function (response){
         for (r of response){
-            var option = document.createElement("option");
-            option.value = r[ "Initial" ];
-            option.text = r[ "Initial" ];
-            selectAnalyst.appendChild( option );
+            var option1 = document.createElement("option");
+            option1.value = r[ "Initial" ];
+            option1.text = r[ "Initial" ];
+            selectAnalyst.appendChild( option1 );
+            var option2 = document.createElement("option");
+            option2.value = r[ "Initial" ];
+            option2.text = r[ "Initial" ];
+            selectCollaborator.appendChild( option2 );
         }
 
 
     });
 
-
+    formData.append("request2", "systemList");
     var selectSystem = document.getElementById("findingSystem");
 
-    fetch("fetchToSystem.php", {
+    fetch("connectToDatabase.php", {
        method: 'POST',
         body: formData
     })
@@ -105,7 +112,7 @@ function refreshFindings(){
     });
 
 
-    var selectSystem = document.getElementById("findingSystem");
+    var selectTask = document.getElementById("findingTask");
 
     fetch("fetchToTask.php", {
         method: 'POST',
@@ -115,14 +122,53 @@ function refreshFindings(){
     .then(function (response){
         for (r of response){
             var option = document.createElement("option");
-            option.value = r[ "" ];
-            option.text = r[ "" ];
-            selectSystem.appendChild( option );
+            option.value = r[ "Title" ];
+            option.text = r[ "Title" ];
+            selectTask.appendChild( option );
         }
 
 
     });
-    
+
+    var selectSubtask = document.getElementById("findingSubtask");
+
+    fetch("fetchToSubtask.php", {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option = document.createElement("option");
+            option.value = r[ "Title" ];
+            option.text = r[ "Title" ];
+            selectSubtask.appendChild( option );
+        }
+
+
+    });
+
+    formData.set("request2", "");
+    formData.append("request3", "relatedFindings");
+
+    var selectFindings = document.getElementById("findingRelatedFindings");
+
+    fetch("connectToDatabase.php", {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option = document.createElement("option");
+            option.value = r[ "Title" ];
+            option.text = r[ "Title" ];
+            selectFindings.appendChild( option );
+        }
+
+
+    });
+
 }
 
 
