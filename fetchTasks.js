@@ -37,13 +37,15 @@ function refreshTasks(){
             td_Analysts.innerText = r["Analysts"];
             td_Priority.innerText = r["Priority"];
             td_Progress.innerText = r["Progress"];
-            // td_Analysts.innerText = r["Analysts"];
-            // td_Collaborators.innerText = r["Collaborators"];
-            // td_RelatedTasks.innerText = r["RelatedTasks"];
-            // td_Subtasks.innerText = r["Subtasks"];
-            // td_Findings.innerText = r["Findings"];
-            // td_Attachment.innerText = r["Attachment"];
-
+            if(r["Subtasks"] != "")
+                td_Subtasks.innerText = r["Subtasks"].split(',').length;
+            else 
+                td_Subtasks.innerText = 0;
+            if(r["Findings"] != "")
+                td_Findings.innerText = r["Findings"].split(',').length;
+            else
+                td_Findings.innerText = 0
+            td_DueDate.innerText = r["DueDate"];
 
 
 
@@ -53,12 +55,9 @@ function refreshTasks(){
             tr.appendChild(td_Analysts);
             tr.appendChild(td_Priority);
             tr.appendChild(td_Progress);
-            // tr.appendChild(td_DueDate);
-            // tr.appendChild(td_Collaborators);
-            // tr.appendChild(td_RelatedTasks);
-            // tr.appendChild(td_Subtasks);
-            // tr.appendChild(td_Findings);
-            // tr.appendChild(td_Attachment);
+            tr.appendChild(td_Subtasks);
+            tr.appendChild(td_Findings);
+            tr.appendChild(td_DueDate);
             
             taskTable.appendChild(tr);
         } 

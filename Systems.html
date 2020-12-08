@@ -33,7 +33,7 @@
           <a class="dropdown-item" href="event.html">Event</a>
           <a class="dropdown-item" href="Systems.html">Systems</a>
           <a class="dropdown-item" href="task.html">Tasks</a>
-          <a class="dropdown-item" href="Subtasks.html">Subtasks</a>
+          <a class="dropdown-item" href="Subtask.html">Subtasks</a>
           <a class="dropdown-item" href="finding.html">Findings</a>
           <a class="dropdown-item" href="Archive.html">Archive</a>
           <a class="dropdown-item" href="Configuration.html">Configuration</a>
@@ -55,7 +55,7 @@
     </div>
   </nav>
 
-<script type="text/javascript" src="task.js"></script> <!-- This just opens and closes the form-->
+<script type="text/javascript" src="system.js"></script> <!-- This just opens and closes the form-->
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
@@ -69,9 +69,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 
 
-<div class="container" id="addTask" style="display: none;">
+<div class="container" id="addSystem" style="display: none;">
   <form action=""> 
-    <h3><u>Add Task</u></h3>
+    <h3><u>Add System</u></h3>
     <label for="addSystemName">Title</label>
     <input type="text" id="systemName" placeholder="Title.." style="width: 300px">
     <p></p>
@@ -96,15 +96,48 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <input type="text" id="systemRoom" placeholder="Router.." style="width: 300px">
     <p></p>
     
-<!-- Not sure if this should go here or not
-    <label for="addSystemProgress">Progress</label>
-    <select id="SystemProgress">
-      <option value="Not started">Not started</option>
-      <option value="assigned">assigned</option>
-      <option value="transferred">transferred</option>
-      <option value="complete">complete</option>
-      <option value="applicable">not applicable</option>
-    </select> -->
+    <label for="lname">Test Plan</label>
+    <input type="text" id="systemPlan" placeholder="Router.." style="width: 300px">
+    <p></p>
+    
+
+    <label for="systemCategorization" accesskey="p">Confidentiality:</label>
+    <select name="CategorizationConfidentiality" id="systemCategorizationConfidentiality">
+        <option> Low         
+        </option>   
+        <option> Medium         
+        </option>   
+        <option> High         
+        </option>   
+        <option> Information         
+        </option>   
+    </select>
+    <br><br>
+    <label for="systemCategorization" accesskey="p">Integrity:</label>
+    <select name="CategorizationIntegrity" id="systemCategorizationIntegrity">
+         <option> Low         
+        </option>   
+        <option> Medium         
+        </option>   
+        <option> High         
+        </option>   
+        <option> Information         
+        </option>  
+    </select>
+    <br><br>
+    <label for="systemCategorization" accesskey="p">Availability:</label>
+    <select name="CategorizationAvailability" id="systemCategorizationAvailability">
+          <option> Low         
+        </option>   
+        <option> Medium         
+        </option>   
+        <option> High         
+        </option>   
+        <option> Information         
+        </option>   
+    </select>
+    <br><br>
+  </fieldset>
 
     <p></p>
     <button type="button" class="btn btn-secondary" id="submit" type="submit" onclick="closeForm()">Submit</button>
@@ -126,8 +159,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
               <th scope="col"></th>
               <th scope="col">System</th>
               <th scope="col">No. of Tasks</th>
-              <th>No. of Findings</th>
-              <th>Progress</th>
+              <th scope="col">No. of Findings</th>
+              <th scope="col">Progress</th>
             </tr>
           </thead>
           <tbody id="systemsTable">

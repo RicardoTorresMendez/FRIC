@@ -1,13 +1,13 @@
-document.getElementById("save").addEventListener("click", function( e ) {
+document.getElementById("submit").addEventListener("click", function( e ) {
   e.preventDefault();
   
-  var sName = document.getElementById("sName").value;
-  var sDescription = document.getElementById("sDescription").value;
-  var sLocation = document.getElementById("sLocation").value;
-  var sRouter = document.getElementById("sRouter").value;
-  var sSwitch = document.getElementById("sSwitch").value;
-  var sRoom = document.getElementById("sRoom").value;
-  var sTestPlan = document.getElementById("sTestPlan").value;
+  var sName = document.getElementById("systemName").value;
+  var sDescription = document.getElementById("systemDescription").value;
+  var sLocation = document.getElementById("systemLocation").value;
+  var sRouter = document.getElementById("systemRouter").value;
+  var sSwitch = document.getElementById("systemSwitch").value;
+  var sRoom = document.getElementById("systemRoom").value;
+  // var sTestPlan = document.getElementById("sTestPlan").value;
   //---------------------------------------------------------------------------------
 
   const formData = new FormData();
@@ -17,7 +17,7 @@ document.getElementById("save").addEventListener("click", function( e ) {
   formData.append("sRouter", sRouter);
   formData.append("sSwitch", sSwitch);
   formData.append("sRoom", sRoom);
-  formData.append("sTestPlan", sTestPlan);
+  // formData.append("sTestPlan", sTestPlan);
   
 
   fetch("sHandler.php", {

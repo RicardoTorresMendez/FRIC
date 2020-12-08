@@ -16,18 +16,24 @@ function refreshSystems(){
             
             let td_checkbox = document.createElement("td");
             let td_Name = document.createElement("td");
-            let td_Description = document.createElement("td");
-            let td_Location = document.createElement("td");
+            let td_Tasks = document.createElement("td");
+            let td_Subtasks = document.createElement("td");
 
             td_checkbox.innerText = "";
             td_Name.innerText = r["Name"];
-            td_Description.innerText = r["Description"];
-            td_Location.innerText = r["Location"];
+            if(r["Title"].split(',').length != 0)
+                td_Tasks.innerText = r["Title"].split(',').length;
+            else
+                td_Tasks.innerText = 0;
+            if(r["findingId"].split(',').length != 0)
+                td_Subtasks.innerText = r["findingId"].split(',').length;
+            else
+                td_Subtasks.innerText = 0;
 
             tr.appendChild(td_checkbox);
             tr.appendChild(td_Name);
-            tr.appendChild(td_Description);
-            tr.appendChild(td_Location);
+            tr.appendChild(td_Tasks);
+            tr.appendChild(td_Subtasks);
             
             systemTable.appendChild(tr);
         } 

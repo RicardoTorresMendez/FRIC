@@ -13,11 +13,11 @@ if ($conn -> connect_errno) {
 
 $name = $_POST[ "sName" ];
 $description = $_POST[ "sDescription" ];
-$location = $_POST[ "s" ];
-$router = $_POST[ "s" ];
-$switch = $_POST[ "s" ];
-$room = $_POST[ "s" ];
-$testPlan = $_POST[ "s" ];
+$location = $_POST[ "sLocation" ];
+$router = $_POST[ "sRouter" ];
+$switch = $_POST[ "sSwitch" ];
+$room = $_POST[ "sRoom" ];
+$testPlan = $_POST[ "sTestPlan" ];
 
 
 
@@ -25,11 +25,6 @@ $upload = "INSERT into systems (Name, Description, Location, Router, Switch, Roo
 
 $result = mysqli_query($conn, $upload);
 
-//$results = array();
-
-//$query = "SELECT ID, lat, lon, nodes FROM completeRoutes";
-
-//$result_set = mysqli_query( $conn, $query );
 
 
 $conn->close();

@@ -11,13 +11,11 @@ if ($conn -> connect_errno) {
   exit();
 }
 
-
 $response = [];
 
-$query = "Select Title, System, Analysts, Priority, Progress from task;";
+$query = "Select Title, System, Analysts, Priority, Progress, Subtasks, Findings, DueDate from task where archived=0;";
 
 $result = mysqli_query($conn, $query);
-
 while($row = mysqli_fetch_assoc($result)){
 	array_push($response, $row);
 }
