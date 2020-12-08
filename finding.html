@@ -82,8 +82,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <form action="">
 		<h3><u>Finding Information</u></h3>
 
-			<label for="findingID">ID:</label>
-			<input type="text" id="findingID"><br><br>
+<!-- 			<label for="findingID">ID:</label>
+			<input type="text" id="findingID"><br><br> -->
+
+			<label for="findingTitle">Title:</label>
+			<input type="text" id="findingTitle"><br><br>
 
 			<label for="findingHostName">Host Name:</label>
 			<input type="text" id="findingHostName"><br><br>
@@ -125,8 +128,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 				<option value="b">Information</option>
 			</select><br><br>
 
-			<label for="findingFile">Evidence</label>
-			<input type="file" id="findingFile"><br><br>
+			<label for="findingEvidence">Evidence</label>
+			<input type="file" id="findingEvidence"><br><br>
 
 			<hr class="solid">
 
@@ -143,8 +146,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
 				<option value="a">Real Task</option>
 				<option value="b">Fake Task</option>
 			</select><br><br>
-
-			<label for="OR">OR</label><br><br>
 
 			<label for="findingSubtask">Subtask</label>
 			<select id="findingSubtask">
@@ -164,24 +165,24 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 		<h3><u>Finding Impact</u></h3>
 			
-				<label for="Confidentiality">Confidentiality:</label>
-				<select name="Confidentiality" id="Confidentiality">
+				<label for="findingConfidentiality">Confidentiality:</label>
+				<select id="findingConfidentiality">
 					<option value="l">L</option>
 					<option value="m">M</option>
 					<option value="h">H</option>
 					<option value="i">Information</option>
 				</select>
 			
-				<label for="Integrity">Integrity:</label>
-				<select name="Integrity" id="Integrity">
+				<label for="findingIntegrity">Integrity:</label>
+				<select id="findingIntegrity">
 					<option value="l">L</option>
 					<option value="m">M</option>
 					<option value="h">H</option>
 					<option value="i">Information</option>
 				</select>
 		
-				<label for="Availability">Availability:</label>
-				<select name="Availability" id="Availability">
+				<label for="findingAvailability">Availability:</label>
+				<select id="findingAvailability">
 					<option value="l">L</option>
 					<option value="m">M</option>
 					<option value="h">H</option>
@@ -191,9 +192,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 		<h3><u>Analyst Information</u></h3>
 
-				<label for="Analyst">Analyst:</label>
+				<label for="findingAnalyst">Analyst:</label>
 				<br>
-				<select name="Analyst" id="Analyst" multiple>
+				<select id="findingAnalyst" multiple>
 					<option value="l">RP</option>
 					<option value="m">FP</option>
 					<option value="h">CT</option>
@@ -201,9 +202,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 				</select>
 				<br><br>
 			
-				<label for="Collaborator">Collaborator:</label>
+				<label for="findingCollaborator">Collaborator:</label>
 				<br>
-				<select name="Collaborator" id="Collaborator" multiple>
+				<select id="findingCollaborator" multiple>
 					<option value="l">RP</option>
 					<option value="m">FP</option>
 					<option value="h">CT</option>
@@ -211,9 +212,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 				</select>
 				<br><br>
 			
-				<label for="Posture">Posture:</label>
+				<label for="findingPosture">Posture:</label>
 				<br>
-				<select name="Posture" id="Posture">
+				<select id="findingPosture">
 					<option value="l">Insider</option>
 					<option value="m">Insider-nearsider</option>
 					<option value="h">Outsider</option>
@@ -225,14 +226,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 			<h3><u>Mitigation</u></h3>
 
-		<textarea id="mitigationBriefDescription" placeholder="Brief Description.." style="height:100px"></textarea>
+		<textarea id="findingMitigationBriefDescription" placeholder="Brief Description.." style="height:100px"></textarea>
 		<br><br>
-		<textarea id="mitigationLongDescription" placeholder="Long Description.." style="height:200px"></textarea>
+		<textarea id="findingMitigationLongDescription" placeholder="Long Description.." style="height:200px"></textarea>
 
 <br><br>
 			<h3><u>Threat Relevance</u></h3>
-					<label for="Posture"></label>
-					<select name="Posture" id="Posture">
+					<label for="findingRelevance"></label>
+					<select id="findingRelevance">
 						<option value="l">Confirmed</option>
 						<option value="m">Expected</option>
 						<option value="h">Anticipated</option>
@@ -243,8 +244,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <br><br>
 			<h3><u>Countermeasure</u></h3>
 				<h4> Effectiveness Rating: </h4>
-					<label for="Posture"></label>
-					<select name="Posture" id="Posture">
+					<label for="findingEffectiveness"></label>
+					<select id="findingEffectiveness">
 						<option value="l">Very High (10)</option>
 						<option value="m">High (7-9)</option>
 						<option value="h">Moderate (4-6)</option>
@@ -255,10 +256,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <br><br>
 			<h3><u>Impact</u></h3>
 
-					<textarea id="impactDescription" placeholder="Impact Description.." style="height:100px"></textarea>
+					<textarea id="findingImpactDescription" placeholder="Impact Description.." style="height:100px"></textarea>
 					<br><br>
 					<label for="Impact">Impact Level:</label>
-					<select name="Impact" id="Impact">
+					<select id="findingImpact">
 						<option value="l">VH</option>
 						<option value="m">H</option>
 						<option value="h">M</option>
@@ -268,41 +269,41 @@ body {font-family: Arial, Helvetica, sans-serif;}
 					<br><br>
 
 			<h3><u>Severity</u></h3>
-		<label for="Severity">Severity Category Score:</label>
-  		<input type="text" id="Severity"><br><br>
+		<label for="findingSeverity">Severity Category Score:</label>
+  		<input type="text" id="findingSeverity"><br><br>
 
   		<label for="VulnerabilitySeverity">Vulnerability Severity:</label>
-  		<input type="text" id="VulnerabilitySeverity"><br><br>
+  		<input type="text" id="findingVulnerabilitySeverity"><br><br>
 
-  		<label for="QuantitativeVulnerabilitySeverity">Quantitative Vulnerability Severity:</label>
-  		<input type="text" id="QuantitativeVulnerabilitySeverity"><br><br>
+  		<label for="findingQuantitativeVulnerabilitySeverity">Quantitative Vulnerability Severity:</label>
+  		<input type="text" id="findingQuantitativeVulnerabilitySeverity"><br><br>
 
 			<h3><u>Risk</u></h3>
 
-		<label for="Risk">Risk:</label>
-  		<input type="text" id="Risk"><br><br>
+		<label for="findingRisk">Risk:</label>
+  		<input type="text" id="findingRisk"><br><br>
 
 
-		<label for="Likelihood">Likelihood:</label>
-  		<input type="text" id="Likelihood"><br><br>
+		<label for="findingLikelihood">Likelihood:</label>
+  		<input type="text" id="findingLikelihood"><br><br>
 
 			<h3><u>Finding System Level Impact</u></h3>
 
-		<label for="ConfidentialityFindingImpactOnSystem">Confidentiality Finding Impact on System:</label>
-  		<input type="text" id="ConfidentialityFindingImpactOnSystem"><br><br>
+		<label for="findingConfidentialityFindingImpactOnSystem">Confidentiality Finding Impact on System:</label>
+  		<input type="text" id="findingConfidentialityFindingImpactOnSystem"><br><br>
 
-  		<label for="IntegrityFindingImpactOnSystem">Integrity Finding Impact on System:</label>
-  		<input type="text" id="IntegrityFindingImpactOnSystem"><br><br>
+  		<label for="findingIntegrityFindingImpactOnSystem">Integrity Finding Impact on System:</label>
+  		<input type="text" id="findingIntegrityFindingImpactOnSystem"><br><br>
 
-  		<label for="AvailabilityFindingImpactonSystem">Availability Finding Impact on System:</label>
-  		<input type="text" id="AvailabilityFindingImpactonSystem"><br><br>
+  		<label for="AfindingvailabilityFindingImpactonSystem">Availability Finding Impact on System:</label>
+  		<input type="text" id="findingAvailabilityFindingImpactonSystem"><br><br>
 
-		<label for="ImpactScore">Impact Score:</label>
-  		<input type="text" id="ImpactScore"><br><br>
+		<label for="findingImpactScore">Impact Score:</label>
+  		<input type="text" id="findingImpactScore"><br><br>
 
 
-    <button class="btn btn-secondary" type="submit" onclick="addSubtask()">Submit</button>
-    <button class="btn btn-secondary" type="submit" onclick="addSubtask()">Cancel</button>
+    <button class="btn btn-secondary" type="submit" id="submitFinding" onclick="addFinding()">Submit</button>
+    <button class="btn btn-secondary" type="submit" onclick="addFinding()">Cancel</button>
 
   </form>
 </div>
@@ -347,23 +348,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 			<th>Type</th>
 			<th>Risk</th>
 		</tr>
-
-
-		<tr>
-			<td style="padding:0 20px 0 20px;">
-				<input type="checkbox" id="cb1" value="cb1" /><label for="cb1"></label>
-			</td>
-			<td style="padding:0 20px 0 20px;">1</td>
-			<td style="padding:0 20px 0 20px;">Real</td>
-			<td style="padding:0 20px 0 20px;">Real System</td>
-			<td style="padding:0 20px 0 20px;">Real Task</td>
-			<td style="padding:0 20px 0 20px;">Real Subtask</td>
-			<td style="padding:0 20px 0 20px;">Real Analyst</td>
-			<td style="padding:0 20px 0 20px;">Real Status</td>
-			<td style="padding:0 20px 0 20px;">Real Classification</td>
-			<td style="padding:0 20px 0 20px;">Real Type</td>
-			<td style="padding:0 20px 0 20px;">Real Risk</td>
-		</tr>
+		<tbody id="findingTable">
+        </tbody>
 	</table>
 
 	<header>
@@ -435,8 +421,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
 				<option value="a">Real Task</option>
 				<option value="b">Fake Task</option>
 			</select><br><br>
-
-			<label for="OR">OR</label><br><br>
 
 			<label for="findingSubtask">Subtask</label>
 			<select id="findingSubtask">
@@ -559,10 +543,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
 			<h3><u>Impact</u><h3>
 		</header>
 
-					<textarea id="impactDescription" placeholder="Impact Description.." style="height:100px"></textarea>
+					<textarea id="findingImpactDescription" placeholder="Impact Description.." style="height:100px"></textarea>
 					<br><br>
-					<label for="Impact">Impact Level:</label>
-					<select name="Impact" id="Impact">
+					<label for="findingImpactLevel">Impact Level:</label>
+					<select name="Impact" id="findingImpactLevel">
 						<option value="l">VH</option>
 						<option value="m">H</option>
 						<option value="h">M</option>
@@ -614,5 +598,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 	<script src="jquery.js"></script>
     <script src="bootstrap.min.js"></script>
+    <script src="createFindingHandler.js"></script>
+    <script src="fetchFindings.js"></script>
 
 </html>
