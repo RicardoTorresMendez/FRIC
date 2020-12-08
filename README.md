@@ -17,11 +17,11 @@ You should see the XAMPP Control Panel. Press the **Apache** and **MySQL** butto
 
 ### 4. Import Database
 Go to your broswer and type [phpmyadmin link](http://localhost/phpmyadmin/). You should see the myphpadmin page.
-![phpmyadmin](phpmyadmin.jpg)
+![phpmyadmin](FRIC/phpmyadmin.jpg)
 Click on **New** Icon on the left panel to create a new Database. Name it "fric"
-![New Database](new_database.jpg)
+![New Database](C:\xampp\htdocs\FRIC\new_database.jpg)
 Click on import on the top right. Click on **Choose File** button to browse your computer for the Database template. The template can be found in the folder **Database_template** within the cloned repository (**C:\xampp\htdocs\FRIC\Database_template**).
-![Import](browse_computer.jpg)
+![Import](C:/xampp/htdocs/FRIC/browse_computer.jpg)
 Clicking Go should fill the data structure and will fill some default values for Analysts.
 
 ## Run Webapp
