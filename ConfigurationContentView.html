@@ -18,6 +18,7 @@
   .hoverTable tr:hover {
     background-color: #d4d4d4;
   }
+
 </style>
 
 <head>
@@ -28,172 +29,193 @@
   <title>Fric · v.1</title>
   
   <link rel="stylesheet" href="bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  <script type="text/javascript" src="js/script.js"></script>
 </head>
 
-<body style="background-color:rgb(51, 116, 236);">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+<body style="background-color:rgb(235, 192, 52);">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand dropdown-toggle" href="#navbarDropdown" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">FRIC menu</a>
+    <div class="dropdown-menu" id="navbarDropdown" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="event.html">Event</a>
+          <a class="dropdown-item" href="Systems.html">Systems</a>
+          <a class="dropdown-item" href="task.html">Tasks</a>
+          <a class="dropdown-item" href="Subtask.html">Subtasks</a>
+          <a class="dropdown-item" href="finding.html">Findings</a>
+          <a class="dropdown-item" href="Archive.html">Archive</a>
+          <a class="dropdown-item" href="Configuration.html">Configuration</a>
+          <a class="dropdown-item" href="Setup.html">Setup</a>
+          <a class="dropdown-item" href="Help.html">Help</a>
+        </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Event <span class="sr-only">(current)</span> </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Systems.html">Systems</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="task.html">Tasks</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Subtask.html">Sub-Tasks </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="finding.html">Findings </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Archive.html">Archive </a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="icons/eventTree.jpg">Event tree menu<span class="sr-only">(current)</span> </a></li>
+        <li class="nav-item"><a class="nav-link" href="ConfigurationContentView.html">Content view<span class="sr-only">(current)</span> </a></li>
+
+<!-- CUT OFF -->
+ <ul class="navbar-nav mr-auto nav-flex-icons">
+          <li class="nav-item avatar dropdown">
+            <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <span class="badge badge-danger ml-2">5</span>
+              <span class="fas fa-bell">Notifications</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-5">
+              <a class="dropdown-item waves-effect waves-light" href="#">Task(s) Due at 14:00 <span class="badge badge-danger ml-2">6</span></a>
+              <a class="dropdown-item waves-effect waves-light" href="#">Subtask(s) Due <span class="badge badge-danger ml-2">1</span></a>
+              <a class="dropdown-item waves-effect waves-light" href="#"> A sync was made by Lead Analyst: Vince <span class="badge badge-danger ml-2"></span></a>
+            </div>
+          </li>
+        </ul>
+<!-- CUT OFF -->
+         <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-secondary" type="submit">Search</button>
+      </form>
       </ul>
     </div>
+    <!--Shortcut Dropdown-->
+
+
+    <short>
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger"><div></div></div>
+            <div class="menu">
+                <div>
+                    <div>
+                        <ul class="short-links">
+            <li><a href="#FT">Finding Type</a></li>
+            <li><a href="#PST">Posture</a></li>
+            <li><a href="#TL">Threat Level</a></li>
+            <li><a href="#IMP">Impact</a></li>
+            <li><a href="#FC">Finding Classification</a></li>
+            <li><a href="#CM">Countermeasure</a></li>
+            <li><a href="#EC">Event Classification</a></li>
+            <li><a href="#SL">System Level</a></li>
+            <li><a href="#ET">Event Type</a></li>
+            <li><a href="#FIL">Finding Impact Level</a></li>
+            <li><a href="#SCC">Security Category Code</a></li>
+            <li><a href="#PRO">Progress</a></li>
+            <li><a href="#ER">Event Rules</a></li>
+            <li><a href="#RMRT">Risk Matrix Report Template</a></li>
+            <li><a href="#ERB">ERB Template</a></li>
+            <li><a href="#FTR">Final Technical Report Template</a></li>
+            <li><a href="#NOTI">Notification</a></li>
+        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </short>
+    <!-- Shortcut Dropdown End-->
   </nav>
 
-
+<section class="pglink" id="FT">
 <head><h2 style="text-decoration: underline;">Finding Type</h2></head>
+
+<script>
+function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("findingTypeTable").deleteRow(i);
+}
+
+// function hide() {
+//   var table = document.getElementById("findingTypeTable");
+//   rows = table.querySelectorAll("tr");
+
+//     for (var i = 1; i < rows.length; i++) {
+//         rows[i].style.display = (rows[i].style.display == "none") ? "" : "none";
+//         }
+//       }
+
+// function makeEditable(button,table) {
+//   var x = document.getElementById("table").innerHTML;
+//   if (x.contentEditable == "true") {
+//     x.contentEditable = "false";
+//     button.innerHTML = "Enable content of p to be editable!";
+//   } else {
+//     x.contentEditable = "true";
+//     button.innerHTML = "Disable content of p to be editable!";
+//   }
+// }
+
+</script>
 
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="findingTypeTable" style="width: 375px; margin-left: auto;margin-right: auto;">
         <thead>
           <tr>
             <!-- <th scope="col"><a href="#"><img title="addLeadAnalyst" alt="Analysts" src="C:\Users\chris\Desktop\FRICTool\FRIC\icons\addPersonIcon.jpg" width="20px"></a></th> -->
-            <th scope="col">Attribute</th>
-            <th scope="col">Data Type</th>
-            <th scope="col">Values and Constraints</th>
-            <th scope="col">Description</th>
+            <th onclick="hide()" scope="col" style="text-align: center;">Finding Type</th> 
+            <th><button>Reset</button></th>
             </tr>
         </thead>
-        
+         <tbody tyle="text-align: center;">
+          <tr>
+            <td contenteditable="true">Credentials Complexity</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+            <td></td>
 
-         <tbody>
-
-          <tr>
-            <td>Finding ID</td>
-            <td>Number</td>
-            <td>System generated</td>
-            <td>Unique identifier of a
-vulnerability/potential
-issue</td>
           </tr>
           <tr>
-            <td>Host Name</td>
-            <td>String</td>
-            <td>Required; Editable</td>
-            <td>Host name where the
-vulnerability/potential
-issue resides</td>
+            <td>Manufacturer Default Creds</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
+          <tr>  
+            <td>Lack of Authentication</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>  
+            <td>Plain Text Protocols</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>  
+            <td>Plain Text Web Login</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>  
           <tr>
-            <td>IP Port</td>
-            <td>String</td>
-            <td>Required; Editable</td>
-            <td>IP port where the
-vulnerability/ potential
-issue resides</td>
+            <td>Encryption</td>  
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
-           <tr>
-            <td>Finding Description</td>
-            <td>String</td>
-            <td>Optional; Editable;
-Appendable</td>
-            <td>Long description of a
-vulnerability/ potential
-issue</td>
+          <tr>  
+            <td>Authentication Bypass</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
-          <tr>
-            <td>Finding Long Description</td>
-            <td>String</td>
-            <td>Optional; Editable;
-Appendable</td>
-            <td>Long description of a
-vulnerability/ potential
-issue</td>
+          <tr>  
+            <td>Port Security</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
-          <tr>
-            <td>Finding Status</td>
-            <td>Enumeration</td>
-            <td>Required; Editable; {Open,
-Closed}</td>
-<td>Status that describes
-whether the vulnerability has been patched by the
-customer</td>
+          <tr>  
+            <td>Access Control</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
-          <tr>
-            <td>Finding Type</td>
-            <td>Enumeration</td>
-            <td>Required; Editable;
-{Credentials Complexity,
-Manufacturer Default
-Creds,
-Lack of Authentication,
-Plain Text Protocols,
-Plain Text Web Login,
-Encryption,
-Authentication Bypass,
-Port Security,
-Access Control,
-Least Privilege,
-Privilege Escalation,
-Missing Patches,
-Physical Security,
-Information Disclosure}</td>
-            <td>Type of vulnerability/
-potential issue</td>
+          <tr>  
+            <td>Least Privilege</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr> 
+          <tr> 
+            <td>Privilege Escalation</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
-          <tr>
-            <td>Finding Classification</td>
-            <td>Enumeration</td>
-            <td>Required; Editable;
-{Vulnerability,
-Information}</td>
-            <td>Classification that
-determines if the
-discovery is a
-vulnerability or potential
-issue</td>
+          <tr>  
+            <td>Missing Patches</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
-          <tr>
-            <td>Association to Finding</td>
-            <td>List</td>
-            <td>Optional; The original
-finding and the associated
-finding shall belong to the
-same system.</td>
-            <td>Relationship of a finding
-to another finding</td>
+          <tr>  
+            <td>Physical Security</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
-          <tr>
-            <td>Evidence</td>
-            <td>File</td>
-            <td>Required; Editable;
-Appendable</td>
-            <td>Evidence that proves the
-existence of vulnerability</td>
-          </tr>
-                 <tr>
-            <td>Archive Status</td>
-            <td>Boolean</td>
-            <td>Required; Editable; {Y =
-archived, N = active}</td>
-            <td>State of a vulnerability or
-potential issue</td>
-          </tr>
+          <tr>  
+            <td>Information Disclosure</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+           </tr>
+          </tr>  
         </tbody>
       </table>
     </div>
@@ -201,202 +223,278 @@ potential issue</td>
 </div>
 
 
+<script>
+  function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("postureTable").deleteRow(i);
+}
+</script>
+
+<section class="pglink" id="PST">
 <head><h2 style="text-decoration: underline;">Posture</h2></head>
 
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="postureTable">
         <thead>
           <tr>
-            <th scope="col">Attribute(s)</th>
-            <th scope="col">Data Type</th>
-            <th scope="col">Values and Constraints</th>
-            <th scope="col">Description</th>
+            <th scope="col">Posture</th>
+            <th><button>Reset</button></th>
           </tr>
         </thead>
         
 
-        <tbody>
-<tr>
-	<td>Posture</td>
-	<td>Enunmeration</td>
-	<td>Required; Editable; {Insider
-Insider-nearsider
-Outsider
-Nearsider
-Nearsider-outsider}</td>
-<td>Security posture an
-analyst plays when
-completing a task/subtask</td>
-</tr>
+       <tbody tyle="text-align: center;">
+          <tr>
+            <td contenteditable="true">Insider</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+
+          </tr>
+          <tr>
+            <td>Insider-nearsider</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>  
+            <td>Outsider</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>  
+            <td>Nearsider</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>  
+            <td>Nearsider-outsider</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>  
+          </tr>  
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
-
+<script>
+  function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("threatLevelTable").deleteRow(i);
+}
+</script>
+<section class="pglink" id="TL">
 <head><h2 style="text-decoration: underline;">Threat Level</h2></head>
 
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="threatLevelTable">
         <thead>
           <tr>
-           <th scope="col">Attribute(s)</th>
-            <th scope="col">Data Type</th>
-            <th scope="col">Values and Constraints</th>
-            <th scope="col">Description</th>
+           <th scope="col">Threat Levels</th>
+           <th><button>Reset</button></th>
           </tr>
         </thead>
-        <tbody>
-<tr>
-<td>Relevance</td>
-<td>Enumeration</td>
-<td>Required; Editable;
-{Confirmed, Expected,
-Anticipated, Predicted
-Possible}</td>
-<td>Threat relevance</td>
+         <tbody tyle="text-align: center;">
+          <tr>
+            <td contenteditable="true">Confirmed</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
 
-</tr>
+          </tr>
+          <tr>
+            <td>Expected</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>  
+            <td>Anticipated</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>  
+            <td>Predicted Possible</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>  
+          </tr>  
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
+<script>
+  function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("impactLevelTable").deleteRow(i);
+}
+</script>
+<section class="pglink" id="IMP">
 <head><h2 style="text-decoration: underline;">Impact</h2></head>
 
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="impactLevelTable">
         <thead>
           <tr>
-           <th scope="col">Attribute(s)</th>
-            <th scope="col">Data Type</th>
-            <th scope="col">Values and Constraints</th>
-            <th scope="col">Description</th>
+           <th scope="col">Impact Levels</th>
+           <th><button>Reset</button></th>
           </tr>
         </thead>
-        <tbody>
-<tr>
-<td>Impact Description</td>
-<td>String</td>
-<td>Required; Editable;
-Appendable</td>
-<td>Description of an impact</td>
-</tr>
+       <tbody tyle="text-align: center;">
+          <tr>
+            <td contenteditable="true">VH</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
 
-<tr>
-	<td>Impact Level</td>
-<td>Enumeration</td>
-<td>Required; Editable; {VH,
-H, M, L, VL, Information}</td>
-<td>Impact Level</td>
-</tr>
+          </tr>
+          <tr>
+            <td>H</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>  
+            <td>M</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>  
+            <td>L</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>  
+           <tr>  
+            <td>VL</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>  
+           <tr>  
+            <td>Information</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>  
+          </tr>  
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
+<script>
+  function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("findingClassificationTable").deleteRow(i);
+}
+</script>
+<section class="pglink" id="FC">
 <head><h2 style="text-decoration: underline;">Finding Classification</h2></head>
 
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="findingClassificationTable">
         <thead>
           <tr>
-           <th scope="col">Attribute(s)</th>
-            <th scope="col">Data Type</th>
-            <th scope="col">Values and Constraints</th>
-            <th scope="col">Description</th>
+           <th scope="col">Finding Classifications</th>
+           <th><button>Reset</button></th>
           </tr>
         </thead>
-        <tbody>
-<tr>
-<td>Finding Classification</td>
-<td>Enumeration</td>
-<td>Required; Editable;
-{Vulnerability,
-Information}</td>
-<td>Classification that
-determines if the
-discovery is a
-vulnerability or potential
-issue</td>
-</tr>
+        <tbody tyle="text-align: center;">
+          <tr>
+            <td contenteditable="true">Vulnerability</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+
+          </tr>
+          <tr>
+            <td>Information</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>  
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
-
+<script>
+  function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("countermeasureTable").deleteRow(i);
+}
+</script>
+<section class="pglink" id="CM">
 <head><h2 style="text-decoration: underline;">Countermeasure</h2></head>
 
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="countermeasureTable">
         <thead>
           <tr>
-           <th scope="col">Attribute(s)</th>
-            <th scope="col">Data Type</th>
-            <th scope="col">Values and Constraints</th>
-            <th scope="col">Description</th>
-          </tr>
+           <th scope="col">Countermeasures</th>
+           <th><button>Reset</button></th>
         </thead>
-        <tbody>
-<tr>
-<td>Effectiveness Rating</td>
-<td>Enumeration</td>
-<td>Required; Editable; {Very
-high (10), High (7-9),
-Moderate (4-6), Low (1-3)
-Very low (0)} (See Table
-17)</td>
-<td>Mechanism the system
-has in place to prevent the
-found vulnerability from
-being exploited</td>
-</tr>
+         <tbody tyle="text-align: center;">
+          <tr>
+            <td contenteditable="true">Very high (10)</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+
+          </tr>
+          <tr>
+            <td>High (7-9)</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+           <tr>
+            <td>Moderate (4-6)</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+           <tr>
+            <td>Low (1-3)</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+           <tr>
+            <td>Very low (0)</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>  
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
-
+<script>
+  function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("eventClassificationTable").deleteRow(i);
+}
+</script>
+<section class="pglink" id="EC">
 <head><h2 style="text-decoration: underline;">Event Classification</h2></head>
 
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="eventClassificationTable">
         <thead>
           <tr>
-           <th scope="col">Attribute(s)</th>
-            <th scope="col">Data Type</th>
-            <th scope="col">Values and Constraints</th>
-            <th scope="col">Description</th>
+           <th scope="col">Event Classifications</th>
+           <th><button>Reset</button></th>
           </tr>
         </thead>
-        <tbody>
-<tr>
-<td>Event Classification</td>
-<td>Enumeration</td>
-<td>Required; {Top secret,
-Secret, Confidential,
-Classified, Unclassified}</td>
-<td>Security classification of a
-cyber engagement</td>
-</tr>
+         <tbody tyle="text-align: center;">
+          <tr>
+            <td contenteditable="true">Top secret</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+
+          </tr>
+          <tr>
+            <td>Secret</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+           <tr>
+            <td>Confidential</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+           <tr>
+            <td>Classified</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+           <tr>
+            <td>Unclassified</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>  
         </tbody>
       </table>
     </div>
@@ -437,187 +535,373 @@ h4 {
   }
 }
 </style>
+
+
+<script>
+  function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("systemLevelTable").deleteRow(i);
+}
+</script>
+<section class="pglink" id="SL">
 <head><h2 style="text-decoration: underline;">System Level</h2></head>
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="systemLevelTable">
         <thead>
           <tr>
-            <th scope="col">Attribute(s)</th>
-            <th scope="col">Data Type</th>
-            <th scope="col">Values and Constraints</th>
-            <th scope="col">Description</th>
+            <th scope="col">System Levels</th>
+            <th><button>Reset</button></th>
           </tr>
         </thead>
-        <tbody>
+         <tbody tyle="text-align: center;">
+          <tr>
+            <td contenteditable="true">Low</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
 
-          <tr>
-            <td>Confidentiality</td>
-            <td>Enumeration</td>
-            <td>Required; {Low, Medium, High, Information}</td>
-            <td>Confidentiality level of a system</td>
           </tr>
           <tr>
-            <td>Integrity</td>
-            <td>Enumeration</td>
-            <td>Required; {Low, Medium, High, Information}</td>
-            <td>Integrity level of a system</td>
+            <td>Medium</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
-          <tr>
-            <td>Availability</td>
-            <td>Enumeration</td>
-            <td>Required; {Low, Medium, High, Information}</td>
-            <td>Availability level of a system</td>
+           <tr>
+            <td>High</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
+           <tr>
+            <td>Information</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>  
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
+
+<script>
+  function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("eventTypeTable").deleteRow(i);
+}
+</script>
+<section class="pglink" id="ET">
 <head><h2 style="text-decoration: underline;">Event Type</h2></head>
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="eventTypeTable">
         <thead>
           <tr>
-            <th scope="col">Values and Constraints</th>
+            <th scope="col">Event Types</th>
+            <th><button>Reset</button></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody tyle="text-align: center;">
           <tr>
-            <td>Required; {Cooperative Vulnerability Penetration Assessment (CVPA). Cooperative Vulnerability Investigation (CVI). Verification of Fixes (VOF)}; Editable</td>
+            <td contenteditable="true">Cooperative Vulnerability Penetration Assessment (CVPA) </td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+
           </tr>
+          <tr>
+            <td>Cooperative Vulnerability Investigation (CVI)</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+           <tr>
+            <td>Verification of Fixes (VOF)</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>  
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
+
+<script>
+  function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("findingImpactLevelTable").deleteRow(i);
+}
+</script>
+<section class="pglink" id="FIL">
 <head><h2 style="text-decoration: underline;">Finding Impact Level</h2></head>
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="findingImpactLevelTable">
         <thead>
           <tr>
-            <th scope="col">Attribute(s)</th>
-            <th scope="col">Data Type</th>
-            <th scope="col">Values and Constraints</th>
-            <th scope="col">Description</th>
+            <th scope="col">Finding Impact Levels</th>
+            <th><button>Reset</button></th>
           </tr>
         </thead>
-        <tbody>
+             <tbody tyle="text-align: center;">
+          <tr>
+            <td contenteditable="true">Low </td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
 
-          <tr>
-            <td>Confidentiality</td>
-            <td>Enumeration</td>
-            <td>Required; {Low, Medium, High, Information}</td>
-            <td>Confidentiality level of a finding</td>
           </tr>
           <tr>
-            <td>Integrity</td>
-            <td>Enumeration</td>
-            <td>Required; {Low, Medium, High, Information}</td>
-            <td>Integrity level of a finding</td>
+            <td>Medium</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+           <tr>
+            <td>High</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
           <tr>
-            <td>Availability</td>
-            <td>Enumeration</td>
-            <td>Required; {Low, Medium, High, Information}</td>
-            <td>Availability level of a finding</td>
+            <td>Information</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
+          </tr>  
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
+<script>
+  function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("severityCategoryCodeTable").deleteRow(i);
+}
+</script>
+<section class="pglink" id="SCC">
 <head><h2 style="text-decoration: underline;">Severity Category Code</h2></head>
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="severityCategoryCodeTable">
         <thead>
           <tr>
-            <th scope="col">Data Type</th>
-            <th scope="col">Values and Constraints</th>
-            <th scope="col">Description</th>
+            <th scope="col">Severity Category Code</th>
+            <th><button>Reset</button></th>
           </tr>
         </thead>
-        <tbody>
-
+        <tbody tyle="text-align: center;">
           <tr>
-            <td>Enumeration</td>
-            <td>Required; Editable; {I, II, III}</td>
-            <td>A classification of vulnerabilities used to assess a facility or system security posture from Defense Information Systems Agency</td>
+            <td contenteditable="true">CAT I </td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+
           </tr>
+          <tr>
+            <td>CAT II </td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+           <tr>
+            <td>CAT III</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>  
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
+<script>
+  function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("progressTable").deleteRow(i);
+}
+</script>
+<section class="pglink" id="PRO">
 <head><h2 style="text-decoration: underline;">Progress</h2></head>
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="progressTable">
         <thead>
           <tr>
-            <th scope="col">Attribute(s)</th>
-            <th scope="col">Data Type</th>
-            <th scope="col">Values and Constraints</th>
-            <th scope="col">Description</th>
+            <th scope="col">Progress</th>
+            <th><button>Reset</button></th>
           </tr>
         </thead>
-        <tbody>
+       <tbody tyle="text-align: center;">
+          <tr>
+            <td contenteditable="true">Not started </td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
 
-          <tr>
-            <td>Task Progress</td>
-            <td>Enumeration</td>
-            <td>Required; {Not started,assigned, transferred, in progress, complete, and not applicable}; Editable if thetask has no subtask. Derived: If a task as at least one subtask, the system shall calculate the progress of a task from the progresses of all its’ subtasks</td>
-            <td>Progress of a task</td>
           </tr>
           <tr>
-            <td>Subtask Progress</td>
-            <td>Enumeration</td>
-            <td>Required; Editable; {Not started, assigned, transferred, in progress, complete, and not applicable}</td>
-            <td>Progress of a subtask</td>
+            <td>assigned </td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
+           <tr>
+            <td>transferred</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>
+            <td>in progress</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>
+            <td>complete</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          <tr>
+            <td>not applicable</td>
+             <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>  
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
+
+<script>
+  function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("eventRulesTable").deleteRow(i);
+}
+</script>
+<section class="pglink" id="ER">
 <head><h2 style="text-decoration: underline;">Event Rules</h2></head>
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="eventRulesTable">
         <thead>
           <tr>
-            <th scope="col">Lead Analyst Assignment</th>
-            <th scope="col">Analyst Self-Assign</th>
+            <th scope="col">Event Rules/Privileges</th>
+            <th scope="col">Lead Analyst</th>
+            <th scope="col">Analyst</th>
+            <th><button>Reset</button></th>
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td>
+              Create Event
+          </td>
+            <td>Yes</td>
+            <td>No</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+            </tr>
+          </tr>
 
           <tr>
-            <td>Allowed</td>
-            <td>Allowed</td>
+            <td>
+              Create System
+          </td>
+            <td>Yes</td>
+            <td>No</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+
+          <tr>
+            <td>
+              Generate Report
+          </td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
           </tr>
           </tr>
+
+          <tr>
+            <td>
+              Create Task
+          </td>
+            <td>Yes</td>
+            <td>No</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>
+
+          <tr>
+            <td>
+              Create Subtask
+          </td>
+            <td>Yes</td>
+            <td>N/A</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>
+
+          <tr>
+            <td>
+              Assign Task
+          </td>
+            <td>Yes</td>
+            <td>No</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>
+
+          <tr>
+            <td>
+              Assign Subtask
+          </td>
+            <td>Yes</td>
+            <td>No</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>
+
+          <tr>
+            <td>
+              Sign up for task
+          </td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>
+
+          <tr>
+            <td>
+              Add collaborator to a task
+          </td>
+            <td>Yes</td>
+            <td>N/A</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>
+
+          <tr>
+            <td>
+              Add collaborator to a subtask
+          </td>
+            <td>Yes</td>
+            <td>N/A</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>
+
+          <tr>
+            <td>
+              Add collaborator to a finding
+          </td>
+            <td>Yes</td>
+            <td>N/A</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>
+
+          <tr>
+            <td>
+              Associate finding (original finding) to another finding (associated finding)
+          </td>
+            <td>Yes</td>
+            <td>N/A</td>
+            <td><input type="button" value="Delete" onclick="deleteRow(this)"></td>
+          </tr>
+          </tr>
+
         </tbody>
       </table>
     </div>
   </div>
 </div>
 
-
+<section class="pglink" id="RMRT">
 <head><h2 style="text-decoration: underline;">Risk Matrix Report Template</h2></head>
 <div class="container">
   <div class="row">
@@ -663,6 +947,7 @@ h4 {
   </div>
 </div>
 
+<section class="pglink" id="ERB">
 <head><h2 style="text-decoration: underline;">ERB Template</h2></head>
 <div class="container">
   <div class="row">
@@ -714,73 +999,37 @@ h4 {
   </div>
 </div>
 
-
+<section class="pglink" id="FTR">
 <head><h2 style="text-decoration: underline;">Final Techical Report Template</h2></head>
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
-        <thead>
-          <tr>
-            <th scope="col">Attribute(s)</th>
-            <th scope="col">Data Type</th>
-            <th scope="col">Values and Constraints</th>
-            <th scope="col">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <tr>
-            <td>Analyst Name</td>
-            <td>List</td>
-            <td>Required</td>
-            <td>Name of analyst who participated in the cyber ingegament</td>
-          </tr>
-          <tr>
-            <td>Summary Table</td>
-            <td>List</td>
-            <td>Required; Summary table includes finding description, system name, impact, and risk</td>
-            <td>Summary table displays finding description, system name, impact, and risk</td>
-          </tr>
-           <tr>
-            <td>Finding</td>
-            <td>List</td>
-            <td>Required</td>
-            <td>List of selected finding from the cyber engagement</td>
-          </tr>
-        </tbody>
-      </table>
+      <img src="icons/FinalReportFindings.png" alt="Final Technical Report Template"> 
+      <img src="icons/FinalReport.png" alt="Final Technical Report Template"> 
     </div>
   </div>
 </div>
 
-
+<section class="pglink" id="NOTI">
 <head><h2 style="text-decoration: underline;">Notification</h2></head>
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <table class="table table-bordered table-dark">
+      <table class="table table-bordered table-dark" id="notificationTable">
         <thead>
           <tr>
-            <th scope="col">Attribute(s)</th>
-            <th scope="col">Data Type</th>
-            <th scope="col">Values and Constraints</th>
-            <th scope="col">Description</th>
+            <th scope="col">Notification Settings</th>
           </tr>
         </thead>
         <tbody>
 
           <tr>
             <td>Duration</td>
-            <td>List</td>
-            <td>Required; Editable</td>
-            <td>Time before the threshold</td>
+            <td>N/A</td>
           </tr>
           <tr>
             <td>Frequency</td>
-            <td>List</td>
-            <td>Required; Editable</td>
-            <td>Recurring time a notification should appear</td>
+            <td>N/A</td>
           </tr>
         </tbody>
       </table>
@@ -820,12 +1069,14 @@ h4 {
   text-decoration: none;
   display: block;
 }
+</style>
 
 
 
 
   <script src="jquery.js"></script>
   <script src="bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </body>
 </html>
