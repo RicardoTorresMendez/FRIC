@@ -11,17 +11,29 @@ if ($conn -> connect_errno) {
   exit();
 }
 
+$query = "Select Id, Name, Title, findingTitle from systems natural join systemtasks natural join systemfindings;";
+$systemtasks = "Select Id, Name, title from systems natural join systemtasks;";
+$systemfindings = "Select Id, Name, findingtitle from systems natural join systemfindings;";
+$systems = "Select Id, Name from systems";
 
 $response = [];
 
-$query = "Select Name, Title, findingTitle from systems natural join systemtasks natural join systemfindings;";
-
 $result = mysqli_query($conn, $query);
-
 while($row = mysqli_fetch_assoc($result)){
 	array_push($response, $row);
 }
-
+$result = mysqli_query($conn, $systemtasks);
+while($row = mysqli_fetch_assoc($result)){
+	array_push($response, $row);
+}
+$result = mysqli_query($conn, $systemfindings);
+while($row = mysqli_fetch_assoc($result)){
+	array_push($response, $row);
+}
+$result = mysqli_query($conn, $systems);
+while($row = mysqli_fetch_assoc($result)){
+	array_push($response, $row);
+}
 echo json_encode($response);
 
 $conn->close();

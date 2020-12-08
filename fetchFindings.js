@@ -23,8 +23,8 @@ function refreshFindings(){
         for (r of response){
 
             let tr = document.createElement("tr");
-            //tr.classList.add("findingTable");
-            //tr.id = r["ID"];
+            tr.classList.add("findingTable");
+            tr.id = r["ID"];
 
             let td_checkbox = document.createElement("td");
             let td_ID = document.createElement("td");
@@ -67,5 +67,62 @@ function refreshFindings(){
         } 
     });
 
+    var selectAnalyst = document.getElementById("findingAnalyst");
 
+    fetch("fetchAnalysts.php", {
+       method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option = document.createElement("option");
+            option.value = r[ "Initial" ];
+            option.text = r[ "Initial" ];
+            selectAnalyst.appendChild( option );
+        }
+
+
+    });
+
+
+    var selectSystem = document.getElementById("findingSystem");
+
+    fetch("fetchToSystem.php", {
+       method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option = document.createElement("option");
+            option.value = r[ "Name" ];
+            option.text = r[ "Name" ];
+            selectSystem.appendChild( option );
+        }
+
+
+    });
+
+
+    var selectSystem = document.getElementById("findingSystem");
+
+    fetch("fetchToTask.php", {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(function (response){
+        for (r of response){
+            var option = document.createElement("option");
+            option.value = r[ "" ];
+            option.text = r[ "" ];
+            selectSystem.appendChild( option );
+        }
+
+
+    });
+    
 }
+
+
