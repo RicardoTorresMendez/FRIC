@@ -12,16 +12,16 @@ Git clone this repository. It is important that the Repository is inside htdocs 
 
 ### 3. Run XAMP application
 Search for the XAMPP app installed in your machine and run it.
-![XAMPP Control Panel](xampp_control_panel.jpg)
+![XAMPP Control Panel](https://github.com/RicardoTorresMendez/FRIC/blob/Doc/xampp_control_panel.JPG)
 You should see the XAMPP Control Panel. Press the **Apache** and **MySQL** buttons to run the server and database functionalities.
 
 ### 4. Import Database
 Go to your broswer and type [phpmyadmin link](http://localhost/phpmyadmin/). You should see the myphpadmin page.
-![phpmyadmin](FRIC\phpmyadmin.jpg)
+![phpmyadmin](https://github.com/RicardoTorresMendez/FRIC/blob/Doc/phpmyadmin.JPG)
 Click on **New** Icon on the left panel to create a new Database. Name it "fric"
-![New Database](\FRIC\new_database.jpg)
+![New Database](https://github.com/RicardoTorresMendez/FRIC/blob/Doc/new_database.JPG)
 Click on import on the top right. Click on **Choose File** button to browse your computer for the Database template. The template can be found in the folder **Database_template** within the cloned repository (**C:\xampp\htdocs\FRIC\Database_template**).
-![Import](/FRIC/browse_computer.jpg)
+![Import](C:/xampp/htdocs/FRIC/https://github.com/RicardoTorresMendez/FRIC/blob/Doc/browse_computer.jpg)
 Clicking Go should fill the data structure and will fill some default values for Analysts.
 
 ## Run Webapp
