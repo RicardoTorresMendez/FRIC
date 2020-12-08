@@ -66,8 +66,8 @@ function refreshTasks(){
 
     var selectAnalyst = document.getElementById("taskAnalysts");
     var selectCollaborator = document.getElementById("taskCollaborators");
-    selectAnalyst.innerHTML = "";
-    selectCollaborator.innerHTML = "";
+    selectAnalyst.innerText = "";
+    selectCollaborator.innerText = "";
 
     fetch("fetchAnalysts.php", {
        method: 'POST',
@@ -91,7 +91,7 @@ function refreshTasks(){
 
     formData.append("request2", "systemList");
     var selectSystem = document.getElementById("taskSystem");
-    selectSystem.innerHTML = "";
+    selectSystem.innerText = "";
 
     fetch("connectToDatabase.php", {
        method: 'POST',
@@ -110,7 +110,7 @@ function refreshTasks(){
     });
 
     var selectTask = document.getElementById("taskTasks");
-    selectTask.innerHTML = "";
+    selectTask.innerText = "";
 
     fetch("fetchToTask.php", {
         method: 'POST',
@@ -132,7 +132,7 @@ function refreshTasks(){
     formData.append("request3", "relatedFindings");
 
     var selectFindings = document.getElementById("taskFindings");
-    selectFindings.innerHTML = "";
+    selectFindings.innerText = "";
 
     fetch("connectToDatabase.php", {
         method: 'POST',
@@ -151,7 +151,7 @@ function refreshTasks(){
     });
 
     var selectSubtask = document.getElementById("taskSubtasks");
-    selectSubtask.innerHTML = "";
+    selectSubtask.innerText = "";
 
     fetch("fetchToSubtask.php", {
         method: 'POST',
