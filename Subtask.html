@@ -26,10 +26,33 @@
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="bootstrap.min.css">
   <!-- Custom styles for this template -->
+  <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  <script type="text/javascript" src="js/all.js"></script>
+  <!-- New Stuff Joe -->
+  <style>
+    {
+        box-sizing: border-box;
+    }
+    p.dotted {border-style: dotted;}
+    p.double {border-style: double;}
+    /* Set additional styling options for the columns*/
+    .column {
+    margin: 0 1.5%;
+    float: left;
+    width: 45%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    </style>
+  <!-- /New Stuff Joe -->
 </head>
 
 <body style="background-color:rgb(235, 192, 52);">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand dropdown-toggle" href="#navbarDropdown" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">FRIC menu</a>
     <div class="dropdown-menu" id="navbarDropdown" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="event.html">Event</a>
@@ -164,7 +187,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </div>
 
 <h3><u>Subtask Detailed View</u></h3>
-
+<!-- New Data Joe -->
+  <div class="row">
+        <div class="column" style = "border-style: double;background-color:grey;">
+            <h2></h2>
+            <p>
+              <!-- Column 1 -->
  <label for="subtaskTitle">Title:</label>
     <input type="text"  placeholder="Title.."><br><br>
 
@@ -190,7 +218,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
           <option value="c">LK</option>
           <option value="d">PK</option>
         </select><br><br>
-
+<!-- /Column 1 -->
+            </p>
+        </div>
+        <div class="column" style="border-style: double;background-color:grey;">
+            <h2></h2>
+            <p>
+              <!-- Column 2 -->
         <label for="subtaskCollaborators">Collaborator(s)</label>
           <select id="subtaskCollaborators" multiple>
           <option value="a">JK</option>
@@ -217,9 +251,15 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
        <label for="subtaskAttatchment(s)">Attachment(s):</label>
           <input type="file" id="subtaskAttatchment(s)"><br><br>
+          <!-- /Column 2 -->
+            </p>
+        </div>
+    </div>
+  <!-- /New Data Joe -->
 
 <script src="jquery.js"></script>
 <script src="bootstrap.min.js"></script>
 <script src="createSubtaskHandler.js"></script>  
 <script src="fetchSubtasks.js"></script> 
+<script src="js/script.js"></script>
 </body>
